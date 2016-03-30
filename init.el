@@ -21,7 +21,6 @@ values."
      (auto-completion :variables
                       auto-completion-enable-help-tooltip t
                       auto-completion-enable-snippets-in-popup t)
-     themes-megapack
      better-defaults git
      emacs-lisp evil-commentary
      org php html javascript
@@ -286,33 +285,3 @@ you should place you code here."
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(ansi-color-names-vector ["black" "light gray" "dark gray" "light slate gray"])
- '(custom-safe-themes
-   (quote
-    ("28ec8ccf6190f6a73812df9bc91df54ce1d6132f18b4c8fcc85d45298569eb53" "39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "cab317d0125d7aab145bc7ee03a1e16804d5abdfa2aa8738198ac30dc5f7b569" "f782ed87369a7d568cee28d14922aa6d639f49dd676124d817dd82c8208985d0" "a985799595034bd95cd74ed968d15f93a1145ed81ffcf0537401ec7dd6ebed4f" "7e67bf73d7b1e112a37b5f1e7fb4c2b3b45b2081b78eb1001f5b69c40835ac64" default)))
- '(fci-rule-color "gray80" t)
- '(highlight-symbol-colors
-   (quote
-    ("#EFFF00" "#73CD4F" "#83DDFF" "MediumPurple1" "#66CDAA" "DarkOrange" "HotPink1" "#809FFF" "#ADFF2F")))
- '(hl-paren-background-colors
-   (quote
-    ("#00FF99" "#CCFF99" "#FFCC99" "#FF9999" "#FF99CC" "#CC99FF" "#9999FF" "#99CCFF" "#99FFCC" "#7FFF00")))
- '(hl-paren-colors (quote ("#326B6B")))
- '(pos-tip-background-color "#5C6743")
- '(pos-tip-foreground-color "#CFCFCF")
- '(xterm-color-names
-   ["#595963" "#B262AF" "#74B2A8" "#AFCCBC" "#668EB0" "#676EA1" "#7F8FB2" "#BCC1C4"])
- '(xterm-color-names-bright
-   ["#73767d" "#CC68C8" "#7CCFC1" "#B4DEC7" "#6CA7D9" "#868DD9" "#B2B2D4" "#ADADAD"]))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
- '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
