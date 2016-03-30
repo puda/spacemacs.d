@@ -18,17 +18,23 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
-                     auto-completion better-defaults git
-                     org php html javascript
-                     colors
-                     vim-empty-lines
-                     (shell :variables
-                            shell-default-position 'bottom)
-                     syntax-checking ranger
-                     (ranger :variables
-                             ranger-show-preview t)
-                     puda-basic
-                     )
+     (auto-completion :variables
+                      auto-completion-enable-help-tooltip t
+                      auto-completion-enable-snippets-in-popup t)
+     themes-megapack
+     better-defaults git
+     emacs-lisp evil-commentary
+     org php html javascript
+     colors
+     vim-empty-lines
+     (shell :variables
+            shell-default-height 30
+            shell-default-position 'bottom)
+     syntax-checking ranger
+     (ranger :variables
+             ranger-show-preview t)
+     puda-basic
+     )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
@@ -93,9 +99,9 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
-                         solarized-dark
+                         ;; solarized-dark
                          ;; spacemacs-dark
-                         ;; material
+                         phoenix-dark-mono
                          )
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
@@ -237,6 +243,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   ;; delete the selection with a keypress
   (delete-selection-mode t)
+
   (global-auto-revert-mode t) ;; reload open files
   ;; ;; nice scrolling
   (setq scroll-margin 0
