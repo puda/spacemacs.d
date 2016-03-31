@@ -39,6 +39,7 @@
     ac-php
     php-mode
     hydra
+    evil-mc
     )
   )
 

@@ -19,11 +19,10 @@ values."
    dotspacemacs-configuration-layers
    '(
      auto-completion
-     better-defaults git
-     emacs-lisp evil-commentary
+     better-defaults
+     git emacs-lisp evil-commentary evil-snipe
      org php html javascript
-     colors
-     vim-empty-lines
+     colors vim-empty-lines
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
@@ -42,6 +41,7 @@ values."
                                     drupal-mode
                                     php-extras
                                     tern
+                                    evil-search-highlight-persist
                                     )
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
