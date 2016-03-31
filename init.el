@@ -18,9 +18,7 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
-     (auto-completion :variables
-                      auto-completion-enable-help-tooltip t
-                      auto-completion-enable-snippets-in-popup t)
+     auto-completion
      better-defaults git
      emacs-lisp evil-commentary
      org php html javascript
@@ -98,17 +96,19 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
-                         solarized-dark
+                         ;; solarized-dark
                          ;; spacemacs-dark
+                         material
                          )
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("Fira Code Retina"
+   dotspacemacs-default-font '(;; "Fira Code Retina"
+                               "Inconsolata-dz for Powerline"
                                :size 35
                                :weight normal
-                               :width medium
+                               :width normal
                                :powerline-scale 1.1)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
