@@ -55,7 +55,6 @@
 
 (defun puda-basic/init-evil-mc ()
   (use-package evil-mc
-    :diminish evil-mc-mode
     :config
     (global-evil-mc-mode t)))
 
