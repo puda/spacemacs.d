@@ -127,13 +127,7 @@
       (evil-leader/set-key-for-mode 'php-mode ">" 'ac-php-location-stack-back)
       (evil-leader/set-key-for-mode 'php-mode "rt" 'ac-php-remake-tags)
       (evil-leader/set-key-for-mode 'php-mode "ra" 'ac-php-remake-tags-all)
-      (add-hook 'php-mode-hook
-                '(lambda ()
-                   (require 'ac-php-company)
-                   (company-mode t)
-                   (add-to-list 'company-backends 'company-ac-php-backend)))
-      )
-    ))
+      )))
 
 (defun puda-basic/init-php-mode ()
   (use-package php-mode
@@ -148,5 +142,6 @@
   (use-package hydra
     :defer t
     ))
+
 
 ;;; packages.el ends here
