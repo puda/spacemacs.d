@@ -18,11 +18,11 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
-     auto-completion
-     better-defaults
+     auto-completion better-defaults
      git emacs-lisp evil-commentary evil-snipe
-     org php html javascript
-     colors vim-empty-lines
+     org ;; php
+     html javascript
+     vim-empty-lines
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
