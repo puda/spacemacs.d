@@ -20,8 +20,7 @@ values."
    '(
      auto-completion better-defaults
      git emacs-lisp evil-commentary evil-snipe
-     org php
-     html javascript
+     org php html javascript
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
