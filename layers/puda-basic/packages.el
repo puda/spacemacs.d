@@ -130,8 +130,7 @@
       (add-hook 'php-mode-hook
                 (lambda ()
                   (require 'ac-php-company)
-                  (company-mode t)
-                  (add-to-list 'company-backends '(company-dabbrev company-ac-php-backend)))))))
+                  (company-mode t))))))
 
 
 (defun puda-basic/init-php-mode ()
