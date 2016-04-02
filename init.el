@@ -20,16 +20,16 @@ values."
    '(
      (auto-completion :variables
                       auto-completion-enable-help-tooltip t)
-     better-defaults
-     git emacs-lisp evil-commentary evil-snipe
-     org php html javascript
+     better-defaults git emacs-lisp evil-commentary evil-snipe org php html
+     (javascript :variables
+                 javascript-disable-tern-port-files t)
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
-     syntax-checking ranger
+     syntax-checking colors
      (ranger :variables
              ranger-show-preview t)
-     puda-basic
+     ibuffer puda-basic ;;selectric (try this out)
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -39,7 +39,7 @@ values."
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(
                                     drupal-mode
-                                    tern
+                                    ;; tern
                                     )
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
