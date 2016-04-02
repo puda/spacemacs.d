@@ -18,7 +18,9 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
-     auto-completion better-defaults
+     (auto-completion :variables
+                      auto-completion-enable-help-tooltip t)
+     better-defaults
      git emacs-lisp evil-commentary evil-snipe
      org php html javascript
      (shell :variables
@@ -37,9 +39,7 @@ values."
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(
                                     drupal-mode
-                                    php-extras
                                     tern
-                                    evil-search-highlight-persist
                                     )
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
