@@ -20,15 +20,17 @@ values."
    '(
      (auto-completion :variables
                       auto-completion-enable-help-tooltip t)
-     better-defaults git emacs-lisp evil-commentary evil-snipe org php html
+     (git :variables
+          git-magit-status-fullscreen t)
      (javascript :variables
                  javascript-disable-tern-port-files t)
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
-     syntax-checking colors
      (ranger :variables
              ranger-show-preview t)
+     syntax-checking colors
+     better-defaults emacs-lisp evil-commentary evil-snipe org php html
      ibuffer puda-basic ;;selectric (try this out)
      )
    ;; List of additional packages that will be installed without being
@@ -96,7 +98,9 @@ values."
    dotspacemacs-themes '(
                          ;; solarized-dark
                          ;; spacemacs-dark
+                         ;; spacemacs-light
                          material
+                         ;; gruvbox
                          )
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
@@ -282,3 +286,18 @@ you should place you code here."
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("b85fc9f122202c71b9884c5aff428eb81b99d25d619ee6fde7f3016e08515f07" default))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
