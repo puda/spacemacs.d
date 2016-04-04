@@ -103,21 +103,13 @@
       (key-chord-define evil-normal-state-map "fk" 'vertigo-jump-up)
       (key-chord-define evil-normal-state-map "fj" 'vertigo-jump-down))))
 
-(defun puda-basic/post-init-evil-magit ()
+(defun puda-basic/init-evil-magit ()
   (use-package evil-magit
-    :defer t
+    ;; :defer t
     :config
     (progn
       (add-hook 'with-editor-mode-hook 'evil-insert-state))))
 
-(defun puda-basic/init-shell-pop ()
-  (use-package shell-pop
-    :defer t
-    :config
-    (progn
-      (add-hook 'term-mode-hook
-                (lambda ()
-                  (define-key term-raw-map (kbd "C-y") 'term-paste))))))
 
 (defun puda-basic/init-ac-php ()
   (use-package ac-php
