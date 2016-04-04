@@ -29,8 +29,8 @@ values."
             shell-default-position 'bottom)
      (ranger :variables
              ranger-show-preview t)
-     syntax-checking colors better-defaults emacs-lisp evil-snipe org php html
-     ibuffer puda-basic
+     syntax-checking colors better-defaults emacs-lisp evil-snipe org php html ibuffer
+     puda-basic
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
