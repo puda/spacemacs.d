@@ -41,6 +41,7 @@
     hydra
     evil-mc
     evil-magit
+    shell-pop
     )
   )
 
