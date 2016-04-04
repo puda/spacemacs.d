@@ -30,7 +30,8 @@ values."
      (ranger :variables
              ranger-show-preview t)
      syntax-checking colors
-     better-defaults emacs-lisp evil-commentary evil-snipe org php html
+     better-defaults emacs-lisp evil-snipe evil-commentary org php html
+     themes-megapack
      ibuffer puda-basic
      )
    ;; List of additional packages that will be installed without being
@@ -41,6 +42,7 @@ values."
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(
                                     drupal-mode
+                                    evil-search-highlight-persist
                                     )
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
@@ -95,6 +97,8 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
+                         farmhouse-dark
+                         monochrome
                          spacemacs-dark
                          material
                          )
@@ -282,3 +286,17 @@ you should place you code here."
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("cdd26fa6a8c6706c9009db659d2dffd7f4b0350f9cc94e5df657fa295fffec71" default))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
