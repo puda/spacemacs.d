@@ -136,9 +136,9 @@
                   (company-mode t))))))
 
 
-(defun puda-basic/init-php-mode ()
+(defun puda-basic/pre-init-php-mode ()
   (use-package php-mode
-    :defer t
+    ;; :defer t
     :mode (
            ("\\.module\\'" . php-mode)
            ("\\.views\\.inc\\'" . php-mode)
