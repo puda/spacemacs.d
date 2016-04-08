@@ -29,6 +29,7 @@ values."
             shell-default-position 'bottom)
      (ranger :variables
              ranger-show-preview t)
+     vim-empty-lines
      syntax-checking colors better-defaults emacs-lisp evil-snipe org php html ibuffer
      puda-basic
      )
