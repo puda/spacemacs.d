@@ -52,8 +52,24 @@
 (defun puda-basic/init-golden-ratio ()
   (use-package golden-ratio
     :diminish golden-ratio-mode
+    :init
+    (progn
+      (setq golden-ratio-exclude-modes '("ediff-mode"
+                                         "eshell-mode"
+                                         "helm-mini"
+                                         "guide-key-mode"
+                                         "dired-mode"))
+      (setq split-width-threshold nil)
+      )
     :config
-    (golden-ratio-mode t)))
+    (progn
+      (add-to-list 'golden-ratio-extra-commands 'ace-window)
+      (add-to-list 'golden-ratio-extra-commands 'select-window-1)
+      (add-to-list 'golden-ratio-extra-commands 'select-window-2)
+      (add-to-list 'golden-ratio-extra-commands 'select-window-3)
+      (add-to-list 'golden-ratio-extra-commands 'select-window-4)
+      (golden-ratio-mode t))
+      ))
 
 (defun puda-basic/init-evil-mc ()
   (use-package evil-mc
