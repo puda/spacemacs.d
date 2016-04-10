@@ -158,7 +158,8 @@
                 (lambda ()
                   (require 'ac-php-company)
                   (company-mode t)
-                  (add-to-list 'company-backends '(company-ac-php-backend company-dabbrev)))))))
+                  (add-to-list 'company-backends '(company-dabbrev-code company-ac-php-backend))
+                  )))))
 
 
 (defun puda-basic/init-php-mode ()
