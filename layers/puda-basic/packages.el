@@ -135,6 +135,7 @@
     (progn
       (add-hook 'term-mode-hook
                 (lambda ()
+                  (spacemacs/toggle-highlight-current-line-globally-off)
                   (define-key term-raw-map (kbd "C-y") 'term-paste))))))
 
 (defun puda-basic/post-init-evil-magit ()

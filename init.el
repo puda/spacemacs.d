@@ -239,7 +239,6 @@ before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   ;; delete the selection with a keypress
   (delete-selection-mode t)
-  (spacemacs/toggle-highlight-current-line-globally-off)
   (global-auto-revert-mode t) ;; reload open files
   ;; ;; nice scrolling
   (setq scroll-margin 0
