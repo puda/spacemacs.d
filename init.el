@@ -29,8 +29,8 @@ values."
             shell-default-position 'bottom)
      (ranger :variables
              ranger-show-preview t)
-     vim-empty-lines
-     syntax-checking colors better-defaults emacs-lisp evil-snipe org php html ibuffer
+     vim-empty-lines syntax-checking colors better-defaults emacs-lisp evil-snipe org html ibuffer
+     ;; php ;; php just makes things slower
      puda-basic
      )
    ;; List of additional packages that will be installed without being
@@ -41,6 +41,7 @@ values."
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(
                                     drupal-mode
+                                    evil-jumper
                                     evil-search-highlight-persist
                                     )
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -96,7 +97,7 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
-                         zenburn
+                         solarized-dark
                          )
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
@@ -194,11 +195,11 @@ values."
    ;; Transparency can be toggled through `toggle-transparency'. (default 90)
    dotspacemacs-inactive-transparency 90
    ;; If non nil unicode symbols are displayed in the mode line. (default t)
-   dotspacemacs-mode-line-unicode-symbols t
+   dotspacemacs-mode-line-unicode-symbols nil
    ;; If non nil smooth scrolling (native-scrolling) is enabled. Smooth
    ;; scrolling overrides the default behavior of Emacs which recenters the
    ;; point when it reaches the top or bottom of the screen. (default t)
-   dotspacemacs-smooth-scrolling nil
+   dotspacemacs-smooth-scrolling t
    ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
    ;; derivatives. If set to `relative', also turns on relative line numbers.
    ;; (default nil)
@@ -241,9 +242,9 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
   (global-auto-revert-mode t) ;; reload open files
   ;; ;; nice scrolling
-  (setq scroll-margin 0
-        scroll-conservatively 10000
-        scroll-preserve-screen-position 1)
+  ;; (setq scroll-margin 0
+  ;;       scroll-conservatively 10000
+  ;;       scroll-preserve-screen-position 1)
   ;; ;; space o is reserved for the user
   ;; (setq default-directory "/var/www/community/" )
   ;; (setq initial-scratch-message ";; Puda loves Rachael!! \n;; Puda Emacs Custom Config!!")

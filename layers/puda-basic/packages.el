@@ -58,7 +58,10 @@
                                          "eshell-mode"
                                          "helm-mini"
                                          "guide-key-mode"
-                                         "dired-mode"))
+                                         "undo-tree-visualizer-mode"
+                                         "diff-mode"
+                                         "dired-mode"
+                                         ))
       (setq split-width-threshold nil)
       )
     :config
@@ -68,6 +71,10 @@
       (add-to-list 'golden-ratio-extra-commands 'select-window-2)
       (add-to-list 'golden-ratio-extra-commands 'select-window-3)
       (add-to-list 'golden-ratio-extra-commands 'select-window-4)
+      (add-to-list 'golden-ratio-extra-commands 'buf-move-left)
+      (add-to-list 'golden-ratio-extra-commands 'buf-move-right)
+      (add-to-list 'golden-ratio-extra-commands 'buf-move-up)
+      (add-to-list 'golden-ratio-extra-commands 'buf-move-down)
       (golden-ratio-mode t))
       ))
 
@@ -149,10 +156,11 @@
       (add-hook 'php-mode-hook
                 (lambda ()
                   (require 'ac-php-company)
-                  (company-mode t))))))
+                  (company-mode t)
+                  (add-to-list 'company-backends '(company-ac-php-backend company-dabbrev)))))))
 
 
-(defun puda-basic/pre-init-php-mode ()
+(defun puda-basic/init-php-mode ()
   (use-package php-mode
     ;; :defer t
     :mode (
@@ -165,6 +173,5 @@
   (use-package hydra
     :defer t
     ))
-
 
 ;;; packages.el ends here
