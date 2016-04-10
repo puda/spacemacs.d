@@ -199,7 +199,7 @@ values."
    ;; If non nil smooth scrolling (native-scrolling) is enabled. Smooth
    ;; scrolling overrides the default behavior of Emacs which recenters the
    ;; point when it reaches the top or bottom of the screen. (default t)
-   dotspacemacs-smooth-scrolling t
+   dotspacemacs-smooth-scrolling nil
    ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
    ;; derivatives. If set to `relative', also turns on relative line numbers.
    ;; (default nil)
@@ -239,13 +239,13 @@ before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   ;; delete the selection with a keypress
   (delete-selection-mode t)
-  (setq highlight-current-line-globally 'nil)
+  (spacemacs/toggle-highlight-current-line-globally-off)
   (global-auto-revert-mode t) ;; reload open files
   ;; ;; nice scrolling
-  ;; (setq scroll-margin 0
-  ;;       scroll-conservatively 10000
-  ;;       scroll-preserve-screen-position 1)
-  ;; ;; space o is reserved for the user
+  (setq scroll-margin 0
+        scroll-conservatively 10000
+        scroll-preserve-screen-position 1)
+  ;; space o is reserved for the user
   ;; (setq default-directory "/var/www/community/" )
   ;; (setq initial-scratch-message ";; Puda loves Rachael!! \n;; Puda Emacs Custom Config!!")
 
