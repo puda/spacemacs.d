@@ -30,7 +30,7 @@ values."
      (ranger :variables
              ranger-show-preview t)
      vim-empty-lines syntax-checking colors better-defaults emacs-lisp evil-snipe org html ibuffer
-     ;; php ;; php just makes things slower
+     php
      puda-basic
      )
    ;; List of additional packages that will be installed without being
@@ -41,7 +41,6 @@ values."
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(
                                     drupal-mode
-                                    evil-jumper
                                     evil-search-highlight-persist
                                     )
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that

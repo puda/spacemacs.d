@@ -34,7 +34,7 @@
     geben
     dumb-jump
     vertigo
-    golden-ratio
+    ;; golden-ratio
     key-chord
     ac-php
     php-mode
@@ -49,34 +49,34 @@
   (use-package geben
     :defer t))
 
-(defun puda-basic/init-golden-ratio ()
-  (use-package golden-ratio
-    :diminish golden-ratio-mode
-    :init
-    (progn
-      (setq golden-ratio-exclude-modes '("ediff-mode"
-                                         "eshell-mode"
-                                         "helm-mini"
-                                         "guide-key-mode"
-                                         "undo-tree-visualizer-mode"
-                                         "diff-mode"
-                                         "dired-mode"
-                                         ))
-      (setq split-width-threshold nil)
-      )
-    :config
-    (progn
-      (add-to-list 'golden-ratio-extra-commands 'ace-window)
-      (add-to-list 'golden-ratio-extra-commands 'select-window-1)
-      (add-to-list 'golden-ratio-extra-commands 'select-window-2)
-      (add-to-list 'golden-ratio-extra-commands 'select-window-3)
-      (add-to-list 'golden-ratio-extra-commands 'select-window-4)
-      (add-to-list 'golden-ratio-extra-commands 'buf-move-left)
-      (add-to-list 'golden-ratio-extra-commands 'buf-move-right)
-      (add-to-list 'golden-ratio-extra-commands 'buf-move-up)
-      (add-to-list 'golden-ratio-extra-commands 'buf-move-down)
-      (golden-ratio-mode t))
-      ))
+;; (defun puda-basic/init-golden-ratio ()
+;;   (use-package golden-ratio
+;;     :diminish golden-ratio-mode
+;;     :init
+;;     (progn
+;;       (setq golden-ratio-exclude-modes '("ediff-mode"
+;;                                          "eshell-mode"
+;;                                          "helm-mini"
+;;                                          "guide-key-mode"
+;;                                          "undo-tree-visualizer-mode"
+;;                                          "diff-mode"
+;;                                          "dired-mode"
+;;                                          ))
+;;       (setq split-width-threshold nil)
+;;       )
+;;     :config
+;;     (progn
+;;       (add-to-list 'golden-ratio-extra-commands 'ace-window)
+;;       (add-to-list 'golden-ratio-extra-commands 'select-window-1)
+;;       (add-to-list 'golden-ratio-extra-commands 'select-window-2)
+;;       (add-to-list 'golden-ratio-extra-commands 'select-window-3)
+;;       (add-to-list 'golden-ratio-extra-commands 'select-window-4)
+;;       (add-to-list 'golden-ratio-extra-commands 'buf-move-left)
+;;       (add-to-list 'golden-ratio-extra-commands 'buf-move-right)
+;;       (add-to-list 'golden-ratio-extra-commands 'buf-move-up)
+;;       (add-to-list 'golden-ratio-extra-commands 'buf-move-down)
+;;       (golden-ratio-mode t))
+;;       ))
 
 (defun puda-basic/init-evil-mc ()
   (use-package evil-mc
@@ -158,11 +158,12 @@
                 (lambda ()
                   (require 'ac-php-company)
                   (company-mode t)
-                  (add-to-list 'company-backends '(company-dabbrev-code company-ac-php-backend))
-                  )))))
+                  ;; (add-to-list 'company-backends '(company-dabbrev-code company-ac-php-backend company-dabbrev))
+                  ))
+      )))
 
 
-(defun puda-basic/init-php-mode ()
+(defun puda-basic/pre-init-php-mode ()
   (use-package php-mode
     ;; :defer t
     :mode (
