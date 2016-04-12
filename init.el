@@ -41,7 +41,7 @@ values."
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(
                                     drupal-mode
-                                    evil-search-highlight-persist
+                                    ;; evil-search-highlight-persist
                                     )
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
@@ -240,10 +240,10 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (delete-selection-mode t)
   (global-auto-revert-mode t) ;; reload open files
   ;; ;; nice scrolling
-  (setq scroll-margin 0
-        scroll-conservatively 10000
-        scroll-preserve-screen-position 1)
-  ;; space o is reserved for the user
+  ;; (setq scroll-margin 0
+  ;;       scroll-conservatively 10000
+  ;;       scroll-preserve-screen-position 1)
+
   ;; (setq default-directory "/var/www/community/" )
   ;; (setq initial-scratch-message ";; Puda loves Rachael!! \n;; Puda Emacs Custom Config!!")
 
@@ -273,9 +273,6 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place you code here."
-
-  (xterm-mouse-mode 0)
-  (setq powerline-default-separator 'wave)
 
   )
 
