@@ -25,8 +25,7 @@ values."
      (javascript :variables
                  javascript-disable-tern-port-files t)
      (shell :variables
-            shell-default-height 30
-            shell-default-position 'bottom)
+            shell-default-position 'right)
      (ranger :variables
              ranger-show-preview t)
      vim-empty-lines syntax-checking colors better-defaults emacs-lisp evil-snipe org html ibuffer
@@ -96,6 +95,7 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
+                         monokai
                          spacemacs-dark
                          )
    ;; If non nil the cursor color matches the state color in GUI Emacs.
@@ -106,7 +106,7 @@ values."
                                :size 35
                                :weight normal
                                :width normal
-                               :powerline-scale 1.2)
+                               :powerline-scale 1.1)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The leader key accessible in `emacs state' and `insert state'

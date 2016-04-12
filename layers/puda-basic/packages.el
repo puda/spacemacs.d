@@ -40,7 +40,6 @@
     hydra
     evil-mc
     evil-magit
-    shell-pop
     )
   )
 
@@ -97,16 +96,6 @@
     (progn
       (key-chord-define evil-normal-state-map "fk" 'vertigo-jump-up)
       (key-chord-define evil-normal-state-map "fj" 'vertigo-jump-down))))
-
-(defun puda-basic/post-init-shell-pop ()
-  (use-package shell-pop
-    :defer t
-    :config
-    (progn
-      (add-hook 'term-mode-hook
-                (lambda ()
-                  (spacemacs/toggle-highlight-current-line-globally-off)
-                  (define-key term-raw-map (kbd "C-y") 'term-paste))))))
 
 (defun puda-basic/post-init-evil-magit ()
   (use-package evil-magit
