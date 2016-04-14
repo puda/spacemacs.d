@@ -103,7 +103,15 @@
            ("\\.views\\.inc\\'" . php-mode)
            ("\\.admin\\.inc\\'" . php-mode)
            )
-    ))
+    :config
+    (progn
+      (evil-leader/set-key
+        "." 'helm-gtags-find-tag-from-here
+        "," 'helm-gtags-previous-history
+        "oc" '(lambda (shell-command "gtags --gtagslabel drupal"))
+        ;; "ou" ' ;; update tags, but with drupal label included
+        )
+    )))
 
 (defun puda-basic/init-hydra ()
   (use-package hydra

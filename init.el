@@ -39,7 +39,7 @@ values."
    dotspacemacs-additional-packages '()
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(
-                                    drupal-mode
+                                    ;; drupal-mode
                                     evil-search-highlight-persist
                                     )
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
