@@ -22,13 +22,15 @@ values."
                       auto-completion-enable-help-tooltip t)
      (git :variables
           git-magit-status-fullscreen t)
+     php html
      (javascript :variables
                  javascript-disable-tern-port-files t)
      (shell :variables
             shell-default-position 'right)
      (ranger :variables
              ranger-show-preview t)
-     vim-empty-lines syntax-checking colors better-defaults emacs-lisp evil-snipe org ibuffer php html
+     vim-empty-lines syntax-checking colors
+     better-defaults emacs-lisp evil-snipe org ibuffer
      gtags
      puda-basic
      )
@@ -95,6 +97,7 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
+                         material
                          spacemacs-dark
                          monokai
                          )
