@@ -32,7 +32,7 @@
 (defconst puda-basic-packages
   '(
     geben
-    dumb-jump
+    ;; dumb-jump
     vertigo
     key-chord
     php-mode
@@ -51,15 +51,15 @@
     :config
     (global-evil-mc-mode t)))
 
-(defun puda-basic/init-dumb-jump ()
-  (use-package dumb-jump
-    :diminish dumb-jump-mode
-    :config
-    (progn
-      (dumb-jump-mode t)
-      (evil-leader/set-key
-        "." 'dumb-jump-go
-        ">" 'dumb-jump-back))))
+;; (defun puda-basic/init-dumb-jump ()
+;;   (use-package dumb-jump
+;;     :diminish dumb-jump-mode
+;;     :config
+;;     (progn
+;;       (dumb-jump-mode t)
+;;       (evil-leader/set-key
+;;         "." 'dumb-jump-go
+;;         ">" 'dumb-jump-back))))
 
 (defun puda-basic/init-key-chord ()
   (use-package key-chord
@@ -104,13 +104,17 @@
       (add-hook 'with-editor-mode-hook 'evil-hybrid-state))))
 
 (defun puda-basic/pre-init-php-mode ()
+  ;; use gtags layer and make sure the ~/.globalrc file is in place and generate tags using
+  ;; gtags --gtagslabel drupal
+  ;; make sure the keybindings work out of the box for spacemacs
   (use-package php-mode
     ;; :defer t
     :mode (
            ("\\.module\\'" . php-mode)
            ("\\.views\\.inc\\'" . php-mode)
            ("\\.admin\\.inc\\'" . php-mode)
-           )))
+           )
+    ))
 
 (defun puda-basic/init-hydra ()
   (use-package hydra
