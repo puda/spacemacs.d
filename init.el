@@ -238,28 +238,6 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
-  ;; delete the selection with a keypress
-  (delete-selection-mode t)
-  (global-auto-revert-mode t) ;; reload open files
-  (setq default-directory "/var/www/community/" )
-  (setq initial-scratch-message ";; Puda loves Rachael!! \n;; Puda Emacs Custom Config!!")
-
-  (defun puda-turn-off-mouse ()
-    (defun turn-off-mouse (&optional frame)
-      (interactive)
-      (let ((inhibit-message t) (default-directory "~"))
-        (shell-command "synclient TouchpadOff=1")))
-
-    (defun turn-on-mouse (&optional frame)
-      (interactive)
-      (let ((inhibit-message t) (default-directory "~"))
-        (shell-command "synclient TouchpadOff=0")))
-    (add-hook 'focus-in-hook #'turn-off-mouse)
-    (add-hook 'focus-out-hook #'turn-on-mouse)
-    (add-hook 'kill-emacs-hook #'turn-on-mouse)
-    (add-hook 'delete-frame-functions #'turn-on-mouse))
-
-  (puda-turn-off-mouse)
 
   )
 

@@ -38,6 +38,7 @@
     hydra
     evil-mc
     evil-magit
+    dumb-jump
     )
   )
 
@@ -108,13 +109,12 @@
       (defun puda-drupal-gtags-create ()
         (interactive)
         (let ((inhibit-message t) (default-directory "/var/www/community/"))
-        (shell-command "gtags --gtagslabel drupal")))
+          (shell-command "gtags --gtagslabel drupal")))
 
       (evil-leader/set-key
         "." 'ggtags-find-definition
         ">" 'ggtags-prev-mark
         "oc" 'puda-drupal-gtags-create
-        ;; "ou" ' ;; update tags, but with drupal label included
         )
       (add-hook 'php-mode-hook
                 (lambda ()
