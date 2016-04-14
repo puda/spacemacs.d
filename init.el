@@ -239,9 +239,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
   ;; delete the selection with a keypress
   (delete-selection-mode t)
   (global-auto-revert-mode t) ;; reload open files
-
-  ;; (setq default-directory "/var/www/community/" )
-  ;; (setq initial-scratch-message ";; Puda loves Rachael!! \n;; Puda Emacs Custom Config!!")
+  (setq default-directory "/var/www/community/" )
+  (setq initial-scratch-message ";; Puda loves Rachael!! \n;; Puda Emacs Custom Config!!")
 
   (defun puda-turn-off-mouse ()
     (defun turn-off-mouse (&optional frame)
