@@ -31,7 +31,7 @@ values."
              ranger-show-preview t)
      vim-empty-lines syntax-checking colors
      better-defaults emacs-lisp evil-snipe org ibuffer
-     puda-basic
+     puda-basic ;; my custom config
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -41,7 +41,6 @@ values."
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(
                                     drupal-mode
-                                    evil-search-highlight-persist
                                     )
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of

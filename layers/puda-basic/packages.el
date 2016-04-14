@@ -114,14 +114,12 @@
       (evil-leader/set-key
         "." 'ggtags-find-definition
         ">" 'ggtags-prev-mark
-        "oc" 'puda-drupal-gtags-create
-        )
+        "oc" 'puda-drupal-gtags-create)
       (add-hook 'php-mode-hook
                 (lambda ()
                   ;; this mode is giving errors when completing with arguments that have data type, making it slow
                   (show-smartparens-mode -1)
-                  ))
-      )))
+                  )))))
 
 (defun puda-basic/init-hydra ()
   (use-package hydra
