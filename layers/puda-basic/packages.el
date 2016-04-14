@@ -107,7 +107,7 @@
     (progn
       (defun puda-drupal-gtags-create ()
         (interactive)
-        (let ((inhibit-message t) (default-directory "/var/www/community"))
+        (let ((inhibit-message t) (default-directory "/var/www/community/"))
         (shell-command "gtags --gtagslabel drupal")))
 
       (evil-leader/set-key
@@ -116,7 +116,12 @@
         "oc" 'puda-drupal-gtags-create
         ;; "ou" ' ;; update tags, but with drupal label included
         )
-    )))
+      (add-hook 'php-mode-hook
+                (lambda ()
+                  ;; this mode is giving errors when completing with arguments that have data type, making it slow
+                  (show-smartparens-mode -1)
+                  ))
+      )))
 
 (defun puda-basic/init-hydra ()
   (use-package hydra
