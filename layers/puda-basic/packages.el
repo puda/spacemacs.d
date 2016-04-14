@@ -35,7 +35,6 @@
     dumb-jump
     vertigo
     key-chord
-    ;; ac-php
     php-mode
     hydra
     evil-mc
@@ -103,24 +102,6 @@
     :config
     (progn
       (add-hook 'with-editor-mode-hook 'evil-hybrid-state))))
-
-
-;; (defun puda-basic/init-ac-php ()
-;;   (use-package ac-php
-;;     :config
-;;     (progn
-;;       (evil-leader/set-key-for-mode 'php-mode "." 'ac-php-find-symbol-at-point)
-;;       (evil-leader/set-key-for-mode 'php-mode ">" 'ac-php-location-stack-back)
-;;       (evil-leader/set-key-for-mode 'php-mode "rt" 'ac-php-remake-tags)
-;;       (evil-leader/set-key-for-mode 'php-mode "ra" 'ac-php-remake-tags-all)
-;;       (add-hook 'php-mode-hook
-;;                 (lambda ()
-;;                   (require 'ac-php-company)
-;;                   (company-mode t)
-;;                   ;; (add-to-list 'company-backends '(company-dabbrev-code company-ac-php-backend company-dabbrev))
-;;                   ))
-;;       )))
-
 
 (defun puda-basic/pre-init-php-mode ()
   (use-package php-mode

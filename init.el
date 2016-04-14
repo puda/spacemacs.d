@@ -194,11 +194,11 @@ values."
    ;; Transparency can be toggled through `toggle-transparency'. (default 90)
    dotspacemacs-inactive-transparency 90
    ;; If non nil unicode symbols are displayed in the mode line. (default t)
-   dotspacemacs-mode-line-unicode-symbols nil
+   dotspacemacs-mode-line-unicode-symbols t
    ;; If non nil smooth scrolling (native-scrolling) is enabled. Smooth
    ;; scrolling overrides the default behavior of Emacs which recenters the
    ;; point when it reaches the top or bottom of the screen. (default t)
-   dotspacemacs-smooth-scrolling nil
+   dotspacemacs-smooth-scrolling t
    ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
    ;; derivatives. If set to `relative', also turns on relative line numbers.
    ;; (default nil)
@@ -239,10 +239,6 @@ before packages are loaded. If you are unsure, you should try in setting them in
   ;; delete the selection with a keypress
   (delete-selection-mode t)
   (global-auto-revert-mode t) ;; reload open files
-  ;; ;; nice scrolling
-  ;; (setq scroll-margin 0
-  ;;       scroll-conservatively 10000
-  ;;       scroll-preserve-screen-position 1)
 
   ;; (setq default-directory "/var/www/community/" )
   ;; (setq initial-scratch-message ";; Puda loves Rachael!! \n;; Puda Emacs Custom Config!!")
