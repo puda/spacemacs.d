@@ -32,7 +32,6 @@
 (defconst puda-basic-packages
   '(
     geben
-    ;; dumb-jump
     vertigo
     key-chord
     php-mode
@@ -50,16 +49,6 @@
   (use-package evil-mc
     :config
     (global-evil-mc-mode t)))
-
-;; (defun puda-basic/init-dumb-jump ()
-;;   (use-package dumb-jump
-;;     :diminish dumb-jump-mode
-;;     :config
-;;     (progn
-;;       (dumb-jump-mode t)
-;;       (evil-leader/set-key
-;;         "." 'dumb-jump-go
-;;         ">" 'dumb-jump-back))))
 
 (defun puda-basic/init-key-chord ()
   (use-package key-chord
