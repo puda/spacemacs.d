@@ -105,10 +105,15 @@
            )
     :config
     (progn
+      (defun puda-drupal-gtags-create ()
+        (interactive)
+        (let ((inhibit-message t) (default-directory "/var/www/community"))
+        (shell-command "gtags --gtagslabel drupal")))
+
       (evil-leader/set-key
-        "." 'helm-gtags-find-tag-from-here
-        "," 'helm-gtags-previous-history
-        "oc" '(lambda (shell-command "gtags --gtagslabel drupal"))
+        "." 'ggtags-find-definition
+        ">" 'ggtags-prev-mark
+        "oc" 'puda-drupal-gtags-create
         ;; "ou" ' ;; update tags, but with drupal label included
         )
     )))
