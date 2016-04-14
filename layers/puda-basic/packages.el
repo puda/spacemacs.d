@@ -111,15 +111,22 @@
         (let ((inhibit-message t) (default-directory "/var/www/community/"))
           (shell-command "gtags --gtagslabel drupal")))
 
-      (evil-leader/set-key
-        "." 'ggtags-find-definition
-        ">" 'ggtags-prev-mark
-        "oc" 'puda-drupal-gtags-create)
+      (evil-leader/set-key-for-mode 'php-mode "." 'ggtags-find-definition)
+      (evil-leader/set-key-for-mode 'php-mode ">" 'ggtags-prev-mark)
+      (evil-leader/set-key-for-mode 'php-mode "oc" 'puda-drupal-gtags-create)
+
       (add-hook 'php-mode-hook
                 (lambda ()
                   ;; this mode is giving errors when completing with arguments that have data type, making it slow
                   (show-smartparens-mode -1)
                   )))))
+
+(defun puda-basic/dumb-jump ()
+  (use-package dumb-jump
+    :ensure t
+    :defer t
+  )
+)
 
 (defun puda-basic/init-hydra ()
   (use-package hydra
