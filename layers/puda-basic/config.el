@@ -29,4 +29,4 @@
 
 (evil-leader/set-key
   "." 'dumb-jump-go
-  ">" 'dumb-jump-prev)
+  ">" 'dumb-jump-back)
