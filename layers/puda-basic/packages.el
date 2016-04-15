@@ -58,6 +58,7 @@
     (progn
       (setq key-chord-two-keys-delay 0.1)
       (key-chord-define minibuffer-local-map "jk" 'helm-like-unite/body)
+      ;; (key-chord-define evil-normal-state-map "jk" 'puda-scroll-inside-file/body)
 
       (defhydra helm-like-unite ()
         "movement"
@@ -75,6 +76,7 @@
         ("G" helm-end-of-buffer "bottom")
         ("j" helm-next-line "down")
         ("k" helm-previous-line "up"))
+
       )
     :config
     (key-chord-mode t)))
@@ -84,7 +86,12 @@
     :config
     (progn
       (key-chord-define evil-normal-state-map "fk" 'vertigo-jump-up)
-      (key-chord-define evil-normal-state-map "fj" 'vertigo-jump-down))))
+      (key-chord-define evil-normal-state-map "fj" 'vertigo-jump-down)
+      (key-chord-define evil-visual-state-map "fk" 'vertigo-jump-up)
+      (key-chord-define evil-visual-state-map "fj" 'vertigo-jump-down)
+      (key-chord-define evil-motion-state-map "fk" 'vertigo-jump-up)
+      (key-chord-define evil-motion-state-map "fj" 'vertigo-jump-down)
+      )))
 
 (defun puda-basic/post-init-evil-magit ()
   (use-package evil-magit
@@ -124,7 +131,7 @@
 (defun puda-basic/init-dumb-jump ()
   (use-package dumb-jump
     :ensure t
-  ))
+    ))
 
 (defun puda-basic/init-hydra ()
   (use-package hydra
