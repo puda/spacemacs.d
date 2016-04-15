@@ -121,12 +121,10 @@
                   (show-smartparens-mode -1)
                   )))))
 
-(defun puda-basic/dumb-jump ()
+(defun puda-basic/init-dumb-jump ()
   (use-package dumb-jump
     :ensure t
-    :defer t
-  )
-)
+  ))
 
 (defun puda-basic/init-hydra ()
   (use-package hydra
