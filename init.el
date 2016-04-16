@@ -156,7 +156,6 @@
        (setq global-hl-line-mode nil))
      comint-hooks))
   (evil-set-initial-state 'term-mode 'emacs)
-  (evil-set-initial-state 'with-editor-mode 'emacs)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
