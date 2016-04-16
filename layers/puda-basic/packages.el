@@ -37,9 +37,7 @@
     php-mode
     hydra
     evil-mc
-    evil-magit
     dumb-jump
-    diff-hl
     )
   )
 
@@ -94,13 +92,6 @@
       (key-chord-define evil-motion-state-map "fj" 'vertigo-jump-down)
       )))
 
-(defun puda-basic/post-init-evil-magit ()
-  (use-package evil-magit
-    ;; :defer t
-    :config
-    (progn
-      (add-hook 'with-editor-mode-hook 'evil-hybrid-state))))
-
 (defun puda-basic/pre-init-php-mode ()
   ;; use gtags layer and make sure the ~/.globalrc file is in place and generate tags using
   ;; gtags --gtagslabel drupal
@@ -129,16 +120,6 @@
   (use-package dumb-jump
     :ensure t
     ))
-
-(defun puda-basic/init-diff-hl ()
-  (use-package diff-hl
-    :ensure t
-    :config
-    (progn
-      (global-diff-hl-mode t)
-      )
-    )
-  )
 
 (defun puda-basic/init-hydra ()
   (use-package hydra

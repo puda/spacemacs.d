@@ -1,23 +1,47 @@
 (defun dotspacemacs/layers ()
   (setq-default
    dotspacemacs-distribution 'spacemacs
+   dotspacemacs-enable-lazy-installation nil
+   dotspacemacs-ask-for-lazy-installation nil
    dotspacemacs-configuration-layer-path '("~/.spacemacs.d/layers/")
+   dotspacemacs-delete-orphan-packages t
    dotspacemacs-configuration-layers
    '(
-     (auto-completion :variables
-                      auto-completion-enable-help-tooltip t)
+     (auto-completion
+      :variables
+      auto-completion-return-key-behavior nil
+      auto-completion-tab-key-behavior 'cycle
+      :disabled-for org)
      (git :variables
           git-magit-status-fullscreen t)
-     php html gtags
+     evil-snipe
+     php
+     html
+     gtags
+     ;; learn languages
+     react
+     ruby
+     python
+     shell-scripts
+     ;; end
+     command-log
      (javascript :variables
                  javascript-disable-tern-port-files t)
      (shell :variables
+            shell-default-shell 'ansi-term
             shell-default-position 'right)
      (ranger :variables
              ranger-show-preview t)
-     vim-empty-lines syntax-checking colors
+     vim-empty-lines
+     (spell-checking :variables spell-checking-enable-by-default nil)
+     (syntax-checking :variables syntax-checking-enable-by-default nil)
+     (version-control :variables version-control-diff-tool 'diff-hl)
+     colors
      unimpaired ;;maybe
-     better-defaults emacs-lisp evil-snipe org ibuffer
+     better-defaults
+     emacs-lisp
+     org
+     ibuffer
      (theming :variables
               theming-headings-inherit-from-default 'all
               theming-headings-same-size 'all
@@ -29,7 +53,7 @@
    dotspacemacs-excluded-packages '(
                                     drupal-mode
                                     )
-   dotspacemacs-delete-orphan-packages t))
+   ))
 
 (defun dotspacemacs/init ()
   (setq-default
@@ -48,11 +72,10 @@
                          spacemacs-dark
                          )
    dotspacemacs-colorize-cursor-according-to-state t
-   dotspacemacs-default-font '("Source Code Pro for Powerline"
-                               :size 35
-                               :weight normal
-                               :width normal
-                               :powerline-scale 1.1)
+   dotspacemacs-default-font '
+   ("Source Code Pro for Powerline"
+    :size 35
+    :weight demibold :width normal :powerline-scale 1.15)
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-leader-key "M-m"
    dotspacemacs-major-mode-leader-key ","
@@ -70,10 +93,10 @@
    dotspacemacs-helm-no-header nil
    dotspacemacs-helm-position 'bottom
    dotspacemacs-enable-paste-micro-state nil
-   dotspacemacs-which-key-delay 0.5
+   dotspacemacs-which-key-delay 1
    dotspacemacs-which-key-position 'bottom
-   dotspacemacs-loading-progress-bar nil
-   dotspacemacs-fullscreen-at-startup t
+   dotspacemacs-loading-progress-bar t
+   dotspacemacs-fullscreen-at-startup nil
    dotspacemacs-fullscreen-use-non-native nil
    dotspacemacs-maximized-at-startup nil
    dotspacemacs-active-transparency 90
@@ -83,33 +106,44 @@
    dotspacemacs-line-numbers 'relative
    dotspacemacs-smartparens-strict-mode nil
    dotspacemacs-highlight-delimiters 'all
-   dotspacemacs-persistent-server t
+   dotspacemacs-persistent-server nil
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
    dotspacemacs-default-package-repository nil
-   dotspacemacs-whitespace-cleanup nil
+   dotspacemacs-whitespace-cleanup 'changed
    ))
 
 (defun dotspacemacs/user-init ()
-  ;;variables
+  ;; Variables
   (setq
+   ;; Evil
    evil-shift-round nil
-   ;; smartparens
+   ;; Smartparens
    sp-highlight-pair-overlay nil
    sp-highlight-wrap-overlay nil
    sp-highlight-wrap-tag-overlay nil
-   ;; random
+   ;; Avy
+   avy-all-windows 'all-frames
+   ;; Ranger
+   ranger-override-dired t
+   ;; Spaceline
+   spaceline-buffer-encoding-abbrev-p nil
+   spaceline-version-control-p nil
+   ;; Shell
+   shell-default-term-shell "/bin/zsh"
+   ;; General
+   ring-bell-function 'ignore
    default-directory "/var/www/community/"
    initial-scratch-message ";; Puda loves Rachael!! \n;; Puda Emacs Custom Config!!"
    )
 
-  ;;modes
+  ;; Modes
   (delete-selection-mode t)
   (global-auto-revert-mode t) ;; reload open files
 
   )
 
 (defun dotspacemacs/user-config ()
-  (setq powerline-default-separator 'alternate)
+  (setq powerline-default-separator 'arrow)
   (with-eval-after-load 'smartparens
     (show-smartparens-global-mode -1))
   (let ((comint-hooks '(
@@ -121,6 +155,7 @@
      (defun puda-disable-hl-for-term ()
        (setq global-hl-line-mode nil))
      comint-hooks))
+  (evil-set-initial-state 'term-mode 'emacs)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
