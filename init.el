@@ -11,7 +11,9 @@
           git-magit-status-fullscreen t)
      (auto-completion :variables
                       auto-completion-return-key-behavior 'complete
-                      auto-completion-tab-key-behavior 'cycle)
+                      auto-completion-tab-key-behavior 'cycle
+                      auto-completion-enable-help-tooltip nil
+                      )
      evil-snipe
      php
      html
@@ -99,7 +101,7 @@
    dotspacemacs-loading-progress-bar t
    dotspacemacs-fullscreen-at-startup nil
    dotspacemacs-fullscreen-use-non-native nil
-   dotspacemacs-maximized-at-startup nil
+   dotspacemacs-maximized-at-startup t
    dotspacemacs-active-transparency 90
    dotspacemacs-inactive-transparency 90
    dotspacemacs-mode-line-unicode-symbols nil
@@ -145,7 +147,9 @@
 
 (defun dotspacemacs/user-config ()
   ;; Variable
-  (setq powerline-default-separator 'arrow)
+  (setq
+   powerline-default-separator 'arrow
+   )
   ;; Modes
   (global-evil-mc-mode t)
   ;; hooks
