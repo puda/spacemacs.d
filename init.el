@@ -7,13 +7,11 @@
    dotspacemacs-delete-orphan-packages t
    dotspacemacs-configuration-layers
    '(
-     (auto-completion
-      :variables
-      auto-completion-return-key-behavior nil
-      auto-completion-tab-key-behavior 'cycle
-      )
      (git :variables
           git-magit-status-fullscreen t)
+     (auto-completion :variables
+                      auto-completion-return-key-behavior 'complete
+                      auto-completion-tab-key-behavior 'cycle)
      evil-snipe
      php
      html
