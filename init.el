@@ -109,7 +109,7 @@
 
 (defun dotspacemacs/user-config ()
   (with-eval-after-load 'smartparens
-    (show-smartparens-mode -1))
+    (show-smartparens-global-mode -1))
   (let ((comint-hooks '(
                         term-mode-hook
                         eshell-mode-hook
