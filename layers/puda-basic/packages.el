@@ -36,7 +36,6 @@
     key-chord
     php-mode
     hydra
-    evil-mc
     dumb-jump
     )
   )
@@ -44,11 +43,6 @@
 (defun puda-basic/init-geben ()
   (use-package geben
     :defer t))
-
-(defun puda-basic/init-evil-mc ()
-  (use-package evil-mc
-    :config
-    (global-evil-mc-mode t)))
 
 (defun puda-basic/init-key-chord ()
   (use-package key-chord

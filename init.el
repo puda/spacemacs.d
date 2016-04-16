@@ -11,7 +11,7 @@
       :variables
       auto-completion-return-key-behavior nil
       auto-completion-tab-key-behavior 'cycle
-      :disabled-for org)
+      )
      (git :variables
           git-magit-status-fullscreen t)
      evil-snipe
@@ -145,7 +145,11 @@
   )
 
 (defun dotspacemacs/user-config ()
-  (setq powerline-default-separator 'alternate)
+  ;; Variable
+  (setq powerline-default-separator 'wave)
+  ;; Modes
+  (global-evil-mc-mode t)
+  ;; hooks
   (with-eval-after-load 'smartparens
     (show-smartparens-global-mode -1))
   (let ((comint-hooks '(
@@ -157,7 +161,6 @@
      (defun puda-disable-hl-for-term ()
        (setq global-hl-line-mode nil))
      comint-hooks))
-  (evil-set-initial-state 'term-mode 'emacs)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
