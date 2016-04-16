@@ -122,11 +122,7 @@
       (evil-leader/set-key-for-mode 'php-mode ">" 'ggtags-prev-mark)
       (evil-leader/set-key-for-mode 'php-mode "oc" 'puda-drupal-gtags-create)
 
-      (add-hook 'php-mode-hook
-                (lambda ()
-                  ;; this mode is giving errors when completing with arguments that have data type, making it slow
-                  (show-smartparens-mode -1)
-                  )))))
+      )))
 
 (defun puda-basic/init-dumb-jump ()
   (use-package dumb-jump

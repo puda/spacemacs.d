@@ -89,10 +89,14 @@
    ))
 
 (defun dotspacemacs/user-init ()
-
   ;;variables
   (setq
    evil-shift-round nil
+   ;; smartparens
+   sp-highlight-pair-overlay nil
+   sp-highlight-wrap-overlay nil
+   sp-highlight-wrap-tag-overlay nil
+   ;; random
    default-directory "/var/www/community/"
    initial-scratch-message ";; Puda loves Rachael!! \n;; Puda Emacs Custom Config!!"
    )
@@ -104,7 +108,17 @@
   )
 
 (defun dotspacemacs/user-config ()
-
+  (with-eval-after-load 'smartparens
+    (show-smartparens-mode -1))
+  (let ((comint-hooks '(
+                        term-mode-hook
+                        eshell-mode-hook
+                        messages-buffer-mode-hook
+                        )))
+    (spacemacs/add-to-hooks
+     (defun puda-disable-hl-for-term ()
+       (setq global-hl-line-mode nil))
+     comint-hooks))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
