@@ -39,6 +39,7 @@
     evil-mc
     evil-magit
     dumb-jump
+    diff-hl
     )
   )
 
@@ -128,6 +129,16 @@
   (use-package dumb-jump
     :ensure t
     ))
+
+(defun puda-basic/init-diff-hl ()
+  (use-package diff-hl
+    :ensure t
+    :config
+    (progn
+      (global-diff-hl-mode t)
+      )
+    )
+  )
 
 (defun puda-basic/init-hydra ()
   (use-package hydra

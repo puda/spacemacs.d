@@ -16,7 +16,7 @@
      (ranger :variables
              ranger-show-preview t)
      vim-empty-lines syntax-checking colors
-     ;; unimpaired ;;maybe
+     unimpaired ;;maybe
      better-defaults emacs-lisp evil-snipe org ibuffer
      (theming :variables
               theming-headings-inherit-from-default 'all
