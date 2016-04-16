@@ -17,7 +17,12 @@
              ranger-show-preview t)
      vim-empty-lines syntax-checking colors
      better-defaults emacs-lisp evil-snipe org ibuffer
-     puda-basic ;; my custom config
+     (theming :variables
+              theming-headings-inherit-from-default 'all
+              theming-headings-same-size 'all
+              theming-headings-bold 'all)
+     ;; custom config
+     puda-basic
      )
    dotspacemacs-additional-packages '()
    dotspacemacs-excluded-packages '(
@@ -38,8 +43,8 @@
    dotspacemacs-scratch-mode 'text-mode
    dotspacemacs-themes '(
                          monokai
-                         spacemacs-dark
                          material
+                         spacemacs-dark
                          )
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Source Code Pro for Powerline"
@@ -84,6 +89,17 @@
    ))
 
 (defun dotspacemacs/user-init ()
+
+  ;;variables
+  (setq
+   evil-shift-round nil
+   default-directory "/var/www/community/"
+   initial-scratch-message ";; Puda loves Rachael!! \n;; Puda Emacs Custom Config!!"
+   )
+
+  ;;modes
+  (delete-selection-mode t)
+  (global-auto-revert-mode t) ;; reload open files
 
   )
 
