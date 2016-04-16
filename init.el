@@ -59,7 +59,7 @@
    dotspacemacs-elpa-https t
    dotspacemacs-elpa-timeout 5
    dotspacemacs-check-for-update t
-   dotspacemacs-editing-style 'hybrid
+   dotspacemacs-editing-style 'vim
    dotspacemacs-verbose-loading nil
    dotspacemacs-startup-banner nil
    dotspacemacs-startup-lists '(recents projects)
@@ -140,13 +140,12 @@
   ;; Modes
   (delete-selection-mode t)
   (global-auto-revert-mode t) ;; reload open files
-
   )
 
 (defun dotspacemacs/user-config ()
   ;; Variable
   (setq
-   powerline-default-separator 'alternate
+   powerline-default-separator 'arrow
    )
   ;; Modes
   (global-evil-mc-mode t)
@@ -162,6 +161,8 @@
      (defun puda-disable-hl-for-term ()
        (setq global-hl-line-mode nil))
      comint-hooks))
+  (evil-set-initial-state 'term-mode 'emacs)
+  (define-key evil-emacs-state-map (kbd "C-y") 'term-paste)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
