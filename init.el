@@ -108,6 +108,7 @@
   )
 
 (defun dotspacemacs/user-config ()
+  (setq powerline-default-separator 'alternate)
   (with-eval-after-load 'smartparens
     (show-smartparens-global-mode -1))
   (let ((comint-hooks '(
