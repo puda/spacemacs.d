@@ -46,6 +46,7 @@
               theming-headings-bold 'all)
      ;; custom config
      puda-basic
+     puda-theming
      )
    dotspacemacs-additional-packages '()
    dotspacemacs-excluded-packages '(
@@ -144,7 +145,7 @@
 
 (defun dotspacemacs/user-config ()
   ;; Variable
-  (setq powerline-default-separator 'wave)
+  (setq powerline-default-separator 'arrow)
   ;; Modes
   (global-evil-mc-mode t)
   ;; hooks
