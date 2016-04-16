@@ -146,7 +146,7 @@
 (defun dotspacemacs/user-config ()
   ;; Variable
   (setq
-   powerline-default-separator 'arrow
+   powerline-default-separator 'alternate
    )
   ;; Modes
   (global-evil-mc-mode t)
