@@ -20,4 +20,6 @@
 
 (evil-leader/set-key
   "." 'dumb-jump-go
-  ">" 'dumb-jump-back)
+  ">" 'dumb-jump-back
+  "bk" 'kill-this-buffer
+  )

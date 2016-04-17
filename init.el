@@ -12,7 +12,9 @@
                       auto-completion-tab-key-behavior 'cycle
                       auto-completion-enable-help-tooltip nil
                       )
-     evil-snipe
+     (evil-snipe :variables
+                 evil-snipe-enable-alternate-f-and-t-behaviors t
+                 )
      php
      html
      gtags
@@ -48,6 +50,7 @@
               theming-headings-same-size 'all
               theming-headings-bold 'all)
      )
+
    dotspacemacs-additional-packages '()
    dotspacemacs-excluded-packages '(
                                     drupal-mode
@@ -59,7 +62,7 @@
    dotspacemacs-elpa-https t
    dotspacemacs-elpa-timeout 5
    dotspacemacs-check-for-update t
-   dotspacemacs-editing-style 'vim
+   dotspacemacs-editing-style 'vim ;;hybrid mode makes it laggy?
    dotspacemacs-verbose-loading nil
    dotspacemacs-startup-banner nil
    dotspacemacs-startup-lists '(recents projects)
@@ -97,7 +100,7 @@
    dotspacemacs-which-key-delay 1
    dotspacemacs-which-key-position 'bottom
    dotspacemacs-loading-progress-bar t
-   dotspacemacs-fullscreen-at-startup nil
+   dotspacemacs-fullscreen-at-startup t
    dotspacemacs-fullscreen-use-non-native nil
    dotspacemacs-maximized-at-startup t
    dotspacemacs-active-transparency 90
@@ -167,3 +170,74 @@
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(paradox-github-token t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(company-tooltip-annotation ((t (:foreground "#ff9eb8"))))
+ '(company-tooltip-annotation-selection ((t (:background "#66d9ef"))))
+ '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil))))
+ '(erc-timestamp-face ((t (:inherit font-lock-comment-face :foreground nil))))
+ '(evil-search-highlight-persist-highlight-face ((t (:background "#fc5fef" :foreground "#000000"))))
+ '(flycheck-fringe-error ((t (:background nil))))
+ '(flycheck-fringe-info ((t (:background nil))))
+ '(flycheck-fringe-warning ((t (:background nil))))
+ '(font-latex-sectioning-0-face ((t (:inherit default :height 1.0 :weight bold))))
+ '(font-latex-sectioning-1-face ((t (:inherit default :height 1.0 :weight bold))))
+ '(font-latex-sectioning-2-face ((t (:inherit default :height 1.0 :weight bold))))
+ '(font-latex-sectioning-3-face ((t (:inherit default :height 1.0 :weight bold))))
+ '(font-latex-sectioning-4-face ((t (:inherit default :height 1.0 :weight bold))))
+ '(font-latex-sectioning-5-face ((t (:inherit default :height 1.0 :weight bold))))
+ '(font-latex-slide-title-face ((t (:inherit default :height 1.0 :weight bold))))
+ '(font-lock-builtin-face ((t (:foreground "#ff9eb8"))))
+ '(font-lock-comment-face ((t (:slant italic))))
+ '(font-lock-doc-face ((t (:slant italic))))
+ '(font-lock-keyword-face ((t (:weight bold))))
+ '(font-lock-string-face ((t (:slant italic))))
+ '(font-lock-warning-face ((t (:underline nil))))
+ '(header-line ((t (:box (:color "#555555" :line-width 1)))))
+ '(helm-ff-prefix ((t (:background nil :foreground "#666666" :weight bold))))
+ '(helm-prefarg ((t (:foreground "PaleGreen"))))
+ '(info-title-1 ((t (:inherit default :height 1.0 :weight bold))))
+ '(info-title-2 ((t (:inherit default :height 1.0 :weight bold))))
+ '(info-title-3 ((t (:inherit default :height 1.0 :weight bold))))
+ '(info-title-4 ((t (:inherit default :height 1.0 :weight bold))))
+ '(markdown-header-face ((t (:inherit default :height 1.0 :weight bold))))
+ '(markdown-header-face-1 ((t (:inherit default :height 1.0 :weight bold))))
+ '(markdown-header-face-2 ((t (:inherit default :height 1.0 :weight bold))))
+ '(markdown-header-face-3 ((t (:inherit default :height 1.0 :weight bold))))
+ '(markdown-header-face-4 ((t (:inherit default :height 1.0 :weight bold))))
+ '(markdown-header-face-5 ((t (:inherit default :height 1.0 :weight bold))))
+ '(markdown-header-face-6 ((t (:inherit default :height 1.0 :weight bold))))
+ '(mode-line ((t (:box (:color "#999999" :line-width 1 :style released-button)))))
+ '(mode-line-inactive ((t (:box (:color "#666666" :line-width 1 :style released-button)))))
+ '(org-document-title ((t (:inherit default :height 1.0 :weight bold))))
+ '(org-done ((t (:foreground "MediumSpringGreen"))))
+ '(org-level-1 ((t (:inherit default :height 1.0 :weight bold))))
+ '(org-level-2 ((t (:inherit default :height 1.0 :weight bold))))
+ '(org-level-3 ((t (:inherit default :height 1.0 :weight bold))))
+ '(org-level-4 ((t (:inherit default :height 1.0 :weight bold))))
+ '(org-level-5 ((t (:inherit default :height 1.0 :weight bold))))
+ '(org-level-6 ((t (:inherit default :height 1.0 :weight bold))))
+ '(org-level-7 ((t (:inherit default :height 1.0 :weight bold))))
+ '(org-level-8 ((t (:inherit default :height 1.0 :weight bold))))
+ '(powerline-active1 ((t (:box (:color "#999999" :line-width 1 :style released-button) :background "#5a5a5a"))))
+ '(powerline-active2 ((t (:box (:color "#999999" :line-width 1 :style released-button)))))
+ '(powerline-inactive1 ((t (:box (:color "#666666" :line-width 1 :style released-button)))))
+ '(powerline-inactive2 ((t (:box (:color "#666666" :line-width 1 :style released-button)))))
+ '(region ((t (:background "#998f84"))))
+ '(spacemacs-transient-state-title-face ((t (:background nil :foreground nil :inherit font-lock-warning-face))))
+ '(term ((t (:foreground nil :background nil))))
+ '(web-mode-comment-face ((t (:inherit font-lock-comment-face :foreground nil))))
+ '(web-mode-html-attr-name-face ((t (:inherit font-lock-variable-name-face :foreground nil))))
+ '(web-mode-html-attr-value-face ((t (:inherit font-lock-string-face :foreground nil))))
+ '(web-mode-html-tag-bracket-face ((t (:inherit web-mode-html-tag-face :foreground nil))))
+ '(web-mode-html-tag-face ((t (:inherit font-lock-builtin-face :foreground nil :weight bold)))))
