@@ -61,12 +61,9 @@
    dotspacemacs-startup-lists '(recents bookmarks projects)
    dotspacemacs-startup-recent-list-size 5
    dotspacemacs-scratch-mode 'text-mode
-   dotspacemacs-themes
-   '(monokai material spacemacs-dark)
+   dotspacemacs-themes '(monokai material spacemacs-dark)
    dotspacemacs-colorize-cursor-according-to-state t
-   dotspacemacs-default-font
-   '("Source Code Pro for Powerline"
-    :size 35 :weight demibold :width normal :powerline-scale 1.15)
+   dotspacemacs-default-font '("Source Code Pro for Powerline" :size 35 :weight demibold :width normal :powerline-scale 1.15)
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-leader-key "M-m"
    dotspacemacs-major-mode-leader-key ","
@@ -86,7 +83,7 @@
    dotspacemacs-enable-paste-transient-state t
    dotspacemacs-which-key-delay 1.0
    dotspacemacs-loading-progress-bar t
-   dotspacemacs-fullscreen-at-startup t
+   dotspacemacs-fullscreen-at-startup nil
    dotspacemacs-fullscreen-use-non-native nil
    dotspacemacs-maximized-at-startup nil
    dotspacemacs-active-transparency 90
