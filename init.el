@@ -4,8 +4,7 @@
    dotspacemacs-configuration-layer-path '("~/.spacemacs.d/layers/")
    dotspacemacs-delete-orphan-packages t
    dotspacemacs-configuration-layers
-   '(
-     (git :variables
+   '((git :variables
           git-magit-status-fullscreen t)
      (auto-completion :variables
                       auto-completion-return-key-behavior 'complete
@@ -54,57 +53,53 @@
    dotspacemacs-additional-packages '()
    dotspacemacs-excluded-packages '(
                                     drupal-mode
+                                    vi-tilde-fringe
                                     )
    ))
 
 (defun dotspacemacs/init ()
   (setq-default
    dotspacemacs-elpa-https t
-   dotspacemacs-elpa-timeout 5
+   dotspacemacs-elpa-timeout 10
    dotspacemacs-check-for-update t
-   dotspacemacs-editing-style 'vim ;;hybrid mode makes it slow?
+   dotspacemacs-editing-style 'vim
    dotspacemacs-verbose-loading nil
    dotspacemacs-startup-banner nil
-   dotspacemacs-startup-lists '(recents projects)
+   dotspacemacs-startup-lists '(recents bookmarks projects)
    dotspacemacs-startup-recent-list-size 5
    dotspacemacs-scratch-mode 'text-mode
-   dotspacemacs-themes '(
-                         monokai
-                         material
-                         spacemacs-dark
-                         )
+   dotspacemacs-themes
+   '(monokai material spacemacs-dark)
    dotspacemacs-colorize-cursor-according-to-state t
-   dotspacemacs-default-font '
-   ("Source Code Pro for Powerline"
-    :size 35
-    :weight demibold
-    :width normal
-    :powerline-scale 1.15)
+   dotspacemacs-default-font
+   '("Source Code Pro for Powerline"
+    :size 35 :weight demibold :width normal :powerline-scale 1.15)
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-leader-key "M-m"
    dotspacemacs-major-mode-leader-key ","
    dotspacemacs-major-mode-emacs-leader-key "C-M-m"
    dotspacemacs-distinguish-gui-tab nil
-   dotspacemacs-command-key ":"
+   dotspacemacs-command-key "SPC"
    dotspacemacs-remap-Y-to-y$ t
-   dotspacemacs-default-layout-name "Default"
+   dotspacemacs-default-layout-name "Home"
    dotspacemacs-display-default-layout nil
    dotspacemacs-auto-resume-layouts nil
    dotspacemacs-auto-save-file-location nil
    dotspacemacs-max-rollback-slots 5
    dotspacemacs-use-ido nil
    dotspacemacs-helm-resize t
-   dotspacemacs-helm-no-header nil
+   dotspacemacs-helm-no-header t
    dotspacemacs-helm-position 'bottom
-   dotspacemacs-enable-paste-micro-state nil
-   dotspacemacs-which-key-delay 1
-   dotspacemacs-which-key-position 'bottom
+   dotspacemacs-enable-paste-transient-state t
+   dotspacemacs-which-key-delay 1.0
    dotspacemacs-loading-progress-bar t
    dotspacemacs-fullscreen-at-startup t
    dotspacemacs-fullscreen-use-non-native nil
-   dotspacemacs-maximized-at-startup t
+   dotspacemacs-maximized-at-startup nil
    dotspacemacs-active-transparency 90
    dotspacemacs-inactive-transparency 90
+   dotspacemacs-show-transient-state-title t
+   dotspacemacs-show-transient-state-color-guide nil
    dotspacemacs-mode-line-unicode-symbols nil
    dotspacemacs-smooth-scrolling t
    dotspacemacs-line-numbers 'relative
@@ -118,7 +113,7 @@
 
 (defun dotspacemacs/user-init ()
   ;; Variables
-  (setq
+  (setq-default
    ;; Evil
    evil-shift-round nil
    ;; Smartparens
@@ -151,8 +146,12 @@
    powerline-default-separator 'arrow
    )
   ;; Modes
+  evil-move-beyond-eol nil
+  helm-echo-input-in-header-line nil
   (global-evil-mc-mode t)
   ;; hooks
+  (add-hook 'evil-mc-after-cursors-deleted
+            (defun puda/clear-anzu () (setq anzu--state nil)))
   (with-eval-after-load 'smartparens
     (show-smartparens-global-mode -1))
   (let ((comint-hooks '(
@@ -165,6 +164,7 @@
        (setq global-hl-line-mode nil))
      comint-hooks))
   (evil-set-initial-state 'term-mode 'emacs)
+  (push 'term-mode evil-escape-excluded-major-modes)
   (define-key evil-emacs-state-map (kbd "C-y") 'term-paste)
 
   ;; leader keybindings
