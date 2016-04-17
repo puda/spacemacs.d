@@ -62,7 +62,7 @@
    dotspacemacs-elpa-https t
    dotspacemacs-elpa-timeout 5
    dotspacemacs-check-for-update t
-   dotspacemacs-editing-style 'vim ;;hybrid mode makes it laggy?
+   dotspacemacs-editing-style 'vim ;;hybrid mode makes it slow?
    dotspacemacs-verbose-loading nil
    dotspacemacs-startup-banner nil
    dotspacemacs-startup-lists '(recents projects)
