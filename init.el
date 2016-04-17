@@ -34,7 +34,6 @@
      (syntax-checking :variables syntax-checking-enable-by-default t)
      (version-control :variables version-control-diff-tool 'diff-hl)
      colors
-     unimpaired ;;maybe
      better-defaults
      emacs-lisp
      org
