@@ -11,9 +11,7 @@
                       auto-completion-tab-key-behavior 'cycle
                       auto-completion-enable-help-tooltip nil
                       )
-     (evil-snipe :variables
-                 evil-snipe-enable-alternate-f-and-t-behaviors t
-                 )
+     evil-snipe
      php
      html
      gtags
