@@ -34,7 +34,7 @@
              ranger-show-preview t)
      vim-empty-lines
      (spell-checking :variables spell-checking-enable-by-default nil)
-     (syntax-checking :variables syntax-checking-enable-by-default nil)
+     (syntax-checking :variables syntax-checking-enable-by-default t)
      (version-control :variables version-control-diff-tool 'diff-hl)
      colors
      unimpaired ;;maybe
@@ -93,7 +93,7 @@
    dotspacemacs-auto-save-file-location nil
    dotspacemacs-max-rollback-slots 5
    dotspacemacs-use-ido nil
-   dotspacemacs-helm-resize nil
+   dotspacemacs-helm-resize t
    dotspacemacs-helm-no-header nil
    dotspacemacs-helm-position 'bottom
    dotspacemacs-enable-paste-micro-state nil
@@ -166,6 +166,13 @@
      comint-hooks))
   (evil-set-initial-state 'term-mode 'emacs)
   (define-key evil-emacs-state-map (kbd "C-y") 'term-paste)
+
+  ;; leader keybindings
+  (evil-leader/set-key
+    "." 'dumb-jump-go
+    ">" 'dumb-jump-back
+    "bk" 'kill-this-buffer
+    )
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

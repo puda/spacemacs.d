@@ -17,9 +17,3 @@
   (add-hook 'delete-frame-functions #'turn-on-mouse))
 
 (puda-turn-off-mouse)
-
-(evil-leader/set-key
-  "." 'dumb-jump-go
-  ">" 'dumb-jump-back
-  "bk" 'kill-this-buffer
-  )

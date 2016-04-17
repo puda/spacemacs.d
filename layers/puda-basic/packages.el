@@ -4,7 +4,6 @@
     vertigo
     key-chord
     php-mode
-    hydra
     dumb-jump
     )
   )
@@ -82,11 +81,6 @@
 (defun puda-basic/init-dumb-jump ()
   (use-package dumb-jump
     :ensure t
-    ))
-
-(defun puda-basic/init-hydra ()
-  (use-package hydra
-    :defer t
     ))
 
 ;;; packages.el ends here
