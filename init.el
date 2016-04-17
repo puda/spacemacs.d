@@ -98,7 +98,7 @@
    dotspacemacs-line-numbers 'relative
    dotspacemacs-smartparens-strict-mode nil
    dotspacemacs-highlight-delimiters 'all
-   dotspacemacs-persistent-server nil
+   dotspacemacs-persistent-server t
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
    dotspacemacs-default-package-repository nil
    dotspacemacs-whitespace-cleanup 'changed
@@ -136,7 +136,7 @@
 (defun dotspacemacs/user-config ()
   ;; Variable
   (setq
-   powerline-default-separator 'arrow
+   powerline-default-separator 'wave
    )
   ;; Modes
   evil-move-beyond-eol nil
