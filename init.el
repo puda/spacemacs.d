@@ -9,8 +9,7 @@
      (auto-completion :variables
                       auto-completion-return-key-behavior 'complete
                       auto-completion-tab-key-behavior 'cycle
-                      auto-completion-enable-help-tooltip nil
-                      )
+                      auto-completion-enable-help-tooltip nil)
      evil-snipe
      php
      html
@@ -48,10 +47,7 @@
      )
 
    dotspacemacs-additional-packages '()
-   dotspacemacs-excluded-packages '(
-                                    drupal-mode
-                                    vi-tilde-fringe
-                                    )
+   dotspacemacs-excluded-packages '(drupal-mode vi-tilde-fringe)
    ))
 
 (defun dotspacemacs/init ()
@@ -84,7 +80,7 @@
    dotspacemacs-auto-save-file-location nil
    dotspacemacs-max-rollback-slots 5
    dotspacemacs-use-ido nil
-   dotspacemacs-helm-resize t
+   dotspacemacs-helm-resize nil
    dotspacemacs-helm-no-header t
    dotspacemacs-helm-position 'bottom
    dotspacemacs-enable-paste-transient-state t
