@@ -47,7 +47,7 @@
      )
 
    dotspacemacs-additional-packages '()
-   dotspacemacs-excluded-packages '(drupal-mode vi-tilde-fringe)
+   dotspacemacs-excluded-packages '(drupal-mode vi-tilde-fringe evil-search-highlight-persist)
    ))
 
 (defun dotspacemacs/init ()
@@ -80,10 +80,10 @@
    dotspacemacs-helm-resize nil
    dotspacemacs-helm-no-header t
    dotspacemacs-helm-position 'bottom
-   dotspacemacs-enable-paste-transient-state t
+   dotspacemacs-enable-paste-transient-state nil
    dotspacemacs-which-key-delay 1.0
    dotspacemacs-loading-progress-bar t
-   dotspacemacs-fullscreen-at-startup nil
+   dotspacemacs-fullscreen-at-startup t
    dotspacemacs-fullscreen-use-non-native nil
    dotspacemacs-maximized-at-startup nil
    dotspacemacs-active-transparency 90
@@ -134,10 +134,10 @@
   ;; Variable
   (setq
    powerline-default-separator 'wave
+   evil-move-beyond-eol nil
+   helm-echo-input-in-header-line nil
    )
   ;; Modes
-  evil-move-beyond-eol nil
-  helm-echo-input-in-header-line nil
   (global-evil-mc-mode t)
   ;; hooks
   (add-hook 'evil-mc-after-cursors-deleted
