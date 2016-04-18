@@ -14,12 +14,11 @@
      php
      html
      gtags
-     ;; learn languages
-     react
-     ruby
-     python
-     shell-scripts
-     ;; end
+     ;; ;learn languages
+     ;; react
+     ;; ruby
+     ;; python
+     ;; shell-scripts
      command-log
      (javascript :variables
                  javascript-disable-tern-port-files t)
@@ -37,6 +36,7 @@
      emacs-lisp
      org
      ibuffer
+     unimpaired
      ;; custom config
      puda-basic
      puda-theming
