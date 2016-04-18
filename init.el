@@ -133,7 +133,7 @@
 (defun dotspacemacs/user-config ()
   ;; Variable
   (setq
-   powerline-default-separator 'wave
+   powerline-default-separator 'arrow
    evil-move-beyond-eol nil
    helm-echo-input-in-header-line nil
    )
