@@ -10,7 +10,8 @@
                       auto-completion-return-key-behavior 'complete
                       auto-completion-tab-key-behavior 'cycle
                       auto-completion-enable-help-tooltip nil)
-     evil-snipe
+     (evil-snipe :variables
+                 evil-snipe-enable-alternate-f-and-t-behaviors 't)
      php
      html
      gtags
@@ -134,8 +135,13 @@
   ;; Variable
   (setq
    powerline-default-separator 'arrow
-   evil-move-beyond-eol nil
    helm-echo-input-in-header-line nil
+   ;; Evil
+   evil-move-beyond-eol nil
+   ;; Snipe
+   evil-snipe-scope 'visible
+   evil-snipe-repeat-scope 'visible
+   evil-snipe-spillover-scope 'visible
    )
   ;; Modes
   (global-evil-mc-mode t)
