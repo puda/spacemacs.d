@@ -15,12 +15,6 @@
      php
      html
      gtags
-     ;; ;learn languages
-     ;; react
-     ;; ruby
-     ;; python
-     ;; shell-scripts
-     command-log
      (javascript :variables
                  javascript-disable-tern-port-files t)
      (shell :variables
@@ -30,7 +24,7 @@
              ranger-show-preview t)
      vim-empty-lines
      (spell-checking :variables spell-checking-enable-by-default nil)
-     (syntax-checking :variables syntax-checking-enable-by-default t)
+     (syntax-checking :variables syntax-checking-enable-by-default 't)
      (version-control :variables version-control-diff-tool 'diff-hl)
      colors
      better-defaults
