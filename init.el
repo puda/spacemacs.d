@@ -26,7 +26,6 @@
      (spell-checking :variables spell-checking-enable-by-default nil)
      (syntax-checking :variables syntax-checking-enable-by-default 't)
      (version-control :variables version-control-diff-tool 'diff-hl)
-     semantic
      colors
      better-defaults
      emacs-lisp
@@ -36,6 +35,7 @@
      ;; custom config
      puda-basic
      puda-theming
+     ;; others
      (theming :variables
               theming-headings-inherit-from-default 'all
               theming-headings-same-size 'all
