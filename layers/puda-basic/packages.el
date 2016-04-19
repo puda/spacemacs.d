@@ -57,9 +57,7 @@
 (defun puda-basic/pre-init-php-mode ()
   ;; use gtags layer and make sure the ~/.globalrc file is in place and generate tags using
   ;; gtags --gtagslabel drupal
-  ;; make sure the keybindings work out of the box for spacemacs
   (use-package php-mode
-    ;; :defer t
     :mode (
            ("\\.module\\'" . php-mode)
            ("\\.views\\.inc\\'" . php-mode)
