@@ -62,7 +62,7 @@
    dotspacemacs-default-font '("Source Code Pro for Powerline" :size 35 :weight demibold :width normal :powerline-scale 1.15)
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-leader-key "M-m"
-   dotspacemacs-major-mode-leader-key "\\"
+   dotspacemacs-major-mode-leader-key "<return>"
    dotspacemacs-major-mode-emacs-leader-key "C-M-m"
    dotspacemacs-distinguish-gui-tab nil
    dotspacemacs-command-key "SPC"
