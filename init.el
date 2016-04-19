@@ -62,7 +62,7 @@
    dotspacemacs-default-font '("Source Code Pro for Powerline" :size 35 :weight demibold :width normal :powerline-scale 1.15)
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-leader-key "M-m"
-   dotspacemacs-major-mode-leader-key ","
+   dotspacemacs-major-mode-leader-key "\\"
    dotspacemacs-major-mode-emacs-leader-key "C-M-m"
    dotspacemacs-distinguish-gui-tab nil
    dotspacemacs-command-key "SPC"
@@ -87,7 +87,7 @@
    dotspacemacs-show-transient-state-title t
    dotspacemacs-show-transient-state-color-guide nil
    dotspacemacs-mode-line-unicode-symbols nil
-   dotspacemacs-smooth-scrolling t
+   dotspacemacs-smooth-scrolling nil
    dotspacemacs-line-numbers 'relative
    dotspacemacs-smartparens-strict-mode nil
    dotspacemacs-highlight-delimiters 'all
@@ -100,6 +100,10 @@
 (defun dotspacemacs/user-init ()
   ;; Variables
   (setq-default
+   ;; nice scrolling
+   scroll-margin 0
+   scroll-conservatively 10000
+   scroll-preserve-screen-position 1
    ;; Evil
    evil-shift-round nil
    ;; Smartparens
