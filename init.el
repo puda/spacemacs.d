@@ -138,6 +138,7 @@
    helm-candidate-number-limit 25
    helm-swoop-candidate-number-limit 1000
    helm-multi-swoop-candidate-number-limit 1000
+   helm-swoop-speed-or-color nil
 
    ;; Evil
    evil-move-beyond-eol nil
