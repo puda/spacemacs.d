@@ -83,7 +83,7 @@
    dotspacemacs-show-transient-state-title t
    dotspacemacs-show-transient-state-color-guide nil
    dotspacemacs-mode-line-unicode-symbols nil
-   dotspacemacs-smooth-scrolling nil
+   dotspacemacs-smooth-scrolling t
    dotspacemacs-line-numbers 'relative
    dotspacemacs-smartparens-strict-mode nil
    dotspacemacs-highlight-delimiters 'all
@@ -96,11 +96,7 @@
 (defun dotspacemacs/user-init ()
   ;; Variables
   (setq-default
-   ;; nice scrolling
-   scroll-margin 0
-   scroll-conservatively 10000
-   scroll-preserve-screen-position 1
-   ;; Evil
+   ;; ;; Evil
    evil-shift-round nil
    ;; Smartparens
    sp-highlight-pair-overlay nil

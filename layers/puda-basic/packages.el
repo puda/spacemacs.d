@@ -11,7 +11,8 @@
 
 (defun puda-basic/init-geben ()
   (use-package geben
-    :config
+    :defer t
+    :init
     (progn
       (evil-leader/set-key-for-mode 'php-mode "gg" 'geben)
       (evil-leader/set-key-for-mode 'php-mode "gf" 'geben-find-file)
@@ -20,7 +21,8 @@
       (evil-leader/set-key-for-mode 'php-mode "gi" 'geben-step-into)
       (evil-leader/set-key-for-mode 'php-mode "gv" 'geben-display-context)
       (evil-leader/set-key-for-mode 'php-mode "gq" 'geben-stop)
-      )))
+      )
+    ))
 
 (defun puda-basic/init-key-chord ()
   (use-package key-chord
