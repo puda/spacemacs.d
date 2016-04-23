@@ -55,7 +55,7 @@
    dotspacemacs-scratch-mode 'text-mode
    dotspacemacs-themes '(monokai material spacemacs-dark)
    dotspacemacs-colorize-cursor-according-to-state t
-   dotspacemacs-default-font '("Source Code Pro for Powerline" :size 35 :weight demibold :width normal :powerline-scale 1.15)
+   dotspacemacs-default-font '("Source Code Pro for Powerline" :size 35 :weight semibold :width normal :powerline-scale 1.15)
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-leader-key "M-m"
    dotspacemacs-major-mode-leader-key "<return>"
