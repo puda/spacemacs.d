@@ -26,12 +26,12 @@
      (syntax-checking :variables syntax-checking-enable-by-default nil)
      (version-control :variables version-control-diff-tool 'diff-hl)
      colors
+     vim-powerline
      ;; better-defaults
      emacs-lisp
      org
      ibuffer
      unimpaired
-     vim-powerline
      ;; custom config
      puda-basic
      puda-theming
@@ -40,6 +40,7 @@
 
    dotspacemacs-additional-packages '()
    dotspacemacs-excluded-packages '(drupal-mode vi-tilde-fringe evil-search-highlight-persist spaceline)
+   ;; spaceline is making things really slow
    ))
 
 (defun dotspacemacs/init ()
@@ -127,7 +128,6 @@
   (setq
    powerline-default-separator 'arrow
    helm-echo-input-in-header-line nil
-
    ;; Evil
    evil-move-beyond-eol nil
    ;; Snipe
