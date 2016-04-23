@@ -11,7 +11,7 @@
                       auto-completion-tab-key-behavior 'cycle
                       auto-completion-enable-help-tooltip nil)
      (evil-snipe :variables
-                 evil-snipe-enable-alternate-f-and-t-behaviors 't)
+                 evil-snipe-enable-alternate-f-and-t-behaviors t)
      php
      html
      gtags
@@ -22,28 +22,24 @@
             shell-default-position 'right)
      (ranger :variables
              ranger-show-preview t)
-     vim-empty-lines
      (spell-checking :variables spell-checking-enable-by-default nil)
-     (syntax-checking :variables syntax-checking-enable-by-default 't)
+     (syntax-checking :variables syntax-checking-enable-by-default nil)
      (version-control :variables version-control-diff-tool 'diff-hl)
      colors
-     better-defaults
+     ;; better-defaults
      emacs-lisp
      org
      ibuffer
      unimpaired
+     vim-powerline
      ;; custom config
      puda-basic
      puda-theming
      ;; others
-     (theming :variables
-              theming-headings-inherit-from-default 'all
-              theming-headings-same-size 'all
-              theming-headings-bold 'all)
      )
 
    dotspacemacs-additional-packages '()
-   dotspacemacs-excluded-packages '(drupal-mode vi-tilde-fringe evil-search-highlight-persist)
+   dotspacemacs-excluded-packages '(drupal-mode vi-tilde-fringe evil-search-highlight-persist spaceline)
    ))
 
 (defun dotspacemacs/init ()
@@ -73,7 +69,7 @@
    dotspacemacs-auto-save-file-location nil
    dotspacemacs-max-rollback-slots 5
    dotspacemacs-use-ido nil
-   dotspacemacs-helm-resize nil
+   dotspacemacs-helm-resize t
    dotspacemacs-helm-no-header t
    dotspacemacs-helm-position 'bottom
    dotspacemacs-enable-paste-transient-state nil
@@ -135,10 +131,6 @@
   (setq
    powerline-default-separator 'arrow
    helm-echo-input-in-header-line nil
-   helm-candidate-number-limit 25
-   helm-swoop-candidate-number-limit 1000
-   helm-multi-swoop-candidate-number-limit 1000
-   helm-swoop-speed-or-color nil
 
    ;; Evil
    evil-move-beyond-eol nil
