@@ -26,7 +26,6 @@
      (syntax-checking :variables syntax-checking-enable-by-default nil)
      (version-control :variables version-control-diff-tool 'diff-hl)
      colors
-     vim-powerline
      ;; better-defaults
      emacs-lisp
      org
@@ -34,12 +33,11 @@
      unimpaired
      ;; custom config
      puda-basic
-     puda-theming
      ;; others
      )
 
    dotspacemacs-additional-packages '()
-   dotspacemacs-excluded-packages '(drupal-mode vi-tilde-fringe evil-search-highlight-persist spaceline)
+   dotspacemacs-excluded-packages '(drupal-mode vi-tilde-fringe evil-search-highlight-persist)
    ;; spaceline is making things really slow
    ))
 
@@ -56,7 +54,7 @@
    dotspacemacs-scratch-mode 'text-mode
    dotspacemacs-themes '(monokai material spacemacs-dark)
    dotspacemacs-colorize-cursor-according-to-state t
-   dotspacemacs-default-font '("Source Code Pro for Powerline" :size 35 :weight semibold :width normal :powerline-scale 1.15)
+   dotspacemacs-default-font '("Source Code Pro for Powerline" :size 36 :weight semibold :width normal :powerline-scale 1.15)
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-leader-key "M-m"
    dotspacemacs-major-mode-leader-key "<return>"
@@ -126,10 +124,6 @@
 (defun dotspacemacs/user-config ()
   ;; Variable
   (setq
-   powerline-default-separator 'arrow
-   helm-echo-input-in-header-line nil
-   ;; Evil
-   evil-move-beyond-eol nil
    ;; Snipe
    evil-snipe-scope 'visible
    evil-snipe-repeat-scope 'visible
