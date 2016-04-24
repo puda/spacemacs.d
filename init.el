@@ -156,7 +156,7 @@
     "bd" 'kill-buffer
     )
   ;; keybindings
-  (global-set-key (kbd "C-i") 'evil-jump-forward) ;; C-i was set to TAB, so switching it back
+  (global-set-key (kbd "C-i") 'evil-jump-forward)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
