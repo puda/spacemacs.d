@@ -38,7 +38,6 @@
 
    dotspacemacs-additional-packages '()
    dotspacemacs-excluded-packages '(drupal-mode vi-tilde-fringe evil-search-highlight-persist)
-   ;; spaceline is making things really slow
    ))
 
 (defun dotspacemacs/init ()
@@ -52,7 +51,7 @@
    dotspacemacs-startup-lists '(recents bookmarks projects)
    dotspacemacs-startup-recent-list-size 5
    dotspacemacs-scratch-mode 'text-mode
-   dotspacemacs-themes '(monokai material spacemacs-dark)
+   dotspacemacs-themes '(spacemacs-dark monokai material)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Source Code Pro for Powerline" :size 36 :weight semibold :width normal :powerline-scale 1.15)
    dotspacemacs-leader-key "SPC"
@@ -68,7 +67,7 @@
    dotspacemacs-auto-save-file-location nil
    dotspacemacs-max-rollback-slots 5
    dotspacemacs-use-ido nil
-   dotspacemacs-helm-resize t
+   dotspacemacs-helm-resize nil
    dotspacemacs-helm-no-header t
    dotspacemacs-helm-position 'bottom
    dotspacemacs-enable-paste-transient-state nil
