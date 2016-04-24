@@ -8,8 +8,7 @@
           git-magit-status-fullscreen t)
      (auto-completion :variables
                       auto-completion-return-key-behavior 'complete
-                      auto-completion-tab-key-behavior 'cycle
-                      auto-completion-enable-help-tooltip nil)
+                      auto-completion-tab-key-behavior 'cycle)
      (evil-snipe :variables
                  evil-snipe-enable-alternate-f-and-t-behaviors t)
      php
@@ -18,15 +17,16 @@
      (javascript :variables
                  javascript-disable-tern-port-files t)
      (shell :variables
-            shell-default-shell 'ansi-term
-            shell-default-position 'right)
+            shell-default-position 'bottom
+            shell-default-height 70
+            )
      (ranger :variables
              ranger-show-preview t)
      (spell-checking :variables spell-checking-enable-by-default nil)
-     (syntax-checking :variables syntax-checking-enable-by-default nil)
+     syntax-checking
      (version-control :variables version-control-diff-tool 'diff-hl)
      colors
-     ;; better-defaults
+     better-defaults
      emacs-lisp
      org
      ibuffer
@@ -45,15 +45,15 @@
    dotspacemacs-elpa-https t
    dotspacemacs-elpa-timeout 10
    dotspacemacs-check-for-update t
-   dotspacemacs-editing-style 'vim
+   dotspacemacs-editing-style 'hybrid
    dotspacemacs-verbose-loading nil
    dotspacemacs-startup-banner nil
    dotspacemacs-startup-lists '(recents bookmarks projects)
    dotspacemacs-startup-recent-list-size 5
    dotspacemacs-scratch-mode 'text-mode
-   dotspacemacs-themes '(spacemacs-dark monokai material)
+   dotspacemacs-themes '(solarized-dark spacemacs-dark monokai material)
    dotspacemacs-colorize-cursor-according-to-state t
-   dotspacemacs-default-font '("Source Code Pro for Powerline" :size 36 :weight semibold :width normal :powerline-scale 1.15)
+   dotspacemacs-default-font '("Source Code Pro for Powerline" :size 36 :weight semibold :width normal :powerline-scale 1)
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-leader-key "M-m"
    dotspacemacs-major-mode-leader-key "<return>"
@@ -71,8 +71,8 @@
    dotspacemacs-helm-no-header t
    dotspacemacs-helm-position 'bottom
    dotspacemacs-enable-paste-transient-state nil
-   dotspacemacs-which-key-delay 1.0
-   dotspacemacs-loading-progress-bar t
+   dotspacemacs-which-key-delay 1.2
+   dotspacemacs-loading-progress-bar nil
    dotspacemacs-fullscreen-at-startup t
    dotspacemacs-fullscreen-use-non-native nil
    dotspacemacs-maximized-at-startup nil
@@ -80,7 +80,7 @@
    dotspacemacs-inactive-transparency 90
    dotspacemacs-show-transient-state-title t
    dotspacemacs-show-transient-state-color-guide nil
-   dotspacemacs-mode-line-unicode-symbols nil
+   dotspacemacs-mode-line-unicode-symbols t
    dotspacemacs-smooth-scrolling t
    dotspacemacs-line-numbers 'relative
    dotspacemacs-smartparens-strict-mode nil
@@ -152,7 +152,9 @@
   (evil-leader/set-key
     "." 'dumb-jump-go
     ">" 'dumb-jump-back
+    ;; swapping bk and bd
     "bk" 'kill-this-buffer
+    "bd" 'kill-buffer
     )
   )
 
