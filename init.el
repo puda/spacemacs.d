@@ -30,6 +30,7 @@
      emacs-lisp
      org
      ibuffer
+     command-log
      unimpaired
      ;; custom config
      puda-basic
@@ -53,7 +54,7 @@
    dotspacemacs-scratch-mode 'text-mode
    dotspacemacs-themes '(solarized-dark spacemacs-dark monokai material)
    dotspacemacs-colorize-cursor-according-to-state t
-   dotspacemacs-default-font '("Source Code Pro for Powerline" :size 36 :weight semibold :width normal :powerline-scale 1)
+   dotspacemacs-default-font '("Fira Code" :size 38 :weight semibold :width normal :powerline-scale 1.22)
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-leader-key "M-m"
    dotspacemacs-major-mode-leader-key "<return>"
@@ -71,7 +72,7 @@
    dotspacemacs-helm-no-header t
    dotspacemacs-helm-position 'bottom
    dotspacemacs-enable-paste-transient-state nil
-   dotspacemacs-which-key-delay 1.2
+   dotspacemacs-which-key-delay 1
    dotspacemacs-loading-progress-bar nil
    dotspacemacs-fullscreen-at-startup t
    dotspacemacs-fullscreen-use-non-native nil
@@ -102,15 +103,9 @@
    sp-highlight-wrap-tag-overlay nil
    ;; Avy
    avy-all-windows 'all-frames
-   ;; Ranger
-   ranger-override-dired t
-   ;; Spaceline
-   spaceline-buffer-encoding-abbrev-p nil
-   spaceline-version-control-p nil
    ;; Shell
    shell-default-term-shell "/bin/zsh"
    ;; General
-   ring-bell-function 'ignore
    default-directory "/var/www/community/"
    initial-scratch-message ";; Puda loves Rachael!! \n;; Puda Emacs Custom Config!!"
    )
@@ -127,10 +122,12 @@
    evil-snipe-scope 'visible
    evil-snipe-repeat-scope 'visible
    evil-snipe-spillover-scope 'visible
+   ;; smooth scroll
+   smooth-scroll-margin 1
    )
   ;; Modes
   (global-evil-mc-mode t)
-  ;; hooks
+  ;; clear anzu after mc
   (add-hook 'evil-mc-after-cursors-deleted
             (defun puda/clear-anzu () (setq anzu--state nil)))
   (with-eval-after-load 'smartparens
