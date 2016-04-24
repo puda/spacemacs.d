@@ -38,8 +38,7 @@
      )
 
    dotspacemacs-additional-packages '()
-   dotspacemacs-excluded-packages '(drupal-mode vi-tilde-fringe evil-search-highlight-persist)
-   ))
+   dotspacemacs-excluded-packages '(drupal-mode vi-tilde-fringe evil-search-highlight-persist)))
 
 (defun dotspacemacs/init ()
   (setq-default
@@ -89,8 +88,7 @@
    dotspacemacs-persistent-server t
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
    dotspacemacs-default-package-repository nil
-   dotspacemacs-whitespace-cleanup 'changed
-   ))
+   dotspacemacs-whitespace-cleanup 'changed))
 
 (defun dotspacemacs/user-init ()
   ;; Variables
@@ -107,13 +105,10 @@
    shell-default-term-shell "/bin/zsh"
    ;; General
    default-directory "/var/www/community/"
-   initial-scratch-message ";; Puda loves Rachael!! \n;; Puda Emacs Custom Config!!"
-   )
-
+   initial-scratch-message ";; Puda loves Rachael!! \n;; Puda Emacs Custom Config!!")
   ;; Modes
   (delete-selection-mode t)
-  (global-auto-revert-mode t) ;; reload open files
-  )
+  (global-auto-revert-mode t))
 
 (defun dotspacemacs/user-config ()
   ;; Variable
@@ -146,7 +141,6 @@
   (evil-set-initial-state 'term-mode 'emacs)
   (push 'term-mode evil-escape-excluded-major-modes)
   (define-key evil-emacs-state-map (kbd "C-y") 'term-paste)
-
   ;; leader keybindings
   (evil-leader/set-key
     "." 'dumb-jump-go
@@ -156,8 +150,7 @@
     "bd" 'kill-buffer
     )
   ;; keybindings
-  (global-set-key (kbd "C-i") 'evil-jump-forward)
-  )
+  (global-set-key (kbd "C-i") 'evil-jump-forward))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
