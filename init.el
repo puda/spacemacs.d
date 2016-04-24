@@ -44,7 +44,7 @@
 (defun dotspacemacs/init ()
   (setq-default
    dotspacemacs-elpa-https t
-   dotspacemacs-elpa-timeout 10
+   dotspacemacs-elpa-timeout 5
    dotspacemacs-check-for-update t
    dotspacemacs-editing-style 'hybrid
    dotspacemacs-verbose-loading nil
