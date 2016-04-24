@@ -72,7 +72,7 @@
    dotspacemacs-helm-no-header t
    dotspacemacs-helm-position 'bottom
    dotspacemacs-enable-paste-transient-state nil
-   dotspacemacs-which-key-delay 1
+   dotspacemacs-which-key-delay 0.5
    dotspacemacs-loading-progress-bar nil
    dotspacemacs-fullscreen-at-startup t
    dotspacemacs-fullscreen-use-non-native nil
@@ -80,9 +80,9 @@
    dotspacemacs-active-transparency 90
    dotspacemacs-inactive-transparency 90
    dotspacemacs-show-transient-state-title t
-   dotspacemacs-show-transient-state-color-guide nil
+   dotspacemacs-show-transient-state-color-guide t
    dotspacemacs-mode-line-unicode-symbols t
-   dotspacemacs-smooth-scrolling t
+   dotspacemacs-smooth-scrolling nil
    dotspacemacs-line-numbers 'relative
    dotspacemacs-smartparens-strict-mode nil
    dotspacemacs-highlight-delimiters 'all
@@ -123,7 +123,9 @@
    evil-snipe-repeat-scope 'visible
    evil-snipe-spillover-scope 'visible
    ;; smooth scroll
-   smooth-scroll-margin 1
+   scroll-margin 0
+   scroll-conservatively 10000
+   scroll-preserve-screen-position 1
    )
   ;; Modes
   (global-evil-mc-mode t)
