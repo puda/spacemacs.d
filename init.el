@@ -121,6 +121,8 @@
    scroll-margin 0
    scroll-conservatively 10000
    scroll-preserve-screen-position 1
+   ;; powerline
+   powerline-default-separator 'slant
    )
   ;; Modes
   (global-evil-mc-mode t)
