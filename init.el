@@ -53,10 +53,10 @@
    dotspacemacs-scratch-mode 'text-mode
    dotspacemacs-themes '(monokai solarized-dark spacemacs-dark material)
    dotspacemacs-colorize-cursor-according-to-state t
-   dotspacemacs-default-font '("Fira Code" :size 38 :weight semibold :width normal :powerline-scale 1.22)
+   dotspacemacs-default-font '("Fira Code" :size 38 :weight semibold :width normal :powerline-scale 1.1)
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-leader-key "M-m"
-   dotspacemacs-major-mode-leader-key "<return>"
+   dotspacemacs-major-mode-leader-key ","
    dotspacemacs-major-mode-emacs-leader-key "C-M-m"
    dotspacemacs-distinguish-gui-tab nil
    dotspacemacs-command-key "SPC"
@@ -73,7 +73,7 @@
    dotspacemacs-enable-paste-transient-state nil
    dotspacemacs-which-key-delay 0.5
    dotspacemacs-loading-progress-bar nil
-   dotspacemacs-fullscreen-at-startup t
+   dotspacemacs-fullscreen-at-startup nil
    dotspacemacs-fullscreen-use-non-native nil
    dotspacemacs-maximized-at-startup nil
    dotspacemacs-active-transparency 90
