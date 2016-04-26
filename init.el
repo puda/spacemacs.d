@@ -122,7 +122,7 @@
    scroll-conservatively 10000
    scroll-preserve-screen-position 1
    ;; powerline
-   powerline-default-separator 'slant
+   powerline-default-separator 'wave
    )
   ;; Modes
   (global-evil-mc-mode t)
