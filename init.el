@@ -37,7 +37,7 @@
      ;; others
      )
 
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(hydra)
    dotspacemacs-excluded-packages '(drupal-mode vi-tilde-fringe evil-search-highlight-persist)))
 
 (defun dotspacemacs/init ()
@@ -65,7 +65,7 @@
    dotspacemacs-display-default-layout nil
    dotspacemacs-auto-resume-layouts nil
    dotspacemacs-auto-save-file-location nil
-   dotspacemacs-max-rollback-slots 0
+   dotspacemacs-max-rollback-slots 0 ;;very risky variable do not increase
    dotspacemacs-use-ido nil
    dotspacemacs-helm-resize nil
    dotspacemacs-helm-no-header t
