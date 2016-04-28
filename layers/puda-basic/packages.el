@@ -31,7 +31,7 @@
     (progn
       (setq key-chord-two-keys-delay 0.1)
       (key-chord-define minibuffer-local-map "jk" 'helm-like-unite/body)
-      ;; (key-chord-define evil-normal-state-map "jk" 'puda-scroll-inside-file/body)
+      ;; (key-chord-define minibuffer-local-map "jk" 'hydra-ivy/body)
 
       (defhydra helm-like-unite ()
         "movement"

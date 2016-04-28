@@ -32,6 +32,7 @@
      ibuffer
      command-log
      unimpaired
+     ;; spacemacs-ivy
      ;; custom config
      puda-basic
      ;; others
@@ -65,7 +66,7 @@
    dotspacemacs-display-default-layout nil
    dotspacemacs-auto-resume-layouts nil
    dotspacemacs-auto-save-file-location nil
-   dotspacemacs-max-rollback-slots 0 ;;very risky variable do not increase
+   dotspacemacs-max-rollback-slots 5
    dotspacemacs-use-ido nil
    dotspacemacs-helm-resize nil
    dotspacemacs-helm-no-header t
