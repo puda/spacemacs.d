@@ -5,6 +5,7 @@
     php-mode
     dumb-jump
     geben
+    hydra
     )
   )
 
@@ -90,6 +91,11 @@
 
 (defun puda-basic/init-dumb-jump ()
   (use-package dumb-jump
+    :ensure t
+    ))
+
+(defun puda-basic/init-hydra ()
+  (use-package hydra
     :ensure t
     ))
 
