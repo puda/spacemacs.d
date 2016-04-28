@@ -1,6 +1,7 @@
 ;;; config.el --- Colors Layer configuration File for Puda Config
 
-;; config
+
+;; disable mouse
 (defun puda-turn-off-mouse ()
   (defun turn-off-mouse (&optional frame)
     (interactive)

@@ -59,7 +59,7 @@
    dotspacemacs-emacs-leader-key "M-m"
    dotspacemacs-major-mode-leader-key ","
    dotspacemacs-major-mode-emacs-leader-key "C-M-m"
-   dotspacemacs-distinguish-gui-tab nil
+   dotspacemacs-distinguish-gui-tab t
    dotspacemacs-command-key "SPC"
    dotspacemacs-remap-Y-to-y$ t
    dotspacemacs-default-layout-name "Home"
@@ -151,9 +151,7 @@
     ;; swapping bk and bd
     "bk" 'kill-this-buffer
     "bd" 'kill-buffer
-    )
-  ;; keybindings
-  (global-set-key (kbd "C-i") 'evil-jump-forward))
+    ))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
