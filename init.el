@@ -32,7 +32,7 @@
      ibuffer
      command-log
      unimpaired
-     ;; spacemacs-ivy
+     ;; spacemacs-ivy ;; enable if helm ever causes lags
      ;; custom config
      puda-basic
      ;; others
@@ -124,6 +124,11 @@
    scroll-preserve-screen-position 1
    ;; powerline
    powerline-default-separator 'wave
+   ;; ivy
+   ;; ivy-re-builders-alist
+   ;; '((ivy-switch-buffer . ivy--regex-plus)
+   ;;   (t . ivy--regex-fuzzy))
+   ;; ivy-initial-inputs-alist nil
    )
   ;; Modes
   (global-evil-mc-mode t)

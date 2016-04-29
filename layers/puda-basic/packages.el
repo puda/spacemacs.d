@@ -30,26 +30,8 @@
     :init
     (progn
       (setq key-chord-two-keys-delay 0.1)
-      (key-chord-define minibuffer-local-map "jk" 'helm-like-unite/body)
-      ;; (key-chord-define minibuffer-local-map "jk" 'hydra-ivy/body)
-
-      (defhydra helm-like-unite ()
-        "movement"
-        ("?" helm-help "help")
-        ("<escape>" nil "exit")
-        ;; ("<escape>" keyboard-escape-quit "exit")
-        ("<SPC>" helm-toggle-visible-mark "mark")
-        ("a" helm-toggle-all-marks "(un)mark all")
-        ("/" (lambda ()
-               (interactive)
-               (execute-kbd-macro [?\C-s]))
-         "search")
-        ("v" helm-execute-persistent-action)
-        ("g" helm-beginning-of-buffer "top")
-        ("G" helm-end-of-buffer "bottom")
-        ("j" helm-next-line "down")
-        ("k" helm-previous-line "up"))
-
+      (key-chord-define minibuffer-local-map "jk" 'spacemacs/helm-navigation-transient-state/body)
+      ;; (key-chord-define minibuffer-local-map "jk" 'spacemacs/ivy-navigation-transient-state/body)
       )
     :config
     (key-chord-mode t)))
