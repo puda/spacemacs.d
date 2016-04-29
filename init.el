@@ -32,10 +32,8 @@
      ibuffer
      command-log
      unimpaired
-     ;; spacemacs-ivy ;; TODO fix <ESC ESC ESC>
      ;; custom config
      puda-basic
-     ;; others
      )
 
    dotspacemacs-additional-packages '()
