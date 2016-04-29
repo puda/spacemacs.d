@@ -14,8 +14,6 @@
     :defer t
     :init
     (progn
-      ;; TODO add geben transient state
-      ;; copy from spacemacs helm navigation transient state / body
       (evil-leader/set-key-for-mode 'php-mode "gg" 'geben)
       (evil-leader/set-key-for-mode 'php-mode "gf" 'geben-find-file)
       (evil-leader/set-key-for-mode 'php-mode "gc" 'geben-run-to-cursor)
@@ -24,6 +22,45 @@
       (evil-leader/set-key-for-mode 'php-mode "gv" 'geben-display-context)
       (evil-leader/set-key-for-mode 'php-mode "gq" 'geben-stop)
       (evil-leader/set-key-for-mode 'php-mode "gQ" 'geben-end)
+
+;;       (spacemacs|define-transient-state geben
+;;         :title "Geben Transient State"
+;;         :doc "
+;; [_o/i_] step over/in            [_v_]^^     persistent action     [_e_]^^    edit occurrences
+;; [_O_] step out                  [_1_.._0_]  action 1..10          [_t_/_T_]  toggle visible/all mark
+;; [_q_]^^    quit                 [_a_]^^     action selection pg"
+;;         :foreign-keys run
+;;         :on-enter (spacemacs//helm-navigation-ms-on-enter)
+;;         :on-exit  (spacemacs//helm-navigation-ms-on-exit)
+;;         :bindings
+;;         ("1" spacemacs/helm-action-1 :exit t)
+;;         ("2" spacemacs/helm-action-2 :exit t)
+;;         ("3" spacemacs/helm-action-3 :exit t)
+;;         ("4" spacemacs/helm-action-4 :exit t)
+;;         ("5" spacemacs/helm-action-5 :exit t)
+;;         ("6" spacemacs/helm-action-6 :exit t)
+;;         ("7" spacemacs/helm-action-7 :exit t)
+;;         ("8" spacemacs/helm-action-8 :exit t)
+;;         ("9" spacemacs/helm-action-9 :exit t)
+;;         ("0" spacemacs/helm-action-10 :exit t)
+;;         ("<tab>" helm-select-action :exit t)
+;;         ("TAB" helm-select-action :exit t)
+;;         ("<RET>" helm-maybe-exit-minibuffer :exit t)
+;;         ;; ("?" nil :doc (spacemacs//helm-navigation-ms-full-doc))
+;;         ("a" spacemacs/helm-transient-state-select-action)
+;;         ("e" spacemacs/helm-edit)
+;;         ("g" helm-beginning-of-buffer)
+;;         ("G" helm-end-of-buffer)
+;;         ("h" helm-previous-source)
+;;         ("j" helm-next-line)
+;;         ("k" helm-previous-line)
+;;         ("l" helm-next-source)
+;;         ("q" nil :exit t)
+;;         ("t" helm-toggle-visible-mark)
+;;         ("T" helm-toggle-all-marks)
+;;         ("v" helm-execute-persistent-action))
+      ;; (define-key helm-map (kbd "M-SPC")
+      ;;   'spacemacs/helm-navigation-transient-state/body)
       )
     ))
 
