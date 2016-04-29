@@ -94,8 +94,6 @@
 (defun dotspacemacs/user-init ()
   ;; Variables
   (setq-default
-   ;; ;; Evil
-   evil-shift-round nil
    ;; Smartparens
    sp-highlight-pair-overlay nil
    sp-highlight-wrap-overlay nil
