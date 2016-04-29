@@ -32,7 +32,7 @@
      ibuffer
      command-log
      unimpaired
-     ;; spacemacs-ivy ;; maybe if helm slows at one point
+     ;; spacemacs-ivy ;; TODO fix ESC ESC ESC
      ;; custom config
      puda-basic
      ;; others
