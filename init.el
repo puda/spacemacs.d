@@ -32,6 +32,7 @@
      ibuffer
      command-log
      unimpaired
+     ;; spacemacs-ivy ;; maybe if helm slows at one point
      ;; custom config
      puda-basic
      ;; others
@@ -51,7 +52,7 @@
    dotspacemacs-startup-lists '(recents bookmarks projects)
    dotspacemacs-startup-recent-list-size 5
    dotspacemacs-scratch-mode 'text-mode
-   dotspacemacs-themes '(monokai material spacemacs-dark solarized-dark)
+   dotspacemacs-themes '(spacemacs-dark material monokai solarized-dark)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Source Code Pro" :size 38 :weight semibold :width normal :powerline-scale 1.1)
    dotspacemacs-leader-key "SPC"
@@ -120,9 +121,7 @@
    ;; smooth scroll
    scroll-margin 0
    scroll-conservatively 10000
-   scroll-preserve-screen-position 1
-   ;; powerline
-   powerline-default-separator 'wave)
+   scroll-preserve-screen-position 1)
   ;; Modes
   (global-evil-mc-mode t)
   ;; clear anzu after mc
