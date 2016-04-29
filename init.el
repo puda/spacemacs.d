@@ -137,11 +137,11 @@
                         )))
     (spacemacs/add-to-hooks
      (defun puda-disable-hl-for-term ()
-       (setq global-hl-line-mode nil))
+       (setq global-hl-line-mode nil)
+       (define-key evil-emacs-state-local-map (kbd "C-y") 'term-paste))
      comint-hooks))
   (evil-set-initial-state 'term-mode 'emacs)
   (push 'term-mode evil-escape-excluded-major-modes)
-  (define-key evil-emacs-state-map (kbd "C-y") 'term-paste)
   ;; leader keybindings
   (evil-leader/set-key
     "." 'dumb-jump-go
