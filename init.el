@@ -37,7 +37,7 @@
      ;; others
      )
 
-   dotspacemacs-additional-packages '(hydra)
+   dotspacemacs-additional-packages '()
    dotspacemacs-excluded-packages '(drupal-mode vi-tilde-fringe evil-search-highlight-persist)))
 
 (defun dotspacemacs/init ()
