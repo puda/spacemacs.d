@@ -100,8 +100,6 @@
    sp-highlight-wrap-tag-overlay nil
    ;; Avy
    avy-all-windows 'all-frames
-   ;; Shell
-   shell-default-term-shell "/bin/zsh"
    ;; General
    default-directory "/var/www/community/"
    initial-scratch-message ";; Puda loves Rachael!! \n;; Puda Emacs Custom Config!!")
