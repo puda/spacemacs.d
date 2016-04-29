@@ -114,7 +114,7 @@
    evil-snipe-scope 'visible
    evil-snipe-repeat-scope 'visible
    evil-snipe-spillover-scope 'visible
-   ;; smooth scroll
+   ;; better smooth scroll
    scroll-margin 0
    scroll-conservatively 10000
    scroll-preserve-screen-position 1)
@@ -125,11 +125,7 @@
             (defun puda/clear-anzu () (setq anzu--state nil)))
   (with-eval-after-load 'smartparens
     (show-smartparens-global-mode -1))
-  (let ((comint-hooks '(
-                        term-mode-hook
-                        eshell-mode-hook
-                        messages-buffer-mode-hook
-                        )))
+  (let ((comint-hooks '(term-mode-hook eshell-mode-hook messages-buffer-mode-hook)))
     (spacemacs/add-to-hooks
      (defun puda-disable-hl-for-term ()
        (setq global-hl-line-mode nil)
