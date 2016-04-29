@@ -14,6 +14,8 @@
     :defer t
     :init
     (progn
+      ;; TODO add geben transient state
+      ;; copy from spacemacs helm navigation transient state / body
       (evil-leader/set-key-for-mode 'php-mode "gg" 'geben)
       (evil-leader/set-key-for-mode 'php-mode "gf" 'geben-find-file)
       (evil-leader/set-key-for-mode 'php-mode "gc" 'geben-run-to-cursor)
@@ -21,6 +23,7 @@
       (evil-leader/set-key-for-mode 'php-mode "gi" 'geben-step-into)
       (evil-leader/set-key-for-mode 'php-mode "gv" 'geben-display-context)
       (evil-leader/set-key-for-mode 'php-mode "gq" 'geben-stop)
+      (evil-leader/set-key-for-mode 'php-mode "gQ" 'geben-end)
       )
     ))
 
@@ -30,7 +33,8 @@
     :init
     (progn
       (setq key-chord-two-keys-delay 0.1)
-      (key-chord-define minibuffer-local-map "jk" 'spacemacs/helm-navigation-transient-state/body)
+      ;; use M-space instead
+      ;; (key-chord-define minibuffer-local-map "jk" 'spacemacs/helm-navigation-transient-state/body)
       ;; (key-chord-define minibuffer-local-map "jk" 'spacemacs/ivy-navigation-transient-state/body)
       )
     :config
@@ -38,6 +42,7 @@
 
 (defun puda-basic/init-vertigo ()
   (use-package vertigo
+    ;; depends on keychord
     :config
     (progn
       (key-chord-define evil-normal-state-map "fk" 'vertigo-jump-up)
