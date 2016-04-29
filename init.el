@@ -34,6 +34,7 @@
      unimpaired
      ;; custom config
      puda-basic
+     games
      )
 
    dotspacemacs-additional-packages '()
