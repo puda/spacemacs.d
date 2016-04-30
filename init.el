@@ -137,7 +137,7 @@
     ;; swapping bk and bd
     "bk" 'kill-this-buffer
     "bd" 'kill-buffer
-    "j/" 'avy-isearch
+    "j;" 'avy-isearch
     ))
 
 ;; Do not write anything past this comment. This is where Emacs will
