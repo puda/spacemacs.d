@@ -51,7 +51,7 @@
    dotspacemacs-startup-lists '(recents bookmarks projects)
    dotspacemacs-startup-recent-list-size 5
    dotspacemacs-scratch-mode 'text-mode
-   dotspacemacs-themes '(monokai material spacemacs-dark solarized-dark)
+   dotspacemacs-themes '(spacemacs-dark material monokai solarized-dark)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Source Code Pro" :size 38 :weight semibold :width normal :powerline-scale 1.1)
    dotspacemacs-leader-key "SPC"
@@ -81,7 +81,7 @@
    dotspacemacs-show-transient-state-title nil
    dotspacemacs-show-transient-state-color-guide nil
    dotspacemacs-mode-line-unicode-symbols t
-   dotspacemacs-smooth-scrolling nil
+   dotspacemacs-smooth-scrolling t
    dotspacemacs-line-numbers 'relative
    dotspacemacs-smartparens-strict-mode nil
    dotspacemacs-highlight-delimiters 'all
@@ -114,10 +114,7 @@
    evil-snipe-scope 'visible
    evil-snipe-repeat-scope 'visible
    evil-snipe-spillover-scope 'visible
-   ;; better smooth scroll
-   scroll-margin 0
-   scroll-conservatively 10000
-   scroll-preserve-screen-position 1)
+   )
   ;; Modes
   (global-evil-mc-mode t)
   ;; clear anzu after mc
