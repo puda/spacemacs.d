@@ -5,17 +5,21 @@
     php-mode
     dumb-jump
     geben
+    geben-helm-projectile
     )
   )
 
 
 (defun puda-basic/init-geben ()
+  ;; needs chrome/firefox extension for 9000 port signal
+  ;; https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc
   (use-package geben
     :defer t
     :init
     (progn
       (evil-leader/set-key-for-mode 'php-mode "gg" 'geben)
       (evil-leader/set-key-for-mode 'php-mode "gf" 'geben-find-file)
+      ;; (evil-leader/set-key-for-mode 'php-mode "gf" 'geben-helm-projectile/open-file)
       (evil-leader/set-key-for-mode 'php-mode "gc" 'geben-run-to-cursor)
       (evil-leader/set-key-for-mode 'php-mode "go" 'geben-step-over)
       (evil-leader/set-key-for-mode 'php-mode "gi" 'geben-step-into)
@@ -114,7 +118,10 @@
 
 (defun puda-basic/init-dumb-jump ()
   (use-package dumb-jump
-    :ensure t
-    ))
+    :ensure t))
+
+(defun puda-basic/init-geben-helm-projectile ()
+  (use-package geben-helm-projectile
+    :ensure t))
 
 ;;; packages.el ends here
