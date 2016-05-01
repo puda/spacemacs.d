@@ -32,11 +32,10 @@
      ibuffer
      command-log
      unimpaired
-     ;; theming
+     games
      ;; custom config
      puda-basic
      puda-theming
-     games
      )
 
    dotspacemacs-additional-packages '()
