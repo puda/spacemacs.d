@@ -110,6 +110,9 @@
    ;; default-directory "/var/www/community/"
    ;; initial-scratch-message ";; Puda loves Rachael!! \n;; Puda Emacs Custom Config!!"
    )
+  ;; transparency
+  (push '(alpha . (0.94 . 0.94)) default-frame-alist)
+  (set-frame-parameter (selected-frame) 'alpha '(0.94 . 0.94))
   ;; Modes
   (delete-selection-mode t)
   (global-auto-revert-mode t))
@@ -124,9 +127,6 @@
    ;; Spaceline
    powerline-default-separator 'arrow
    )
-  ;; transparency
-  (push '(alpha . (0.94 . 0.94)) default-frame-alist)
-  (set-frame-parameter (selected-frame) 'alpha '(0.94 . 0.94))
   ;; Modes
   (global-evil-mc-mode t)
   ;; clear anzu after mc
