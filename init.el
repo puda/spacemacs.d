@@ -32,8 +32,10 @@
      ibuffer
      command-log
      unimpaired
+     ;; theming
      ;; custom config
      puda-basic
+     puda-theming
      games
      )
 
@@ -93,12 +95,18 @@
 (defun dotspacemacs/user-init ()
   ;; Variables
   (setq-default
+
    ;; Smartparens
    sp-highlight-pair-overlay nil
    sp-highlight-wrap-overlay nil
    sp-highlight-wrap-tag-overlay nil
+
    ;; Avy
    avy-all-windows 'all-frames
+
+   ;; Spaceline
+   spaceline-buffer-encoding-abbrev-p nil
+   spaceline-version-control-p nil
    ;; General
    ;; default-directory "/var/www/community/"
    ;; initial-scratch-message ";; Puda loves Rachael!! \n;; Puda Emacs Custom Config!!"
@@ -114,6 +122,8 @@
    evil-snipe-scope 'visible
    evil-snipe-repeat-scope 'visible
    evil-snipe-spillover-scope 'visible
+   ;; Spaceline
+   powerline-default-separator 'arrow
    )
   ;; Modes
   (global-evil-mc-mode t)
