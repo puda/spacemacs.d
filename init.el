@@ -82,7 +82,7 @@
    dotspacemacs-show-transient-state-title nil
    dotspacemacs-show-transient-state-color-guide nil
    dotspacemacs-mode-line-unicode-symbols t
-   dotspacemacs-smooth-scrolling t
+   dotspacemacs-smooth-scrolling nil
    dotspacemacs-line-numbers 'relative
    dotspacemacs-smartparens-strict-mode nil
    dotspacemacs-highlight-delimiters 'all
@@ -124,6 +124,9 @@
    ;; Spaceline
    powerline-default-separator 'arrow
    )
+  ;; transparency
+  (push '(alpha . (0.94 . 0.94)) default-frame-alist)
+  (set-frame-parameter (selected-frame) 'alpha '(0.94 . 0.94))
   ;; Modes
   (global-evil-mc-mode t)
   ;; clear anzu after mc
