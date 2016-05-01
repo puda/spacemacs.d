@@ -45,7 +45,7 @@
    dotspacemacs-elpa-https t
    dotspacemacs-elpa-timeout 5
    dotspacemacs-check-for-update t
-   dotspacemacs-editing-style 'hybrid
+   dotspacemacs-editing-style 'vim
    dotspacemacs-verbose-loading nil
    dotspacemacs-startup-banner nil
    dotspacemacs-startup-lists '(recents bookmarks projects)
@@ -72,7 +72,7 @@
    dotspacemacs-helm-position 'bottom
    dotspacemacs-enable-paste-transient-state nil
    dotspacemacs-which-key-delay 0.5
-   dotspacemacs-loading-progress-bar nil
+   dotspacemacs-loading-progress-bar t
    dotspacemacs-fullscreen-at-startup t
    dotspacemacs-fullscreen-use-non-native nil
    dotspacemacs-maximized-at-startup nil
