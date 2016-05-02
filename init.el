@@ -133,8 +133,10 @@
   ;; clear anzu after mc
   (add-hook 'evil-mc-after-cursors-deleted
             (defun puda/clear-anzu () (setq anzu--state nil)))
+  ;; disable show-smartparens-global-mode for performance
   (with-eval-after-load 'smartparens
     (show-smartparens-global-mode -1))
+  ;; terminal hooks
   (let ((comint-hooks '(term-mode-hook eshell-mode-hook messages-buffer-mode-hook)))
     (spacemacs/add-to-hooks
      (defun puda-disable-hl-for-term ()
@@ -143,6 +145,8 @@
      comint-hooks))
   (evil-set-initial-state 'term-mode 'emacs)
   (push 'term-mode evil-escape-excluded-major-modes)
+  ;; global keybinding
+  (global-set-key (kbd "M-SPC") 'spacemacs/ivy-transient-state/body) ;; consistent key-binding for helm and ivy
   ;; leader keybindings
   (evil-leader/set-key
     "." 'dumb-jump-go
