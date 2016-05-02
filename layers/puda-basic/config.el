@@ -18,3 +18,6 @@
   (add-hook 'delete-frame-functions #'turn-on-mouse))
 
 (puda-turn-off-mouse)
+
+;; global keybinding
+(global-set-key (kbd "M-SPC") 'spacemacs/ivy-transient-state/body)

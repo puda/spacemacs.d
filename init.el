@@ -32,6 +32,7 @@
      ibuffer
      command-log
      unimpaired
+     spacemacs-ivy ;; remove if unwanted
      games
      ;; custom config
      puda-basic
