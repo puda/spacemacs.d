@@ -68,7 +68,7 @@
    dotspacemacs-auto-save-file-location nil
    dotspacemacs-max-rollback-slots 5
    dotspacemacs-use-ido nil
-   dotspacemacs-helm-resize nil
+   dotspacemacs-helm-resize t
    dotspacemacs-helm-no-header t
    dotspacemacs-helm-position 'bottom
    dotspacemacs-enable-paste-transient-state nil
