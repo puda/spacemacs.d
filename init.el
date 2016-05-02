@@ -32,7 +32,6 @@
      ibuffer
      command-log
      unimpaired
-     spacemacs-ivy ;; remove if unwanted
      games
      ;; custom config
      puda-basic
@@ -145,8 +144,6 @@
      comint-hooks))
   (evil-set-initial-state 'term-mode 'emacs)
   (push 'term-mode evil-escape-excluded-major-modes)
-  ;; global keybinding
-  (global-set-key (kbd "M-SPC") 'spacemacs/ivy-transient-state/body) ;; consistent key-binding for helm and ivy
   ;; leader keybindings
   (evil-leader/set-key
     "." 'dumb-jump-go
