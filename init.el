@@ -124,8 +124,6 @@
    evil-snipe-scope 'visible
    evil-snipe-repeat-scope 'visible
    evil-snipe-spillover-scope 'visible
-   ;; Spaceline
-   powerline-default-separator 'arrow
    )
   ;; Modes
   (global-evil-mc-mode t)
