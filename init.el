@@ -6,7 +6,9 @@
    dotspacemacs-configuration-layers
    '((git :variables
           git-magit-status-fullscreen t)
-     ;; spacemacs-ivy
+     ;; byte-compile-file hydra-ivy
+     ;; byte-recompile-file hydra-ivy
+     spacemacs-ivy
      (auto-completion :variables
                       auto-completion-return-key-behavior 'complete
                       auto-completion-tab-key-behavior 'cycle)
