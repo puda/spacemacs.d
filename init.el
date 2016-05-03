@@ -149,6 +149,8 @@
   (push 'term-mode evil-escape-excluded-major-modes)
   ;; keybinding rebinding
   (define-key ivy-minibuffer-map (kbd "M-SPC") 'spacemacs/ivy-transient-state/body)
+  ;; quit with 1 esc hit
+  (define-key ivy-minibuffer-map (kbd "<escape>") 'minibuffer-keyboard-quit)
   ;; leader keybindings
   (evil-leader/set-key
     "." 'dumb-jump-go
