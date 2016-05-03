@@ -6,6 +6,7 @@
    dotspacemacs-configuration-layers
    '((git :variables
           git-magit-status-fullscreen t)
+     ;; spacemacs-ivy
      (auto-completion :variables
                       auto-completion-return-key-behavior 'complete
                       auto-completion-tab-key-behavior 'cycle)
@@ -124,6 +125,8 @@
    evil-snipe-scope 'visible
    evil-snipe-repeat-scope 'visible
    evil-snipe-spillover-scope 'visible
+   ;; Spaceline
+   powerline-default-separator 'arrow
    )
   ;; Modes
   (global-evil-mc-mode t)
