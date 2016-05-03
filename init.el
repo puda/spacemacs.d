@@ -147,6 +147,8 @@
      comint-hooks))
   (evil-set-initial-state 'term-mode 'emacs)
   (push 'term-mode evil-escape-excluded-major-modes)
+  ;; keybinding rebinding
+  (define-key ivy-minibuffer-map (kbd "M-SPC") 'spacemacs/ivy-transient-state/body)
   ;; leader keybindings
   (evil-leader/set-key
     "." 'dumb-jump-go
