@@ -130,14 +130,17 @@
    ;; Spaceline
    powerline-default-separator 'arrow
    )
+
   ;; Modes
   (global-evil-mc-mode t)
   ;; clear anzu after mc
   (add-hook 'evil-mc-after-cursors-deleted
             (defun puda/clear-anzu () (setq anzu--state nil)))
+
   ;; disable show-smartparens-global-mode for performance
   (with-eval-after-load 'smartparens
     (show-smartparens-global-mode -1))
+
   ;; terminal hooks
   (let ((comint-hooks '(term-mode-hook eshell-mode-hook messages-buffer-mode-hook)))
     (spacemacs/add-to-hooks
@@ -147,10 +150,7 @@
      comint-hooks))
   (evil-set-initial-state 'term-mode 'emacs)
   (push 'term-mode evil-escape-excluded-major-modes)
-  ;; keybinding rebinding
-  (define-key ivy-minibuffer-map (kbd "M-SPC") 'spacemacs/ivy-transient-state/body)
-  ;; quit with 1 esc hit
-  (define-key ivy-minibuffer-map (kbd "<escape>") 'minibuffer-keyboard-quit)
+
   ;; leader keybindings
   (evil-leader/set-key
     "." 'dumb-jump-go
@@ -159,7 +159,12 @@
     "bk" 'kill-this-buffer
     "bd" 'kill-buffer
     "j;" 'avy-isearch
-    ))
+    )
+
+  ;; keybinding rebinding
+  (define-key ivy-minibuffer-map (kbd "M-SPC") 'spacemacs/ivy-transient-state/body)
+  (define-key ivy-minibuffer-map (kbd "<escape>") 'minibuffer-keyboard-quit)
+  )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
