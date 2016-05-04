@@ -1,6 +1,8 @@
 (defun dotspacemacs/layers ()
   (setq-default
    dotspacemacs-distribution 'spacemacs
+   dotspacemacs-enable-lazy-installation nil
+   dotspacemacs-ask-for-lazy-installation t
    dotspacemacs-configuration-layer-path '("~/.spacemacs.d/layers/")
    dotspacemacs-delete-orphan-packages t
    dotspacemacs-configuration-layers
@@ -8,7 +10,8 @@
           git-magit-status-fullscreen t)
      ;; byte-compile-file hydra-ivy
      ;; byte-recompile-file hydra-ivy
-     spacemacs-ivy
+     ;; spacemacs-ivy
+     spacemacs-helm
      (auto-completion :variables
                       auto-completion-return-key-behavior 'complete
                       auto-completion-tab-key-behavior 'cycle)
@@ -65,17 +68,17 @@
    dotspacemacs-distinguish-gui-tab t
    dotspacemacs-command-key "SPC"
    dotspacemacs-remap-Y-to-y$ t
-   dotspacemacs-default-layout-name "Home"
+   dotspacemacs-default-layout-name "Default"
    dotspacemacs-display-default-layout nil
    dotspacemacs-auto-resume-layouts nil
-   dotspacemacs-auto-save-file-location nil
+   dotspacemacs-auto-save-file-location 'cache
    dotspacemacs-max-rollback-slots 5
    dotspacemacs-use-ido nil
    dotspacemacs-helm-resize nil
    dotspacemacs-helm-no-header t
    dotspacemacs-helm-position 'bottom
    dotspacemacs-enable-paste-transient-state nil
-   dotspacemacs-which-key-delay 0.5
+   dotspacemacs-which-key-delay 0.4
    dotspacemacs-loading-progress-bar t
    dotspacemacs-fullscreen-at-startup t
    dotspacemacs-fullscreen-use-non-native nil
@@ -84,6 +87,7 @@
    dotspacemacs-inactive-transparency 90
    dotspacemacs-show-transient-state-title nil
    dotspacemacs-show-transient-state-color-guide nil
+   dotspacemacs-smart-closing-parenthesis nil
    dotspacemacs-mode-line-unicode-symbols nil
    dotspacemacs-smooth-scrolling nil
    dotspacemacs-line-numbers 'relative
@@ -166,8 +170,8 @@
     )
 
   ;; keybinding rebinding
-  (define-key ivy-minibuffer-map (kbd "M-SPC") 'spacemacs/ivy-transient-state/body)
-  (define-key ivy-minibuffer-map (kbd "<escape>") 'minibuffer-keyboard-quit)
+  ;; (define-key ivy-minibuffer-map (kbd "M-SPC") 'spacemacs/ivy-transient-state/body)
+  ;; (define-key ivy-minibuffer-map (kbd "<escape>") 'minibuffer-keyboard-quit)
   (global-set-key (kbd "<escape>") 'keyboard-quit)
   )
 
