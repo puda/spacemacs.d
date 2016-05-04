@@ -41,6 +41,7 @@
      ;; custom config
      puda-basic
      puda-theming
+     evil-little-word
      )
 
    dotspacemacs-additional-packages '()
