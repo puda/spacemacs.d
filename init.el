@@ -141,6 +141,11 @@
 
   ;; Modes
   (global-evil-mc-mode t)
+
+  ;; change _ to part of word
+  (with-eval-after-load 'evil
+    (defalias #'forward-evil-word #'forward-evil-symbol))
+
   ;; clear anzu after mc
   (add-hook 'evil-mc-after-cursors-deleted
             (defun puda/clear-anzu () (setq anzu--state nil)))
