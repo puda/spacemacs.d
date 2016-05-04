@@ -9,9 +9,8 @@
    '((git :variables
           git-magit-status-fullscreen t)
      ;; byte-compile-file hydra-ivy
-     ;; byte-recompile-file hydra-ivy
-     ;; spacemacs-ivy
-     spacemacs-helm
+     spacemacs-ivy
+     ;; spacemacs-helm
      (auto-completion :variables
                       auto-completion-return-key-behavior 'complete
                       auto-completion-tab-key-behavior 'cycle)
@@ -170,8 +169,8 @@
     )
 
   ;; keybinding rebinding
-  ;; (define-key ivy-minibuffer-map (kbd "M-SPC") 'spacemacs/ivy-transient-state/body)
-  ;; (define-key ivy-minibuffer-map (kbd "<escape>") 'minibuffer-keyboard-quit)
+  (define-key ivy-minibuffer-map (kbd "M-SPC") 'spacemacs/ivy-transient-state/body)
+  (define-key ivy-minibuffer-map (kbd "<escape>") 'minibuffer-keyboard-quit)
   (global-set-key (kbd "<escape>") 'keyboard-quit)
   )
 
