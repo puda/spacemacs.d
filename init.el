@@ -9,8 +9,8 @@
    '((git :variables
           git-magit-status-fullscreen t)
      ;; byte-compile-file hydra-ivy
-     spacemacs-ivy
-     ;; spacemacs-helm
+     ;; spacemacs-ivy
+     spacemacs-helm
      (auto-completion :variables
                       auto-completion-return-key-behavior 'complete
                       auto-completion-tab-key-behavior 'cycle)
@@ -71,7 +71,7 @@
    dotspacemacs-default-layout-name "Default"
    dotspacemacs-display-default-layout nil
    dotspacemacs-auto-resume-layouts nil
-   dotspacemacs-auto-save-file-location nil
+   dotspacemacs-auto-save-file-location 'cache
    dotspacemacs-max-rollback-slots 5
    dotspacemacs-use-ido nil
    dotspacemacs-helm-resize nil
@@ -142,10 +142,6 @@
   ;; Modes
   (global-evil-mc-mode t)
 
-  ;; change _ to part of word
-  (with-eval-after-load 'evil
-    (defalias #'forward-evil-word #'forward-evil-symbol))
-
   ;; clear anzu after mc
   (add-hook 'evil-mc-after-cursors-deleted
             (defun puda/clear-anzu () (setq anzu--state nil)))
@@ -175,8 +171,8 @@
     )
 
   ;; keybinding rebinding
-  (define-key ivy-minibuffer-map (kbd "M-SPC") 'spacemacs/ivy-transient-state/body)
-  (define-key ivy-minibuffer-map (kbd "<escape>") 'minibuffer-keyboard-quit)
+  ;; (define-key ivy-minibuffer-map (kbd "M-SPC") 'spacemacs/ivy-transient-state/body)
+  ;; (define-key ivy-minibuffer-map (kbd "<escape>") 'minibuffer-keyboard-quit)
   (global-set-key (kbd "<escape>") 'keyboard-quit)
   )
 
