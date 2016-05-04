@@ -9,7 +9,6 @@
     )
   )
 
-
 (defun puda-basic/init-geben ()
   ;; needs chrome/firefox extension for 9000 port signal
   ;; https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc
@@ -123,5 +122,13 @@
 (defun puda-basic/init-geben-helm-projectile ()
   (use-package geben-helm-projectile
     :ensure t))
+
+;; FOR IVY PACKAGE
+;; keybinding rebinding
+;; (define-key ivy-minibuffer-map (kbd "M-SPC") 'spacemacs/ivy-transient-state/body)
+;; (define-key ivy-minibuffer-map (kbd "<escape>") 'minibuffer-keyboard-quit)
+;; byte-compile-file hydra-ivy
+;; spacemacs-ivy
+;; (global-set-key (kbd "<escape>") 'keyboard-quit)
 
 ;;; packages.el ends here
