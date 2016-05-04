@@ -71,7 +71,7 @@
    dotspacemacs-default-layout-name "Default"
    dotspacemacs-display-default-layout nil
    dotspacemacs-auto-resume-layouts nil
-   dotspacemacs-auto-save-file-location 'cache
+   dotspacemacs-auto-save-file-location nil
    dotspacemacs-max-rollback-slots 5
    dotspacemacs-use-ido nil
    dotspacemacs-helm-resize nil
