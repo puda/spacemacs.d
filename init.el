@@ -33,7 +33,6 @@
      emacs-lisp
      org
      ibuffer
-     command-log
      unimpaired
      games
      ;; custom config
@@ -43,7 +42,8 @@
      )
 
    dotspacemacs-additional-packages '()
-   dotspacemacs-excluded-packages '(drupal-mode vi-tilde-fringe evil-search-highlight-persist)))
+   dotspacemacs-excluded-packages '(drupal-mode vi-tilde-fringe evil-search-highlight-persist spaceline)))
+
 
 (defun dotspacemacs/init ()
   (setq-default
@@ -93,7 +93,7 @@
    dotspacemacs-highlight-delimiters 'all
    dotspacemacs-persistent-server t
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
-   dotspacemacs-default-package-repository nil
+   dotspacemacs-default-package-repository 'melpa
    dotspacemacs-whitespace-cleanup 'changed))
 
 (defun dotspacemacs/user-init ()
@@ -111,6 +111,9 @@
    ;; Spaceline
    spaceline-buffer-encoding-abbrev-p nil
    spaceline-version-control-p nil
+
+   ;; Helm Swoop
+   helm-swoop-speed-or-color nil
    ;; General
    ;; default-directory "/var/www/community/"
    ;; initial-scratch-message ";; Puda loves Rachael!! \n;; Puda Emacs Custom Config!!"
