@@ -90,7 +90,7 @@
    dotspacemacs-show-transient-state-title nil
    dotspacemacs-show-transient-state-color-guide nil
    dotspacemacs-smart-closing-parenthesis nil
-   dotspacemacs-mode-line-unicode-symbols t
+   dotspacemacs-mode-line-unicode-symbols nil
    dotspacemacs-smooth-scrolling nil
    dotspacemacs-line-numbers 'relative
    dotspacemacs-smartparens-strict-mode nil
