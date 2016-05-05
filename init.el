@@ -103,21 +103,18 @@
 (defun dotspacemacs/user-init ()
   ;; Variables
   (setq-default
-
    ;; Smartparens
    sp-highlight-pair-overlay nil
    sp-highlight-wrap-overlay nil
    sp-highlight-wrap-tag-overlay nil
-
    ;; Avy
    avy-all-windows 'all-frames
-
    ;; Spaceline
    spaceline-buffer-encoding-abbrev-p nil
    spaceline-version-control-p nil
    ;; General
-   ;; default-directory "/var/www/community/"
-   ;; initial-scratch-message ";; Puda loves Rachael!! \n;; Puda Emacs Custom Config!!"
+   default-directory "/var/www/community/"
+   initial-scratch-message ";; Puda loves Rachael!! \n;; Puda Emacs Custom Config!!"
    )
   ;; nice scrolling
   (setq scroll-margin 0
@@ -142,18 +139,14 @@
    ;; Helm Swoop
    helm-swoop-speed-or-color nil
    )
-
   ;; Modes
   (global-evil-mc-mode t)
-
   ;; clear anzu after mc
   (add-hook 'evil-mc-after-cursors-deleted
             (defun puda/clear-anzu () (setq anzu--state nil)))
-
   ;; disable show-smartparens-global-mode for performance
   (with-eval-after-load 'smartparens
     (show-smartparens-global-mode -1))
-
   ;; terminal hooks
   (let ((comint-hooks '(term-mode-hook eshell-mode-hook messages-buffer-mode-hook)))
     (spacemacs/add-to-hooks
@@ -163,12 +156,10 @@
      comint-hooks))
   (evil-set-initial-state 'term-mode 'emacs)
   (push 'term-mode evil-escape-excluded-major-modes)
-
   ;; leader keybindings
   (evil-leader/set-key
     "." 'dumb-jump-go
     ">" 'dumb-jump-back
-    ;; swapping bk and bd
     "bk" 'kill-this-buffer
     "bd" 'kill-buffer
     "j;" 'avy-isearch
