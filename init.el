@@ -42,7 +42,8 @@
      )
 
    dotspacemacs-additional-packages '()
-   dotspacemacs-excluded-packages '(drupal-mode vi-tilde-fringe evil-search-highlight-persist spaceline)))
+   dotspacemacs-excluded-packages '(drupal-mode vi-tilde-fringe evil-search-highlight-persist spaceline)
+   ))
 
 
 (defun dotspacemacs/init ()
