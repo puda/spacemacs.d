@@ -76,7 +76,7 @@
    dotspacemacs-auto-save-file-location 'cache
    dotspacemacs-max-rollback-slots 5
    dotspacemacs-use-ido nil
-   dotspacemacs-helm-resize nil
+   dotspacemacs-helm-resize t
    dotspacemacs-helm-no-header t
    dotspacemacs-helm-position 'bottom
    dotspacemacs-enable-paste-transient-state nil
@@ -90,12 +90,12 @@
    dotspacemacs-show-transient-state-title nil
    dotspacemacs-show-transient-state-color-guide nil
    dotspacemacs-smart-closing-parenthesis nil
-   dotspacemacs-mode-line-unicode-symbols nil
+   dotspacemacs-mode-line-unicode-symbols t
    dotspacemacs-smooth-scrolling nil
    dotspacemacs-line-numbers 'relative
    dotspacemacs-smartparens-strict-mode nil
    dotspacemacs-highlight-delimiters 'all
-   dotspacemacs-persistent-server t
+   dotspacemacs-persistent-server nil
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
    dotspacemacs-default-package-repository 'melpa
    dotspacemacs-whitespace-cleanup 'changed))
@@ -117,9 +117,9 @@
    initial-scratch-message ";; Puda loves Rachael!! \n;; Puda Emacs Custom Config!!"
    )
   ;; nice scrolling
-  (setq scroll-margin 0
-        scroll-conservatively 10000
-        scroll-preserve-screen-position 1)
+  ;; (setq scroll-margin 0
+  ;;       scroll-conservatively 10000
+  ;;       scroll-preserve-screen-position 1)
   ;; transparency
   (push '(alpha . (0.94 . 0.94)) default-frame-alist)
   (set-frame-parameter (selected-frame) 'alpha '(0.94 . 0.94))
