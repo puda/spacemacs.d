@@ -44,7 +44,9 @@
    dotspacemacs-excluded-packages '(drupal-mode
                                     vi-tilde-fringe
                                     evil-search-highlight-persist
-                                    eyebrowse)
+                                    eyebrowse
+                                    php-extras
+                                    )
    ))
 
 
@@ -75,7 +77,7 @@
    dotspacemacs-auto-save-file-location 'cache
    dotspacemacs-max-rollback-slots 5
    dotspacemacs-use-ido nil
-   dotspacemacs-helm-resize t
+   dotspacemacs-helm-resize nil
    dotspacemacs-helm-no-header t
    dotspacemacs-helm-position 'bottom
    dotspacemacs-enable-paste-transient-state nil
@@ -137,6 +139,9 @@
    powerline-default-separator 'arrow
    ;; Helm Swoop
    helm-swoop-speed-or-color nil
+   ;; Cursor
+   evil-insert-state-cursor '((bar . 5) "chartreuse3")
+   evil-hybrid-state-cursor '((bar . 5) "SkyBlue2")
    )
   ;; Modes
   (global-evil-mc-mode t)
