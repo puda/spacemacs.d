@@ -8,7 +8,7 @@
    dotspacemacs-configuration-layers
    '((git :variables
           git-magit-status-fullscreen t)
-     spacemacs-helm
+     ;; spacemacs-ivy
      (auto-completion :variables
                       auto-completion-return-key-behavior 'complete
                       auto-completion-tab-key-behavior 'cycle)
@@ -164,6 +164,10 @@
     "bd" 'kill-buffer
     "j;" 'avy-isearch
     )
+  ;; keybindings
+  ;; (define-key ivy-minibuffer-map (kbd "M-SPC") 'spacemacs/ivy-transient-state/body)
+  ;; (define-key ivy-minibuffer-map (kbd "<escape>") 'minibuffer-keyboard-quit)
+  ;; (global-set-key (kbd "<escape>") 'keyboard-quit)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
