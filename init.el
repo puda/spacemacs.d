@@ -116,9 +116,9 @@
    initial-scratch-message ";; Puda loves Rachael!! \n;; Puda Emacs Custom Config!!"
    )
   ;; nice scrolling
-  ;; (setq scroll-margin 0
-  ;;       scroll-conservatively 10000
-  ;;       scroll-preserve-screen-position 1)
+  (setq scroll-margin 0
+        scroll-conservatively 10000
+        scroll-preserve-screen-position 1)
   ;; transparency
   (push '(alpha . (0.94 . 0.94)) default-frame-alist)
   (set-frame-parameter (selected-frame) 'alpha '(0.94 . 0.94))
