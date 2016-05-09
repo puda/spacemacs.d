@@ -166,7 +166,11 @@
     "bd" 'kill-buffer
     "j;" 'avy-isearch
     )
-  )
+  ;; Diminish
+  (with-eval-after-load 'hybrid-mode
+    (spacemacs|diminish hybrid-mode))
+  (spacemacs|diminish which-key-mode)
+)
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
