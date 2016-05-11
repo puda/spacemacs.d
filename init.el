@@ -135,6 +135,8 @@
    evil-snipe-spillover-scope 'visible
    ;; Spaceline
    powerline-default-separator 'arrow
+   spaceline-version-control-p nil
+   spaceline-minor-modes-p nil
    ;; Helm Swoop
    helm-swoop-speed-or-color nil
    ;; Cursor
