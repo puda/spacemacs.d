@@ -10,7 +10,8 @@
           git-magit-status-fullscreen t)
      (auto-completion :variables
                       auto-completion-return-key-behavior 'complete
-                      auto-completion-tab-key-behavior 'cycle)
+                      auto-completion-tab-key-behavior 'cycle
+                      auto-completion-private-snippets-directory "~/.spacemacs.d/puda-snippets")
      (evil-snipe :variables
                  evil-snipe-enable-alternate-f-and-t-behaviors t)
      php
@@ -53,7 +54,7 @@
    dotspacemacs-elpa-https t
    dotspacemacs-elpa-timeout 5
    dotspacemacs-check-for-update t
-   dotspacemacs-editing-style 'hybrid
+   dotspacemacs-editing-style 'vim
    dotspacemacs-verbose-loading nil
    dotspacemacs-startup-banner nil
    dotspacemacs-startup-lists '(recents bookmarks projects)
@@ -140,8 +141,8 @@
    ;; Helm Swoop
    helm-swoop-speed-or-color nil
    ;; Cursor
-   evil-insert-state-cursor '((bar . 5) "chartreuse3")
-   evil-hybrid-state-cursor '((bar . 5) "SkyBlue2")
+   evil-insert-state-cursor '((bar . 10) "chartreuse3")
+   evil-hybrid-state-cursor '((bar . 10) "SkyBlue2")
    )
   ;; Modes
   (global-evil-mc-mode t)

@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# contributor: puda
+# name: select_query
+# key: $q
+# --
+$$1 = "SELECT $2 FROM $3 WHERE $4 = :$4";
+$result = mygroup_query($$1, array(":$4" => $$4));
+while (is_object($result) && $row = $result->fetchObject()) {
+    $$5 = $row->$6;
+}
