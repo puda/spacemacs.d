@@ -60,7 +60,7 @@
    dotspacemacs-startup-lists '(recents bookmarks projects)
    dotspacemacs-startup-recent-list-size 5
    dotspacemacs-scratch-mode 'text-mode
-   dotspacemacs-themes '(monokai spacemacs-dark material leuven cyberpunk solarized-dark)
+   dotspacemacs-themes '(spacemacs-dark monokai material leuven cyberpunk solarized-dark)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Source Code Pro" :size 38 :weight semibold :width normal :powerline-scale 1.1)
    dotspacemacs-leader-key "SPC"
