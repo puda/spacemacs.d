@@ -93,6 +93,7 @@
    dotspacemacs-mode-line-unicode-symbols t ;; do not change
    dotspacemacs-smooth-scrolling nil
    dotspacemacs-line-numbers 'relative
+   dotspacemacs-large-file-size 1
    dotspacemacs-smartparens-strict-mode nil
    dotspacemacs-highlight-delimiters 'all
    dotspacemacs-persistent-server nil
@@ -169,10 +170,6 @@
     "bd" 'kill-buffer
     "j;" 'avy-isearch
     )
-  ;; Diminish
-  (with-eval-after-load 'hybrid-mode
-    (spacemacs|diminish hybrid-mode))
-  (spacemacs|diminish which-key-mode)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
