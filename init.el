@@ -169,6 +169,8 @@
     "bk" 'kill-this-buffer
     "bd" 'kill-buffer
     "j;" 'avy-isearch
+    "qq" 'spacemacs/frame-killer
+    "qz" 'spacemacs/prompt-kill-emacs
     )
 )
 

@@ -16,15 +16,15 @@
     :defer t
     :init
     (progn
-      (evil-leader/set-key-for-mode 'php-mode "og" 'geben)
-      (evil-leader/set-key-for-mode 'php-mode "of" 'geben-find-file)
+      (evil-leader/set-key-for-mode 'php-mode "gg" 'geben)
+      (evil-leader/set-key-for-mode 'php-mode "gf" 'geben-find-file)
       ;; (evil-leader/set-key-for-mode 'php-mode "of" 'geben-helm-projectile/open-file)
-      (evil-leader/set-key-for-mode 'php-mode "oc" 'geben-run-to-cursor)
-      (evil-leader/set-key-for-mode 'php-mode "oo" 'geben-step-over)
-      (evil-leader/set-key-for-mode 'php-mode "oi" 'geben-step-into)
-      (evil-leader/set-key-for-mode 'php-mode "ov" 'geben-display-context)
-      (evil-leader/set-key-for-mode 'php-mode "oq" 'geben-stop)
-      (evil-leader/set-key-for-mode 'php-mode "oQ" 'geben-end)
+      (evil-leader/set-key-for-mode 'php-mode "gc" 'geben-run-to-cursor)
+      (evil-leader/set-key-for-mode 'php-mode "go" 'geben-step-over)
+      (evil-leader/set-key-for-mode 'php-mode "gi" 'geben-step-into)
+      (evil-leader/set-key-for-mode 'php-mode "gv" 'geben-display-context)
+      (evil-leader/set-key-for-mode 'php-mode "gq" 'geben-stop)
+      (evil-leader/set-key-for-mode 'php-mode "gQ" 'geben-end)
 
 ;;       (spacemacs|define-transient-state geben
 ;;         :title "Geben Transient State"
