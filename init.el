@@ -96,7 +96,7 @@
    dotspacemacs-large-file-size 1
    dotspacemacs-smartparens-strict-mode nil
    dotspacemacs-highlight-delimiters 'all
-   dotspacemacs-persistent-server nil
+   dotspacemacs-persistent-server t
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
    dotspacemacs-default-package-repository 'melpa
    dotspacemacs-whitespace-cleanup 'changed))
