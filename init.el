@@ -144,6 +144,8 @@
    ;; Cursor
    evil-insert-state-cursor '((bar . 10) "chartreuse3")
    evil-hybrid-state-cursor '((bar . 10) "SkyBlue2")
+   ;; Helm Mini
+   helm-mini-default-sources '(helm-source-buffers-list helm-source-recentf helm-source-buffer-not-found helm-source-bookmarks)
    )
   ;; Modes
   (global-evil-mc-mode t)
