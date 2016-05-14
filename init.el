@@ -62,7 +62,7 @@
    dotspacemacs-scratch-mode 'text-mode
    dotspacemacs-themes '(monokai spacemacs-dark material leuven cyberpunk solarized-dark)
    dotspacemacs-colorize-cursor-according-to-state t
-   dotspacemacs-default-font '("Source Code Pro" :size 38 :weight semibold :width normal :powerline-scale 1.1)
+   dotspacemacs-default-font '("Source Code Pro" :size 38 :weight semibold :width normal :powerline-scale 1.15)
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-leader-key "M-m"
    dotspacemacs-major-mode-leader-key ","
@@ -139,6 +139,9 @@
    spaceline-version-control-p nil
    spaceline-minor-modes-p nil
    spaceline-buffer-size-p nil
+   spaceline-new-version-p nil
+   ;; powerline
+   powerline-default-separator 'arrow
    ;; Helm Swoop
    helm-swoop-speed-or-color nil
    ;; Cursor
