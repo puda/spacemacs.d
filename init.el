@@ -54,7 +54,7 @@
    dotspacemacs-elpa-https t
    dotspacemacs-elpa-timeout 5
    dotspacemacs-check-for-update t
-   dotspacemacs-editing-style 'vim
+   dotspacemacs-editing-style 'hybrid
    dotspacemacs-verbose-loading nil
    dotspacemacs-startup-banner nil
    dotspacemacs-startup-lists '(recents bookmarks projects)
@@ -147,6 +147,7 @@
    ;; Cursor
    evil-insert-state-cursor '((bar . 10) "chartreuse3")
    evil-hybrid-state-cursor '((bar . 10) "SkyBlue2")
+   evil-move-cursor-back nil
    ;; Helm Mini
    helm-mini-default-sources '(helm-source-buffers-list helm-source-recentf helm-source-buffer-not-found helm-source-bookmarks)
    )
