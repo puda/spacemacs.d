@@ -32,6 +32,9 @@
      better-defaults
      emacs-lisp
      org
+     (deft :variables
+       deft-extensions '("org" "md" "txt")
+       deft-directory '"~/Documents/")
      ibuffer
      unimpaired
      games
@@ -110,9 +113,6 @@
    sp-highlight-wrap-tag-overlay nil
    ;; Avy
    avy-all-windows 'all-frames
-   ;; Spaceline
-   spaceline-buffer-encoding-abbrev-p nil
-   spaceline-version-control-p nil
    ;; General
    default-directory "/var/www/community/"
    initial-scratch-message ";; Puda loves Rachael!! \n;; Puda Emacs Custom Config!!"
@@ -135,11 +135,6 @@
    evil-snipe-scope 'visible
    evil-snipe-repeat-scope 'visible
    evil-snipe-spillover-scope 'visible
-   ;; Spaceline
-   spaceline-version-control-p nil
-   spaceline-minor-modes-p nil
-   spaceline-buffer-size-p nil
-   spaceline-new-version-p nil
    ;; powerline
    powerline-default-separator 'arrow
    ;; Helm Swoop
