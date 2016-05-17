@@ -1,6 +1,7 @@
 (setq-default
  theming-modifications
- '((monokai
+ '((;; monokai
+    spacemacs-dark
     ;; Font locking
     (font-lock-comment-face :slant italic)
     (font-lock-string-face :slant italic)
