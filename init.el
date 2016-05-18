@@ -142,6 +142,9 @@
    ;; Helm Mini
    helm-mini-default-sources '(helm-source-buffers-list helm-source-recentf helm-source-buffer-not-found helm-source-bookmarks)
    )
+  ;; change _ to part of word
+  (with-eval-after-load 'evil
+    (defalias #'forward-evil-word #'forward-evil-symbol))
   ;; Modes
   (global-evil-mc-mode t)
   ;; clear anzu after mc
