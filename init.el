@@ -38,6 +38,7 @@
      ibuffer
      unimpaired
      games
+     vim-empty-lines
      ;; custom config
      puda-basic
      puda-theming
@@ -46,9 +47,7 @@
 
    dotspacemacs-additional-packages '()
    dotspacemacs-excluded-packages '(drupal-mode
-                                    vi-tilde-fringe
-                                    evil-search-highlight-persist
-                                    eyebrowse)
+                                    vi-tilde-fringe)
    ))
 
 
@@ -57,7 +56,7 @@
    dotspacemacs-elpa-https t
    dotspacemacs-elpa-timeout 5
    dotspacemacs-check-for-update t
-   dotspacemacs-editing-style 'hybrid
+   dotspacemacs-editing-style 'vim
    dotspacemacs-verbose-loading nil
    dotspacemacs-startup-banner nil
    dotspacemacs-startup-lists '(recents bookmarks projects)
@@ -65,7 +64,7 @@
    dotspacemacs-scratch-mode 'text-mode
    dotspacemacs-themes '(monokai spacemacs-dark material leuven cyberpunk solarized-dark)
    dotspacemacs-colorize-cursor-according-to-state t
-   dotspacemacs-default-font '("Source Code Pro" :size 38 :weight semibold :width normal :powerline-scale 1.15)
+   dotspacemacs-default-font '("Source Code Pro" :size 35 :weight demibold :width normal :powerline-scale 1.15)
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-leader-key "M-m"
    dotspacemacs-major-mode-leader-key ","
@@ -122,8 +121,11 @@
         scroll-conservatively 10000
         scroll-preserve-screen-position 1)
   ;; transparency
-  (push '(alpha . (0.94 . 0.94)) default-frame-alist)
-  (set-frame-parameter (selected-frame) 'alpha '(0.94 . 0.94))
+  (let ((tp (cons dotspacemacs-active-transparency dotspacemacs-inactive-transparency)))
+    (push `(alpha . ,tp) default-frame-alist)
+    (set-frame-parameter (selected-frame) 'alpha tp))
+  ; (push '(alpha . (0.94 . 0.94)) default-frame-alist)
+  ; (set-frame-parameter (selected-frame) 'alpha '(0.94 . 0.94))
   ;; Modes
   (delete-selection-mode t)
   (global-auto-revert-mode t))
@@ -141,6 +143,10 @@
    helm-swoop-speed-or-color nil
    ;; Helm Mini
    helm-mini-default-sources '(helm-source-buffers-list helm-source-recentf helm-source-buffer-not-found helm-source-bookmarks)
+   ;; Spaceline
+   spaceline-new-version-p nil
+   spaceline-version-control-p nil
+   spaceline-minor-modes-p nil
    )
   ;; Modes
   (global-evil-mc-mode t)
