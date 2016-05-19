@@ -2,7 +2,7 @@
   (setq-default
    dotspacemacs-distribution 'spacemacs
    dotspacemacs-enable-lazy-installation nil
-   dotspacemacs-ask-for-lazy-installation t
+   dotspacemacs-ask-for-lazy-installation nil
    dotspacemacs-configuration-layer-path '("~/.spacemacs.d/layers/")
    dotspacemacs-delete-orphan-packages t
    dotspacemacs-configuration-layers
