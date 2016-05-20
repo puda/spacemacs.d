@@ -8,6 +8,7 @@
    dotspacemacs-configuration-layers
    '((git :variables
           git-magit-status-fullscreen t)
+     github
      (auto-completion :variables
                       auto-completion-return-key-behavior 'complete
                       auto-completion-tab-key-behavior 'cycle
@@ -19,6 +20,7 @@
      gtags
      (javascript :variables
                  javascript-disable-tern-port-files t)
+     react ;;learn
      (shell :variables
             shell-default-position 'bottom
             shell-default-height 70
@@ -38,7 +40,6 @@
      ibuffer
      unimpaired
      games
-     vim-empty-lines
      ;; custom config
      puda-basic
      puda-theming
@@ -54,7 +55,7 @@
 (defun dotspacemacs/init ()
   (setq-default
    dotspacemacs-elpa-https t
-   dotspacemacs-elpa-timeout 5
+   dotspacemacs-elpa-timeout 10
    dotspacemacs-check-for-update t
    dotspacemacs-editing-style 'vim
    dotspacemacs-verbose-loading nil
@@ -82,25 +83,25 @@
    dotspacemacs-helm-no-header t
    dotspacemacs-helm-position 'bottom
    dotspacemacs-enable-paste-transient-state nil
-   dotspacemacs-which-key-delay 0.4
+   dotspacemacs-which-key-delay 1.0
    dotspacemacs-loading-progress-bar t
-   dotspacemacs-fullscreen-at-startup t
+   dotspacemacs-fullscreen-at-startup nil
    dotspacemacs-fullscreen-use-non-native nil
    dotspacemacs-maximized-at-startup nil
    dotspacemacs-active-transparency 90
    dotspacemacs-inactive-transparency 90
-   dotspacemacs-show-transient-state-title nil
+   dotspacemacs-show-transient-state-title t
    dotspacemacs-show-transient-state-color-guide nil
-   dotspacemacs-smart-closing-parenthesis nil
    dotspacemacs-mode-line-unicode-symbols t ;; do not change
    dotspacemacs-smooth-scrolling nil
-   dotspacemacs-line-numbers 'relative
+   dotspacemacs-line-numbers nil ;; change back to relative
    dotspacemacs-large-file-size 1
    dotspacemacs-smartparens-strict-mode nil
+   dotspacemacs-smart-closing-parenthesis nil
    dotspacemacs-highlight-delimiters 'all
-   dotspacemacs-persistent-server t
+   dotspacemacs-persistent-server nil
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
-   dotspacemacs-default-package-repository 'melpa
+   dotspacemacs-default-package-repository nil
    dotspacemacs-whitespace-cleanup 'changed))
 
 (defun dotspacemacs/user-init ()
@@ -137,16 +138,21 @@
    evil-snipe-scope 'visible
    evil-snipe-repeat-scope 'visible
    evil-snipe-spillover-scope 'visible
+   ;; Evil
+   evil-move-beyond-eol nil
    ;; powerline
    powerline-default-separator 'arrow
    ;; Helm Swoop
    helm-swoop-speed-or-color nil
    ;; Helm Mini
    helm-mini-default-sources '(helm-source-buffers-list helm-source-recentf helm-source-buffer-not-found helm-source-bookmarks)
+   ;; Helm
+   helm-echo-input-in-header-line nil
    ;; Spaceline
    spaceline-new-version-p nil
-   spaceline-version-control-p nil
    spaceline-minor-modes-p nil
+   spaceline-buffer-encoding-abbrev-p nil
+   spaceline-version-control-p nil
    )
   ;; Modes
   (global-evil-mc-mode t)
