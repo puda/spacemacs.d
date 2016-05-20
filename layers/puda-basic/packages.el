@@ -6,7 +6,6 @@
     dumb-jump
     geben
     geben-helm-projectile
-    linum-relative
     )
   )
 
@@ -123,14 +122,6 @@
 (defun puda-basic/init-geben-helm-projectile ()
   (use-package geben-helm-projectile
     :ensure t))
-
-(defun puda-basic/init-linum-relative ()
-  (use-package linum-relative
-    :ensure t
-    :config
-    (progn
-      (linum-relative-global-mode t)
-      )))
 
 ;; FOR IVY PACKAGE
 ;; keybinding rebinding
