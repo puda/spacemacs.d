@@ -8,7 +8,6 @@
    dotspacemacs-configuration-layers
    '((git :variables
           git-magit-status-fullscreen t)
-     github
      (auto-completion :variables
                       auto-completion-return-key-behavior 'complete
                       auto-completion-tab-key-behavior 'cycle
@@ -48,6 +47,8 @@
 
    dotspacemacs-additional-packages '()
    dotspacemacs-excluded-packages '(drupal-mode
+                                    eyebrowse
+                                    evil-search-highlight-persist
                                     vi-tilde-fringe)
    ))
 
@@ -94,7 +95,7 @@
    dotspacemacs-show-transient-state-color-guide nil
    dotspacemacs-mode-line-unicode-symbols t ;; do not change
    dotspacemacs-smooth-scrolling nil
-   dotspacemacs-line-numbers 'relative ;; change back to relative
+   dotspacemacs-line-numbers nil ;; change back to relative
    dotspacemacs-large-file-size 1
    dotspacemacs-smartparens-strict-mode nil
    dotspacemacs-smart-closing-parenthesis nil
