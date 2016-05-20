@@ -95,7 +95,7 @@
    dotspacemacs-show-transient-state-color-guide nil
    dotspacemacs-mode-line-unicode-symbols t ;; do not change
    dotspacemacs-smooth-scrolling nil
-   dotspacemacs-line-numbers nil ;; change back to relative
+   dotspacemacs-line-numbers 'relative ;; change back to relative
    dotspacemacs-large-file-size 1
    dotspacemacs-smartparens-strict-mode nil
    dotspacemacs-smart-closing-parenthesis nil
