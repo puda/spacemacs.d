@@ -179,7 +179,9 @@
     "bk" 'kill-this-buffer
     "bd" 'kill-buffer
     "j;" 'avy-isearch
+    ;; for master branch only
     "jl" 'evil-avy-goto-line
+    "jj" 'evil-avy-goto-char
     "ji" 'helm-imenu
     )
 )
