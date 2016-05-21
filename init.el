@@ -66,7 +66,7 @@
    dotspacemacs-scratch-mode 'text-mode
    dotspacemacs-themes '(monokai spacemacs-dark material leuven cyberpunk solarized-dark)
    dotspacemacs-colorize-cursor-according-to-state t
-   dotspacemacs-default-font '("Source Code Pro" :size 35 :weight demibold :width normal :powerline-scale 1.15)
+   dotspacemacs-default-font '("Source Code Pro" :size 38 :weight demibold :width normal :powerline-scale 1.15)
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-leader-key "M-m"
    dotspacemacs-major-mode-leader-key ","
@@ -86,7 +86,7 @@
    dotspacemacs-enable-paste-transient-state nil
    dotspacemacs-which-key-delay 1.0
    dotspacemacs-loading-progress-bar t
-   dotspacemacs-fullscreen-at-startup nil
+   dotspacemacs-fullscreen-at-startup t
    dotspacemacs-fullscreen-use-non-native nil
    dotspacemacs-maximized-at-startup nil
    dotspacemacs-active-transparency 90
@@ -179,8 +179,7 @@
     "bk" 'kill-this-buffer
     "bd" 'kill-buffer
     "j;" 'avy-isearch
-    "qq" 'spacemacs/frame-killer
-    "qz" 'spacemacs/prompt-kill-emacs
+    "jl" 'evil-avy-goto-line
     )
 )
 
