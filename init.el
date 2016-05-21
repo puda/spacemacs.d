@@ -180,6 +180,7 @@
     "bd" 'kill-buffer
     "j;" 'avy-isearch
     "jl" 'evil-avy-goto-line
+    "ji" 'helm-imenu
     )
 )
 
