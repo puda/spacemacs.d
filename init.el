@@ -94,7 +94,7 @@
    dotspacemacs-show-transient-state-title t
    dotspacemacs-show-transient-state-color-guide nil
    dotspacemacs-mode-line-unicode-symbols t ;; do not change
-   dotspacemacs-smooth-scrolling nil
+   dotspacemacs-smooth-scrolling t
    dotspacemacs-line-numbers 'relative ;; change back to relative
    dotspacemacs-large-file-size 1
    dotspacemacs-smartparens-strict-mode nil
@@ -118,16 +118,10 @@
    default-directory "/var/www/community/"
    initial-scratch-message ";; Puda loves Rachael!! \n;; Puda Emacs Custom Config!!"
    )
-  ;; nice scrolling
-  (setq scroll-margin 0
-        scroll-conservatively 10000
-        scroll-preserve-screen-position 1)
   ;; transparency
   (let ((tp (cons dotspacemacs-active-transparency dotspacemacs-inactive-transparency)))
     (push `(alpha . ,tp) default-frame-alist)
     (set-frame-parameter (selected-frame) 'alpha tp))
-  ; (push '(alpha . (0.94 . 0.94)) default-frame-alist)
-  ; (set-frame-parameter (selected-frame) 'alpha '(0.94 . 0.94))
   ;; Modes
   (delete-selection-mode t)
   (global-auto-revert-mode t))
@@ -151,7 +145,6 @@
    helm-echo-input-in-header-line nil
    ;; Spaceline
    spaceline-new-version-p nil
-   spaceline-minor-modes-p nil
    spaceline-buffer-encoding-abbrev-p nil
    spaceline-version-control-p nil
    )
@@ -179,10 +172,6 @@
     "bk" 'kill-this-buffer
     "bd" 'kill-buffer
     "j;" 'avy-isearch
-    ;; for master branch only
-    "jl" 'evil-avy-goto-line
-    "jj" 'evil-avy-goto-char
-    "ji" 'helm-imenu
     )
 )
 
