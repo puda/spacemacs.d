@@ -137,8 +137,6 @@
    evil-move-beyond-eol nil
    ;; powerline
    powerline-default-separator 'arrow
-   ;; Helm Swoop
-   helm-swoop-speed-or-color nil
    ;; Helm Mini
    helm-mini-default-sources '(helm-source-buffers-list helm-source-recentf helm-source-buffer-not-found helm-source-bookmarks)
    ;; Helm
@@ -150,6 +148,7 @@
    )
   ;; Modes
   (global-evil-mc-mode t)
+  (nameless-mode t)
   ;; clear anzu after mc
   (add-hook 'evil-mc-after-cursors-deleted
             (defun puda/clear-anzu () (setq anzu--state nil)))

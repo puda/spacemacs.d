@@ -6,6 +6,7 @@
     dumb-jump
     geben
     geben-helm-projectile
+    nameless
     )
   )
 
@@ -122,6 +123,25 @@
 (defun puda-basic/init-geben-helm-projectile ()
   (use-package geben-helm-projectile
     :ensure t))
+
+(defun puda-basic/init-nameless ()
+  (use-package nameless
+    :ensure t
+    :init
+    (setq nameless-discover-current-name nil)
+    :config
+    (progn
+      (setq nameless-separator "_")
+      (add-hook 'emacs-lisp-mode-hook #'nameless-mode)
+      (add-hook 'php-mode-hook #'nameless-mode)
+      (setq nameless-global-aliases '(("dsm" . "dotspacemacs")
+                                      ("sm" . "spacemacs")
+                                      ("sl" . "spaceline")
+                                      ("ot" . "onlinetest")
+                                      ("mg" . "mygroup")
+                                      ("pr" . "progressreport")
+                                      ))
+      )))
 
 ;; FOR IVY PACKAGE
 ;; keybinding rebinding
