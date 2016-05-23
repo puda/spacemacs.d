@@ -58,7 +58,7 @@
    dotspacemacs-elpa-https t
    dotspacemacs-elpa-timeout 10
    dotspacemacs-check-for-update t
-   dotspacemacs-editing-style 'vim
+   dotspacemacs-editing-style 'hybrid
    dotspacemacs-verbose-loading nil
    dotspacemacs-startup-banner nil
    dotspacemacs-startup-lists '(recents bookmarks projects)
@@ -173,17 +173,6 @@
     "bd" 'kill-buffer
     "j;" 'avy-isearch
     )
-  ;; Prettify-Symbols
-  (let ((puda-prettify-hooks '(js2-mode-hook php-mode-hook emacs-lisp-mode-hook)))
-    (spacemacs/add-to-hooks
-     (defun puda-prettify-symbols ()
-       (push '("function" . ?ƒ) prettify-symbols-alist)
-       (push '("->" . ?→) prettify-symbols-alist)
-       (push '("=>" . ?») prettify-symbols-alist)
-       (push '("!=" . ?≠) prettify-symbols-alist)
-       (global-prettify-symbols-mode +1)
-       )
-       puda-prettify-hooks))
 )
 
 ;; Do not write anything past this comment. This is where Emacs will

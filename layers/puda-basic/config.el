@@ -18,3 +18,15 @@
   (add-hook 'delete-frame-functions #'turn-on-mouse))
 
 (puda-turn-off-mouse)
+
+;; Prettify-Symbols
+(let ((puda-prettify-hooks '(js2-mode-hook php-mode-hook emacs-lisp-mode-hook)))
+  (spacemacs/add-to-hooks
+   (defun puda-prettify-symbols ()
+     (push '("function" . ?ƒ) prettify-symbols-alist)
+     (push '("->" . ?→) prettify-symbols-alist)
+     (push '("=>" . ?») prettify-symbols-alist)
+     (push '("!=" . ?≠) prettify-symbols-alist)
+     (global-prettify-symbols-mode +1)
+     )
+   puda-prettify-hooks))
