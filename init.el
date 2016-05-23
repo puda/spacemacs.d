@@ -148,7 +148,6 @@
    )
   ;; Modes
   (global-evil-mc-mode t)
-  (nameless-mode t)
   ;; clear anzu after mc
   (add-hook 'evil-mc-after-cursors-deleted
             (defun puda/clear-anzu () (setq anzu--state nil)))
