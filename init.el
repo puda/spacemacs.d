@@ -84,6 +84,8 @@
    dotspacemacs-helm-no-header t
    dotspacemacs-helm-position 'bottom
    dotspacemacs-enable-paste-transient-state nil
+   ;; for master branch
+   dotspacemacs-enable-paste-micro-state nil
    dotspacemacs-which-key-delay 1.0
    dotspacemacs-loading-progress-bar t
    dotspacemacs-fullscreen-at-startup t
@@ -170,6 +172,11 @@
     "bk" 'kill-this-buffer
     "bd" 'kill-buffer
     "j;" 'avy-isearch
+    ;; for master branch
+    "jj" 'evil-avy-goto-char
+    "jw" 'evil-avy-goto-word-or-subword-1
+    "ji" 'spacemacs/jump-in-buffer
+    "jl" 'evil-avy-goto-line
     )
 )
 
