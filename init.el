@@ -64,7 +64,7 @@
    dotspacemacs-startup-lists '(recents bookmarks projects)
    dotspacemacs-startup-recent-list-size 5
    dotspacemacs-scratch-mode 'text-mode
-   dotspacemacs-themes '(monokai spacemacs-dark material leuven cyberpunk solarized-dark)
+   dotspacemacs-themes '(spacemacs-dark monokai material leuven cyberpunk solarized-dark)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Source Code Pro" :size 38 :weight demibold :width normal :powerline-scale 1.15)
    dotspacemacs-leader-key "SPC"
@@ -97,7 +97,7 @@
    dotspacemacs-show-transient-state-title t
    dotspacemacs-show-transient-state-color-guide nil
    dotspacemacs-mode-line-unicode-symbols t ;; do not change
-   dotspacemacs-smooth-scrolling t
+   dotspacemacs-smooth-scrolling nil
    dotspacemacs-line-numbers 'relative ;; change back to relative
    dotspacemacs-large-file-size 1
    dotspacemacs-smartparens-strict-mode nil
@@ -125,6 +125,8 @@
   (let ((tp (cons dotspacemacs-active-transparency dotspacemacs-inactive-transparency)))
     (push `(alpha . ,tp) default-frame-alist)
     (set-frame-parameter (selected-frame) 'alpha tp))
+  ;; smooth-scrolling
+  (setq scroll-conservatively 101)
   ;; Modes
   (delete-selection-mode t)
   (global-auto-revert-mode t))
