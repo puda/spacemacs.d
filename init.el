@@ -86,6 +86,7 @@
    dotspacemacs-enable-paste-transient-state nil
    ;; for master branch
    dotspacemacs-enable-paste-micro-state nil
+   ;; end
    dotspacemacs-which-key-delay 1.0
    dotspacemacs-loading-progress-bar t
    dotspacemacs-fullscreen-at-startup t
@@ -177,6 +178,7 @@
     "jw" 'evil-avy-goto-word-or-subword-1
     "ji" 'spacemacs/jump-in-buffer
     "jl" 'evil-avy-goto-line
+    ;; end
     )
 )
 
