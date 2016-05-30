@@ -125,7 +125,7 @@
   (let ((tp (cons dotspacemacs-active-transparency dotspacemacs-inactive-transparency)))
     (push `(alpha . ,tp) default-frame-alist)
     (set-frame-parameter (selected-frame) 'alpha tp))
-  ;; smooth-scrolling
+  ;; smooth-scrolling for master branch
   (setq scroll-conservatively 101)
   ;; Modes
   (delete-selection-mode t)
