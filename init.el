@@ -64,7 +64,7 @@
    dotspacemacs-startup-lists '(recents bookmarks projects)
    dotspacemacs-startup-recent-list-size 5
    dotspacemacs-scratch-mode 'text-mode
-   dotspacemacs-themes '(spacemacs-dark monokai material leuven cyberpunk solarized-dark)
+   dotspacemacs-themes '(gruvbox material monokai spacemacs-dark leuven cyberpunk solarized-dark)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Source Code Pro" :size 38 :weight demibold :width normal :powerline-scale 1.15)
    dotspacemacs-leader-key "SPC"
@@ -140,13 +140,12 @@
    evil-snipe-spillover-scope 'visible
    ;; Evil
    evil-move-beyond-eol nil
-   ;; powerline
-   powerline-default-separator 'arrow
    ;; Helm Mini
    helm-mini-default-sources '(helm-source-buffers-list helm-source-recentf helm-source-buffer-not-found helm-source-bookmarks)
    ;; Helm
    helm-echo-input-in-header-line nil
    ;; Spaceline
+   powerline-default-separator 'arrow
    spaceline-new-version-p nil
    spaceline-buffer-encoding-abbrev-p nil
    spaceline-version-control-p nil
