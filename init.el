@@ -64,9 +64,9 @@
    dotspacemacs-startup-lists '(recents bookmarks projects)
    dotspacemacs-startup-recent-list-size 5
    dotspacemacs-scratch-mode 'text-mode
-   dotspacemacs-themes '(gruvbox material monokai spacemacs-dark leuven cyberpunk solarized-dark)
+   dotspacemacs-themes '(solarized-dark material monokai gruvbox leuven cyberpunk spacemacs-dark)
    dotspacemacs-colorize-cursor-according-to-state t
-   dotspacemacs-default-font '("Source Code Pro" :size 38 :weight demibold :width normal :powerline-scale 1.15)
+   dotspacemacs-default-font '("Source Code Pro" :size 38 :weight demibold :width normal :powerline-scale 1.1)
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-leader-key "M-m"
    dotspacemacs-major-mode-leader-key ","
@@ -122,9 +122,9 @@
    initial-scratch-message ";; Puda loves Rachael!! \n;; Puda Emacs Custom Config!!"
    )
   ;; transparency
-  (let ((tp (cons dotspacemacs-active-transparency dotspacemacs-inactive-transparency)))
-    (push `(alpha . ,tp) default-frame-alist)
-    (set-frame-parameter (selected-frame) 'alpha tp))
+  ;; (let ((tp (cons dotspacemacs-active-transparency dotspacemacs-inactive-transparency)))
+  ;;   (push `(alpha . ,tp) default-frame-alist)
+  ;;   (set-frame-parameter (selected-frame) 'alpha tp))
   ;; smooth-scrolling for master branch
   (setq scroll-conservatively 101)
   ;; Modes
