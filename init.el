@@ -179,6 +179,7 @@
     "jw" 'evil-avy-goto-word-or-subword-1
     "ji" 'spacemacs/jump-in-buffer
     "jl" 'evil-avy-goto-line
+    "wd" 'delete-window
     ;; end
     )
 )
