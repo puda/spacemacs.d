@@ -64,7 +64,7 @@
    dotspacemacs-startup-lists '(recents bookmarks projects)
    dotspacemacs-startup-recent-list-size 5
    dotspacemacs-scratch-mode 'text-mode
-   dotspacemacs-themes '(solarized-dark material monokai gruvbox leuven cyberpunk spacemacs-dark)
+   dotspacemacs-themes '(monokai material solarized-dark gruvbox leuven cyberpunk spacemacs-dark)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Source Code Pro" :size 38 :weight demibold :width normal :powerline-scale 1.1)
    dotspacemacs-leader-key "SPC"
@@ -84,9 +84,6 @@
    dotspacemacs-helm-no-header t
    dotspacemacs-helm-position 'bottom
    dotspacemacs-enable-paste-transient-state nil
-   ;; for master branch
-   dotspacemacs-enable-paste-micro-state nil
-   ;; end
    dotspacemacs-which-key-delay 1.0
    dotspacemacs-loading-progress-bar t
    dotspacemacs-fullscreen-at-startup t
@@ -97,7 +94,7 @@
    dotspacemacs-show-transient-state-title t
    dotspacemacs-show-transient-state-color-guide nil
    dotspacemacs-mode-line-unicode-symbols t ;; do not change
-   dotspacemacs-smooth-scrolling nil
+   dotspacemacs-smooth-scrolling t
    dotspacemacs-line-numbers 'relative ;; change back to relative
    dotspacemacs-large-file-size 1
    dotspacemacs-smartparens-strict-mode nil
@@ -125,8 +122,6 @@
   (let ((tp (cons dotspacemacs-active-transparency dotspacemacs-inactive-transparency)))
     (push `(alpha . ,tp) default-frame-alist)
     (set-frame-parameter (selected-frame) 'alpha tp))
-  ;; smooth-scrolling for master branch
-  (setq scroll-conservatively 101)
   ;; Modes
   (delete-selection-mode t)
   (global-auto-revert-mode t))
@@ -174,13 +169,6 @@
     "bk" 'kill-this-buffer
     "bd" 'kill-buffer
     "j;" 'avy-isearch
-    ;; for master branch
-    "jj" 'evil-avy-goto-char
-    "jw" 'evil-avy-goto-word-or-subword-1
-    "ji" 'spacemacs/jump-in-buffer
-    "jl" 'evil-avy-goto-line
-    "wd" 'delete-window
-    ;; end
     )
 )
 
