@@ -42,6 +42,10 @@
      ;; custom config
      puda-basic
      puda-theming
+     (theming :variables
+              theming-headings-inherit-from-default 'all
+              theming-headings-same-size 'all
+              theming-headings-bold 'all)
      evil-little-word
      )
 
