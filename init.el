@@ -122,9 +122,9 @@
    initial-scratch-message ";; Puda loves Rachael!! \n;; Puda Emacs Custom Config!!"
    )
   ;; transparency
-  ;; (let ((tp (cons dotspacemacs-active-transparency dotspacemacs-inactive-transparency)))
-  ;;   (push `(alpha . ,tp) default-frame-alist)
-  ;;   (set-frame-parameter (selected-frame) 'alpha tp))
+  (let ((tp (cons dotspacemacs-active-transparency dotspacemacs-inactive-transparency)))
+    (push `(alpha . ,tp) default-frame-alist)
+    (set-frame-parameter (selected-frame) 'alpha tp))
   ;; smooth-scrolling for master branch
   (setq scroll-conservatively 101)
   ;; Modes
