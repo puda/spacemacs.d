@@ -1,7 +1,8 @@
 (setq-default
  theming-modifications
- '((monokai
+ '((;; monokai
     ;; Font locking
+    hc-zenburn
     (font-lock-comment-face :slant italic)
     (font-lock-string-face :slant italic)
     (font-lock-doc-face :slant italic)
