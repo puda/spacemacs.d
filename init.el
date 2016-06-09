@@ -39,6 +39,7 @@
      ibuffer
      unimpaired
      games
+     vim-empty-lines
      ;; custom config
      puda-basic
      puda-theming
@@ -55,7 +56,6 @@
                                     evil-search-highlight-persist
                                     vi-tilde-fringe)
    ))
-
 
 (defun dotspacemacs/init ()
   (setq-default
