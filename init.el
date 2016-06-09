@@ -4,7 +4,8 @@
    dotspacemacs-enable-lazy-installation nil
    dotspacemacs-ask-for-lazy-installation nil
    dotspacemacs-configuration-layer-path '("~/.spacemacs.d/layers/")
-   dotspacemacs-delete-orphan-packages t
+   dotspacemacs-download-packages 'used
+
    dotspacemacs-configuration-layers
    '((git :variables
           git-magit-status-fullscreen t)
@@ -39,7 +40,6 @@
      ibuffer
      unimpaired
      games
-     vim-empty-lines
      ;; custom config
      puda-basic
      puda-theming
@@ -52,6 +52,7 @@
 
    dotspacemacs-additional-packages '()
    dotspacemacs-excluded-packages '(drupal-mode
+                                    ido
                                     eyebrowse
                                     evil-search-highlight-persist
                                     vi-tilde-fringe)
@@ -63,12 +64,11 @@
    dotspacemacs-elpa-timeout 10
    dotspacemacs-check-for-update t
    dotspacemacs-editing-style 'hybrid
-   dotspacemacs-verbose-loading nil
    dotspacemacs-startup-banner nil
    dotspacemacs-startup-lists '(recents bookmarks projects)
    dotspacemacs-startup-recent-list-size 5
    dotspacemacs-scratch-mode 'text-mode
-   dotspacemacs-themes '(monokai darkokai spacemacs-dark material solarized-dark)
+   dotspacemacs-themes '(monokai zenburn darkokai spacemacs-dark material solarized-dark)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Source Code Pro" :size 38 :weight semibold :width normal :powerline-scale 1.15)
    dotspacemacs-leader-key "SPC"
@@ -76,15 +76,17 @@
    dotspacemacs-major-mode-leader-key ","
    dotspacemacs-major-mode-emacs-leader-key "C-M-m"
    dotspacemacs-distinguish-gui-tab t
-   dotspacemacs-command-key "SPC"
+   dotspacemacs-emacs-command-key "SPC"
    dotspacemacs-remap-Y-to-y$ t
+   dotspacemacs-retain-visual-state-on-shift t
+   dotspacemacs-visual-line-move-text t
+   dotspacemacs-ex-substitute-global nil
    dotspacemacs-default-layout-name "Default"
    dotspacemacs-display-default-layout nil
    dotspacemacs-auto-resume-layouts nil
    dotspacemacs-auto-save-file-location 'cache
    dotspacemacs-max-rollback-slots 5
-   dotspacemacs-use-ido nil
-   dotspacemacs-helm-resize nil
+   dotspacemacs-helm-resize t
    dotspacemacs-helm-no-header t
    dotspacemacs-helm-position 'bottom
    dotspacemacs-enable-paste-transient-state nil
@@ -100,7 +102,7 @@
    dotspacemacs-mode-line-unicode-symbols t ;; do not change
    dotspacemacs-smooth-scrolling t
    dotspacemacs-line-numbers 'relative ;; change back to relative
-   dotspacemacs-large-file-size 1
+   dotspacemacs-folding-method 'origami
    dotspacemacs-smartparens-strict-mode nil
    dotspacemacs-smart-closing-parenthesis nil
    dotspacemacs-highlight-delimiters 'all
@@ -121,6 +123,8 @@
    ;; General
    default-directory "/var/www/community/"
    initial-scratch-message ";; Puda loves Rachael!! \n;; Puda Emacs Custom Config!!"
+   ;; Ranger
+   ranger-override-dired t
    )
   ;; transparency
   (let ((tp (cons dotspacemacs-active-transparency dotspacemacs-inactive-transparency)))
