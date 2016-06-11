@@ -26,7 +26,9 @@
             shell-default-height 70
             )
      (ranger :variables
-             ranger-show-preview t)
+             ranger-show-preview t
+             ranger-show-dotfiles t
+             )
      (spell-checking :variables spell-checking-enable-by-default nil)
      syntax-checking
      (version-control :variables version-control-diff-tool 'diff-hl)
@@ -68,7 +70,7 @@
    dotspacemacs-startup-lists '(recents bookmarks projects)
    dotspacemacs-startup-recent-list-size 5
    dotspacemacs-scratch-mode 'text-mode
-   dotspacemacs-themes '(monokai zenburn darkokai spacemacs-dark material solarized-dark)
+   dotspacemacs-themes '(darkokai zenburn monokai spacemacs-dark material solarized-dark)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Source Code Pro" :size 38 :weight semibold :width normal :powerline-scale 1.15)
    dotspacemacs-leader-key "SPC"
