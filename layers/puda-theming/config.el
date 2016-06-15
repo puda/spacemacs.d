@@ -1,6 +1,7 @@
 (setq-default
  theming-modifications
- '((darkokai
+ '((;; darkokai
+    spacemacs-dark
     ;; Font locking
     (font-lock-comment-face :slant italic)
     (font-lock-string-face :slant italic)
@@ -20,14 +21,14 @@
      :inherit font-lock-comment-face :foreground nil)
 
     ;; Modeline
-    (header-line :box (:color "#555555" :line-width 1))
+    ;; (header-line :box (:color "#555555" :line-width 1))
     (mode-line :box (:color "#999999" :line-width 1 :style released-button))
-    (powerline-active1 :box (:color "#999999" :line-width 1 :style released-button)
-                       :background "#5a5a5a")
+    ;; (powerline-active1 :box (:color "#999999" :line-width 1 :style released-button)
+    ;;                    :background "#5a5a5a")
     (powerline-active2 :box (:color "#999999" :line-width 1 :style released-button))
-    (mode-line-inactive :box (:color "#666666" :line-width 1 :style released-button))
-    (powerline-inactive1 :box (:color "#666666" :line-width 1 :style released-button))
-    (powerline-inactive2 :box (:color "#666666" :line-width 1 :style released-button))
+    ;; (mode-line-inactive :box (:color "#666666" :line-width 1 :style released-button))
+    ;; (powerline-inactive1 :box (:color "#666666" :line-width 1 :style released-button))
+    ;; (powerline-inactive2 :box (:color "#666666" :line-width 1 :style released-button))
     (helm-prefarg :foreground "PaleGreen")
 
     ;; Flycheck
