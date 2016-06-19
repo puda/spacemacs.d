@@ -36,6 +36,7 @@
      better-defaults
      emacs-lisp
      org
+     helm
      (deft :variables
        deft-extensions '("org" "md" "txt")
        deft-directory '"~/Documents/")
@@ -54,8 +55,6 @@
 
    dotspacemacs-additional-packages '()
    dotspacemacs-excluded-packages '(drupal-mode
-                                    ido
-                                    eyebrowse
                                     evil-search-highlight-persist
                                     vi-tilde-fringe)
    ))
@@ -72,7 +71,7 @@
    dotspacemacs-scratch-mode 'text-mode
    dotspacemacs-themes '(monokai spacemacs-dark hc-zenburn darkokai material solarized-dark)
    dotspacemacs-colorize-cursor-according-to-state t
-   dotspacemacs-default-font '("Source Code Pro" :size 38 :weight semibold :width normal :powerline-scale 1.15)
+   dotspacemacs-default-font '("Source Code Pro" :size 38 :weight semibold :width normal :powerline-scale 1.2)
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-leader-key "M-m"
    dotspacemacs-major-mode-leader-key ","
@@ -150,7 +149,7 @@
    ;; Helm
    helm-echo-input-in-header-line nil
    ;; Spaceline
-   powerline-default-separator 'arrow
+   powerline-default-separator 'slant
    spaceline-new-version-p nil
    spaceline-buffer-encoding-abbrev-p nil
    spaceline-version-control-p nil
