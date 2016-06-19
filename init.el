@@ -55,6 +55,7 @@
 
    dotspacemacs-additional-packages '()
    dotspacemacs-excluded-packages '(drupal-mode
+                                    eyebrowse
                                     evil-search-highlight-persist
                                     vi-tilde-fringe)
    ))
