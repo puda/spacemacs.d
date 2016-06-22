@@ -20,7 +20,7 @@
      gtags
      (javascript :variables
                  javascript-disable-tern-port-files t)
-     react ;;learn
+     react
      (shell :variables
             shell-default-position 'bottom
             shell-default-height 70
