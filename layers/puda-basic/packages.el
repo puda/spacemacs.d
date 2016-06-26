@@ -6,6 +6,7 @@
     dumb-jump
     geben
     geben-helm-projectile
+    beacon
     )
   )
 
@@ -122,6 +123,14 @@
 (defun puda-basic/init-geben-helm-projectile ()
   (use-package geben-helm-projectile
     :ensure t))
+
+(defun puda-basic/init-beacon ()
+  (use-package beacon
+    :ensure t
+    :config
+    (progn
+      (beacon-mode t)
+      )))
 
 ;; FOR IVY PACKAGE
 ;; keybinding rebinding
