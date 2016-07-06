@@ -43,7 +43,7 @@
        deft-extensions '("org" "md" "txt")
        deft-directory '"~/Documents/")
      ibuffer
-     unimpaired
+     vim-empty-lines
      games
      ;; custom config
      puda-basic
