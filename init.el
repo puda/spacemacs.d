@@ -12,7 +12,7 @@
      (auto-completion :variables
                       auto-completion-return-key-behavior 'complete
                       auto-completion-tab-key-behavior 'cycle
-                      ;; auto-completion-private-snippets-directory "~/.spacemacs.d/puda-snippets"
+                      auto-completion-private-snippets-directory "~/.spacemacs.d/puda-snippets"
                       ;; using snippets is causing slowness, TODO
                       )
      (evil-snipe :variables
@@ -43,8 +43,6 @@
        deft-extensions '("org" "md" "txt")
        deft-directory '"~/Documents/")
      ibuffer
-     vim-empty-lines
-     games
      ;; custom config
      puda-basic
      puda-theming
@@ -58,6 +56,7 @@
    dotspacemacs-additional-packages '()
    dotspacemacs-excluded-packages '(drupal-mode
                                     eyebrowse
+                                    evil-search-highlight-persist
                                     vi-tilde-fringe)
    ))
 
@@ -71,7 +70,7 @@
    dotspacemacs-startup-lists '(recents bookmarks projects)
    dotspacemacs-startup-recent-list-size 5
    dotspacemacs-scratch-mode 'text-mode
-   dotspacemacs-themes '(spacemacs-dark darkokai monokai material hc-zenburn solarized-dark)
+   dotspacemacs-themes '(monokai darkokai spacemacs-dark material hc-zenburn solarized-dark)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Source Code Pro" :size 38 :weight semibold :width normal :powerline-scale 1.2)
    dotspacemacs-leader-key "SPC"
@@ -151,7 +150,7 @@
    ;; Helm
    helm-echo-input-in-header-line nil
    ;; Spaceline
-   powerline-default-separator 'wave
+   powerline-default-separator 'arrow
    spaceline-new-version-p nil
    spaceline-buffer-encoding-abbrev-p nil
    spaceline-version-control-p nil
