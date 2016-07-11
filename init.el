@@ -180,6 +180,12 @@
     "bd" 'kill-buffer
     "j;" 'avy-isearch
     )
+  ;; multiple-cursors-mode
+  (setq mc/always-run-for-all t)
+  (global-set-key (kbd "C->") 'mc/mark-next-like-this)
+  (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+  (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
