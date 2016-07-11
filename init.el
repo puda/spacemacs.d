@@ -150,7 +150,7 @@
    ;; Helm
    helm-echo-input-in-header-line nil
    ;; Spaceline
-   powerline-default-separator 'butt
+   powerline-default-separator 'arrow
    spaceline-new-version-p nil
    spaceline-buffer-encoding-abbrev-p nil
    spaceline-version-control-p nil
