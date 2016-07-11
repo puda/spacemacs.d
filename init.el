@@ -15,7 +15,8 @@
                       )
      (evil-snipe :variables
                  evil-snipe-enable-alternate-f-and-t-behaviors t)
-     git
+     (git :variables
+          git-magit-status-fullscreen t)
      php
      html
      gtags
