@@ -7,9 +7,7 @@
    dotspacemacs-download-packages 'used
 
    dotspacemacs-configuration-layers
-   '((git :variables
-          git-magit-status-fullscreen t)
-     (auto-completion :variables
+   '((auto-completion :variables
                       auto-completion-return-key-behavior 'complete
                       auto-completion-tab-key-behavior 'cycle
                       auto-completion-private-snippets-directory "~/.spacemacs.d/puda-snippets"
@@ -17,6 +15,7 @@
                       )
      (evil-snipe :variables
                  evil-snipe-enable-alternate-f-and-t-behaviors t)
+     git
      php
      html
      gtags
@@ -65,7 +64,7 @@
    dotspacemacs-elpa-https t
    dotspacemacs-elpa-timeout 10
    dotspacemacs-check-for-update t
-   dotspacemacs-editing-style 'vim
+   dotspacemacs-editing-style 'hybrid
    dotspacemacs-startup-banner nil
    dotspacemacs-startup-lists '(recents bookmarks projects)
    dotspacemacs-startup-recent-list-size 5
@@ -150,7 +149,7 @@
    ;; Helm
    helm-echo-input-in-header-line nil
    ;; Spaceline
-   powerline-default-separator 'arrow
+   powerline-default-separator 'butt
    spaceline-new-version-p nil
    spaceline-buffer-encoding-abbrev-p nil
    spaceline-version-control-p nil
