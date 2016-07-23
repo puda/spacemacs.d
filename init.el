@@ -55,7 +55,8 @@
    dotspacemacs-excluded-packages '(drupal-mode
                                     eyebrowse
                                     evil-search-highlight-persist
-                                    vi-tilde-fringe)
+                                    vi-tilde-fringe
+                                    ido)
    ))
 
 (defun dotspacemacs/init ()
@@ -70,7 +71,7 @@
    dotspacemacs-scratch-mode 'text-mode
    dotspacemacs-themes '(monokai darkokai spacemacs-dark material hc-zenburn solarized-dark)
    dotspacemacs-colorize-cursor-according-to-state t
-   dotspacemacs-default-font '("Source Code Pro" :size 38 :weight semibold :width normal :powerline-scale 1.2)
+   dotspacemacs-default-font '("Source Code Pro" :size 38 :weight demibold :width normal :powerline-scale 1.2)
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-leader-key "M-m"
    dotspacemacs-major-mode-leader-key ","
@@ -143,6 +144,7 @@
    evil-snipe-spillover-scope 'visible
    ;; Evil
    evil-move-beyond-eol nil
+   evil-shift-round nil
    ;; Helm Mini
    helm-mini-default-sources '(helm-source-buffers-list helm-source-recentf helm-source-buffer-not-found helm-source-bookmarks)
    ;; Helm
@@ -183,6 +185,14 @@
   (global-set-key (kbd "C->") 'mc/mark-next-like-this)
   (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
   (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
+  ;; Diminish
+  (spacemacs|diminish holy-mode)
+  (spacemacs|diminish hybrid-mode)
+  (spacemacs|diminish which-key-mode)
+  (spacemacs|diminish evil-mc-mode)
+  (spacemacs|diminish helm-gtags-mode)
+  (spacemacs|diminish ggtags-mode)
 
 )
 
