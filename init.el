@@ -20,8 +20,6 @@
      php
      html
      gtags
-     vim-powerline
-     ivy
      (javascript :variables
                  javascript-disable-tern-port-files t)
      react
@@ -187,10 +185,6 @@
   (global-set-key (kbd "C->") 'mc/mark-next-like-this)
   (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
   (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
-  ;; ivy config
-  (define-key ivy-minibuffer-map (kbd "M-SPC") 'spacemacs/ivy-transient-state/body)
-  (define-key ivy-minibuffer-map (kbd "<escape>") 'minibuffer-keyboard-quit)
-  (global-set-key (kbd "<escape>") 'keyboard-quit)
 
 )
 
