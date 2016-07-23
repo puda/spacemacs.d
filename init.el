@@ -38,11 +38,9 @@
      better-defaults
      emacs-lisp
      org
-     helm
      (deft :variables
        deft-extensions '("org" "md" "txt")
        deft-directory '"~/Documents/")
-     ibuffer
      ;; custom config
      puda-basic
      puda-theming
