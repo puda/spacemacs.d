@@ -174,8 +174,8 @@
   (push 'term-mode evil-escape-excluded-major-modes)
   ;; leader keybindings
   (evil-leader/set-key
-    "." 'dumb-jump-go
-    ">" 'dumb-jump-back
+    ;; "." 'dumb-jump-go
+    ;; ">" 'dumb-jump-back
     "bk" 'kill-this-buffer
     "bd" 'kill-buffer
     "j;" 'avy-isearch

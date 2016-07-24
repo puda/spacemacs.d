@@ -3,7 +3,7 @@
     vertigo
     key-chord
     php-mode
-    dumb-jump
+    ;; dumb-jump
     geben
     geben-helm-projectile
     )
@@ -115,9 +115,9 @@
 
       )))
 
-(defun puda-basic/init-dumb-jump ()
-  (use-package dumb-jump
-    :ensure t))
+;; (defun puda-basic/init-dumb-jump ()
+;;   (use-package dumb-jump
+;;     :ensure t))
 
 (defun puda-basic/init-geben-helm-projectile ()
   (use-package geben-helm-projectile
