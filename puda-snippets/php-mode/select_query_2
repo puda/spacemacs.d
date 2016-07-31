@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # contributor: puda
-# name: select_query
+# name: select_query_2
 # key: $q2
 # --
 $$1 = "SELECT $2 FROM $3 WHERE $4 = :$4 AND $5 = :$5";

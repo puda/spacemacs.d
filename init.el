@@ -17,6 +17,7 @@
                  evil-snipe-enable-alternate-f-and-t-behaviors t)
      (git :variables
           git-magit-status-fullscreen t)
+     ivy ;;helm
      php
      html
      gtags
@@ -55,8 +56,7 @@
    dotspacemacs-excluded-packages '(drupal-mode
                                     eyebrowse
                                     evil-search-highlight-persist
-                                    vi-tilde-fringe
-                                    ido)
+                                    vi-tilde-fringe)
    ))
 
 (defun dotspacemacs/init ()
@@ -193,6 +193,11 @@
   (spacemacs|diminish evil-mc-mode)
   (spacemacs|diminish helm-gtags-mode)
   (spacemacs|diminish ggtags-mode)
+
+  ;; IVY
+  (define-key ivy-minibuffer-map (kbd "M-SPC") 'spacemacs/ivy-transient-state/body)
+  (define-key ivy-minibuffer-map (kbd "<escape>") 'minibuffer-keyboard-quit)
+  ;; (global-set-key (kbd "<escape>") 'keyboard-quit)
 
 )
 

@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# contributor: puda
+# name: insert_query
+# key: $i
+# --
+$$1 = "INSERT INTO $2 ($3) VALUES ($4) WHERE $5 = :$5";
+$result = mygroup_query($$1, array(":$5" => $$5));
+if (is_object($result) && $result != false) {
+    $6
+}
