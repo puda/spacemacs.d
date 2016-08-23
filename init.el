@@ -17,7 +17,6 @@
                  evil-snipe-enable-alternate-f-and-t-behaviors t)
      (git :variables
           git-magit-status-fullscreen t)
-     helm
      php
      html
      gtags
@@ -69,9 +68,9 @@
    dotspacemacs-startup-lists '(recents bookmarks projects)
    dotspacemacs-startup-recent-list-size 5
    dotspacemacs-scratch-mode 'text-mode
-   dotspacemacs-themes '(monokai darkokai spacemacs-dark material hc-zenburn solarized-dark)
+   dotspacemacs-themes '(hc-zenburn spacemacs-dark monokai darkokai material solarized-dark)
    dotspacemacs-colorize-cursor-according-to-state t
-   dotspacemacs-default-font '("Source Code Pro" :size 38 :weight demibold :width normal :powerline-scale 1.2)
+   dotspacemacs-default-font '("Source Code Pro" :size 38 :weight semibold :width normal :powerline-scale 1.2)
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-leader-key "M-m"
    dotspacemacs-major-mode-leader-key ","
@@ -128,9 +127,9 @@
    ranger-override-dired t
    )
   ;; transparency
-  (let ((tp (cons dotspacemacs-active-transparency dotspacemacs-inactive-transparency)))
-    (push `(alpha . ,tp) default-frame-alist)
-    (set-frame-parameter (selected-frame) 'alpha tp))
+  ;; (let ((tp (cons dotspacemacs-active-transparency dotspacemacs-inactive-transparency)))
+  ;;   (push `(alpha . ,tp) default-frame-alist)
+  ;;   (set-frame-parameter (selected-frame) 'alpha tp))
   ;; Modes
   (delete-selection-mode t)
   (global-auto-revert-mode t))
