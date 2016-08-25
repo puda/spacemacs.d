@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # contributor: puda
-# name: function_declaration
+# name: onlinetest_function_declaration
 # key: fun
 # --
 function onlinetest_$1 ($2) {
