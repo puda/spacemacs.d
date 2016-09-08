@@ -17,7 +17,7 @@
   (add-hook 'kill-emacs-hook #'turn-on-mouse)
   (add-hook 'delete-frame-functions #'turn-on-mouse))
 
-(puda-turn-off-mouse)
+;; (puda-turn-off-mouse)
 
 ;; Prettify-Symbols
 (let ((puda-prettify-hooks '(js2-mode-hook php-mode-hook emacs-lisp-mode-hook)))

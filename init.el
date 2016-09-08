@@ -68,9 +68,9 @@
    dotspacemacs-startup-lists '(recents bookmarks projects)
    dotspacemacs-startup-recent-list-size 5
    dotspacemacs-scratch-mode 'text-mode
-   dotspacemacs-themes '(spacemacs-dark material monokai darkokai base16-eighties solarized-dark)
+   dotspacemacs-themes '(monokai material spacemacs-dark darkokai base16-eighties solarized-dark)
    dotspacemacs-colorize-cursor-according-to-state t
-   dotspacemacs-default-font '("Source Code Pro" :size 38 :weight semibold :width normal :powerline-scale 1.2)
+   dotspacemacs-default-font '("Source Code Pro" :size 16 :weight semibold :width normal :powerline-scale 1.2)
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-leader-key "M-m"
    dotspacemacs-major-mode-leader-key ","
