@@ -54,6 +54,7 @@
 
    dotspacemacs-additional-packages '()
    dotspacemacs-excluded-packages '(drupal-mode
+                                    evil-unimpaired
                                     eyebrowse
                                     evil-search-highlight-persist
                                     vi-tilde-fringe)
@@ -69,7 +70,7 @@
    dotspacemacs-startup-lists '(recents bookmarks projects)
    dotspacemacs-startup-recent-list-size 5
    dotspacemacs-scratch-mode 'text-mode
-   dotspacemacs-themes '(monokai material spacemacs-dark darkokai base16-eighties solarized-dark)
+   dotspacemacs-themes '(spacemacs-dark material monokai darkokai base16-eighties solarized-dark)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Source Code Pro" :size 16 :weight semibold :width normal :powerline-scale 1.2)
    dotspacemacs-leader-key "SPC"
@@ -102,7 +103,7 @@
    dotspacemacs-show-transient-state-color-guide nil
    dotspacemacs-mode-line-unicode-symbols t ;; do not change
    dotspacemacs-smooth-scrolling t
-   dotspacemacs-line-numbers 'relative ;; change back to relative
+   dotspacemacs-line-numbers 'relative
    dotspacemacs-folding-method 'origami
    dotspacemacs-smartparens-strict-mode nil
    dotspacemacs-smart-closing-parenthesis nil
@@ -127,10 +128,6 @@
    ;; Ranger
    ranger-override-dired t
    )
-  ;; transparency
-  ;; (let ((tp (cons dotspacemacs-active-transparency dotspacemacs-inactive-transparency)))
-  ;;   (push `(alpha . ,tp) default-frame-alist)
-  ;;   (set-frame-parameter (selected-frame) 'alpha tp))
   ;; Modes
   (delete-selection-mode t)
   (global-auto-revert-mode t))
