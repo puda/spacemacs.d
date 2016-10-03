@@ -11,7 +11,6 @@
                       auto-completion-return-key-behavior 'complete
                       auto-completion-tab-key-behavior 'cycle
                       auto-completion-private-snippets-directory "~/.spacemacs.d/puda-snippets"
-                      ;; using snippets is causing slowness, TODO
                       )
      (evil-snipe :variables
                  evil-snipe-enable-alternate-f-and-t-behaviors t)
