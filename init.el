@@ -49,13 +49,14 @@
               theming-headings-same-size 'all
               theming-headings-bold 'all)
      evil-little-word
-     vim-empty-lines
-     ;; previously excluded packages
-     ;; drupal-mode
-     ;; eyebrowse
-     ;; evil-search-highlight
-     ;; vi-tilde-fring-mode
      )
+
+   dotspacemacs-excluded-packages '(
+                                    drupal-mode
+                                    eyebrowse
+                                    evil-search-highlight-persist
+                                    vi-tilde-fringe
+                                    )
 
    dotspacemacs-additional-packages '()
    ))
@@ -111,7 +112,7 @@
    dotspacemacs-persistent-server nil
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
    dotspacemacs-default-package-repository nil
-   dotspacemacs-whitespace-cleanup 'changed))
+   dotspacemacs-whitespace-cleanup 'nil))
 
 (defun dotspacemacs/user-init ()
   ;; Variables
@@ -151,6 +152,8 @@
    spaceline-new-version-p nil
    spaceline-buffer-encoding-abbrev-p nil
    spaceline-version-control-p nil
+   ;; Magit
+   magit-process-ensure-unix-line-ending nil
    )
   ;; Modes
   (global-evil-mc-mode t)
@@ -175,7 +178,6 @@
     ;; ">" 'dumb-jump-back
     "bk" 'kill-this-buffer
     "bd" 'kill-buffer
-    "j;" 'avy-isearch
     )
   ;; multiple-cursors-mode
   (setq mc/always-run-for-all t)
