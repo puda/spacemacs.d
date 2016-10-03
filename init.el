@@ -50,14 +50,19 @@
               theming-headings-same-size 'all
               theming-headings-bold 'all)
      evil-little-word
+     vim-empty-lines
+     ;; previously excluded packages
+     ;; drupal-mode
+     ;; eyebrowse
+     ;; evil-search-highlight
+     ;; vi-tilde-fring-mode
      )
 
    dotspacemacs-additional-packages '()
-   dotspacemacs-excluded-packages '(drupal-mode
-                                    eyebrowse
-                                    evil-unimpaired
-                                    evil-search-highlight-persist
-                                    vi-tilde-fringe)
+   ;; dotspacemacs-excluded-packages '(drupal-mode
+   ;;                                  eyebrowse
+   ;;                                  evil-search-highlight-persist
+   ;;                                  vi-tilde-fringe)
    ))
 
 (defun dotspacemacs/init ()
@@ -72,7 +77,7 @@
    dotspacemacs-scratch-mode 'text-mode
    dotspacemacs-themes '(spacemacs-dark material monokai darkokai base16-eighties solarized-dark)
    dotspacemacs-colorize-cursor-according-to-state t
-   dotspacemacs-default-font '("Source Code Pro" :size 16 :weight semibold :width normal :powerline-scale 1.2)
+   dotspacemacs-default-font '("Source Code Pro" :size 36 :weight semibold :width normal :powerline-scale 1.2)
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-leader-key "M-m"
    dotspacemacs-major-mode-leader-key ","
