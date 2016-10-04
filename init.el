@@ -55,7 +55,6 @@
                                     drupal-mode
                                     eyebrowse
                                     evil-search-highlight-persist
-                                    evil-unimpaired
                                     vi-tilde-fringe
                                     )
 
