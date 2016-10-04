@@ -123,12 +123,4 @@
   (use-package geben-helm-projectile
     :ensure t))
 
-;; FOR IVY PACKAGE
-;; keybinding rebinding
-;; (define-key ivy-minibuffer-map (kbd "M-SPC") 'spacemacs/ivy-transient-state/body)
-;; (define-key ivy-minibuffer-map (kbd "<escape>") 'minibuffer-keyboard-quit)
-;; byte-compile-file hydra-ivy
-;; spacemacs-ivy
-;; (global-set-key (kbd "<escape>") 'keyboard-quit)
-
 ;;; packages.el ends here
