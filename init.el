@@ -4,10 +4,11 @@
    dotspacemacs-enable-lazy-installation nil
    dotspacemacs-ask-for-lazy-installation nil
    dotspacemacs-configuration-layer-path '("~/.spacemacs.d/layers/")
-   dotspacemacs-download-packages 'used
+   dotspacemacs-download-packages 'used-but-keep-unused
 
    dotspacemacs-configuration-layers
    '((auto-completion :variables
+                      auto-completion-enable-snippets-in-popup t
                       auto-completion-return-key-behavior 'complete
                       auto-completion-tab-key-behavior 'cycle
                       auto-completion-private-snippets-directory "~/.spacemacs.d/puda-snippets"
@@ -33,7 +34,7 @@
      (spell-checking :variables spell-checking-enable-by-default nil)
      syntax-checking
      (version-control :variables version-control-diff-tool 'diff-hl)
-     ivy
+     ;; ivy ;; find a way to make C-o to work as M-o in helm
      colors
      better-defaults
      emacs-lisp
@@ -70,10 +71,12 @@
    dotspacemacs-startup-banner nil
    dotspacemacs-startup-lists '(recents bookmarks projects)
    dotspacemacs-startup-recent-list-size 5
+   dotspacemacs-startup-buffer-responsive t
    dotspacemacs-scratch-mode 'text-mode
-   dotspacemacs-themes '(spacemacs-dark material monokai darkokai base16-eighties solarized-dark)
+   dotspacemacs-themes
+   '(spacemacs-dark material monokai darkokai base16-eighties solarized-dark)
    dotspacemacs-colorize-cursor-according-to-state t
-   dotspacemacs-default-font '("Source Code Pro" :size 36 :weight semibold :width normal :powerline-scale 1.2)
+   dotspacemacs-default-font '("Source Code Pro" :size 36 :weight demibold :width normal :powerline-scale 1.2)
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-leader-key "M-m"
    dotspacemacs-major-mode-leader-key ","
@@ -83,7 +86,7 @@
    dotspacemacs-remap-Y-to-y$ t
    dotspacemacs-retain-visual-state-on-shift t
    dotspacemacs-visual-line-move-text t
-   dotspacemacs-ex-substitute-global nil
+   dotspacemacs-ex-substitute-global t
    dotspacemacs-default-layout-name "Default"
    dotspacemacs-display-default-layout nil
    dotspacemacs-auto-resume-layouts nil
