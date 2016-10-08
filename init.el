@@ -34,7 +34,7 @@
      (spell-checking :variables spell-checking-enable-by-default nil)
      syntax-checking
      (version-control :variables version-control-diff-tool 'diff-hl)
-     ;; ivy ;; find a way to make C-o to work as M-o in helm
+     ivy
      colors
      better-defaults
      emacs-lisp
