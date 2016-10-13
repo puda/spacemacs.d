@@ -42,6 +42,7 @@
      (deft :variables
        deft-extensions '("org" "md" "txt")
        deft-directory '"~/Documents/")
+     theming
      ;; custom config
      puda-basic
      puda-theming

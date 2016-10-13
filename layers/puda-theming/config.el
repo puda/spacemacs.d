@@ -5,8 +5,8 @@
     (font-lock-comment-face :slant italic)
     (font-lock-string-face :slant italic)
     (font-lock-doc-face :slant italic)
-    (font-lock-keyword-face :weight bold)
-    (font-lock-builtin-face :foreground "#ff9eb8" :weight semi-bold)
+    (font-lock-keyword-face :weight bold :foreground "#ff4185")
+    (font-lock-builtin-face :foreground "#ffabd6" :weight semi-bold)
     (font-lock-warning-face :underline nil)
     (web-mode-html-attr-value-face
      :inherit font-lock-string-face :foreground nil)
@@ -42,6 +42,7 @@
      :inherit font-lock-comment-face :foreground nil)
     (evil-search-highlight-persist-highlight-face
      :background "#fc5fef" :foreground "#000000")
+    (font-latex-verbatim-face :inherit nil)
     (helm-ff-prefix :background nil :foreground "#666666" :weight bold)
     (org-done :foreground "MediumSpringGreen")
     (region :background "#998f84")
