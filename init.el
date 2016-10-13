@@ -74,7 +74,7 @@
    dotspacemacs-startup-buffer-responsive t
    dotspacemacs-scratch-mode 'text-mode
    dotspacemacs-themes
-   '(spacemacs-dark material monokai darkokai base16-eighties solarized-dark)
+   '(monokai material spacemacs-dark darkokai base16-eighties solarized-dark)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Source Code Pro" :size 16 :weight semibold :width normal :powerline-scale 1.2)
    dotspacemacs-leader-key "SPC"
@@ -131,6 +131,8 @@
    initial-scratch-message ";; Puda loves Rachael!! \n;; Puda Emacs Custom Config!!"
    ;; Ranger
    ranger-override-dired t
+   ;; Monokai
+   monokai-highlight-line "#3A3A3A"
    )
   ;; Modes
   (delete-selection-mode t)
