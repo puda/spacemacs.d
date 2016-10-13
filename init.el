@@ -8,7 +8,7 @@
 
    dotspacemacs-configuration-layers
    '((auto-completion :variables
-                      auto-completion-enable-snippets-in-popup t
+                      ;; auto-completion-enable-snippets-in-popup t
                       auto-completion-return-key-behavior 'complete
                       auto-completion-tab-key-behavior 'cycle
                       auto-completion-private-snippets-directory "~/.spacemacs.d/puda-snippets"
