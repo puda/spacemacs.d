@@ -127,6 +127,12 @@
    sp-highlight-wrap-tag-overlay nil
    ;; Avy
    avy-all-windows 'all-frames
+   ;; Shell
+   shell-default-term-shell "/bin/zsh"
+   ;; Web
+   web-mode-markup-indent-offset 4
+   web-mode-css-indent-offset 4
+   web-mode-code-indent-offset 4
    ;; General
    default-directory "/var/www/community/"
    initial-scratch-message ";; Puda loves Rachael!! \n;; Puda Emacs Custom Config!!"
