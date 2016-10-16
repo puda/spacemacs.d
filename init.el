@@ -54,7 +54,7 @@
      )
 
    dotspacemacs-excluded-packages '(
-                                    persp-mode
+                                    persp-mode ;; causing errors
                                     drupal-mode
                                     eyebrowse
                                     evil-search-highlight-persist
