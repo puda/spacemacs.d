@@ -54,6 +54,7 @@
      )
 
    dotspacemacs-excluded-packages '(
+                                    persp-mode
                                     drupal-mode
                                     eyebrowse
                                     evil-search-highlight-persist
@@ -167,6 +168,9 @@
    ;; Magit
    magit-process-ensure-unix-line-ending nil
    )
+  ;; Transparency
+  (spacemacs/toggle-transparency)
+  (add-hook 'after-make-frame-functions 'spacemacs/toggle-transparency)
   ;; Modes
   (global-evil-mc-mode t)
   ;; clear anzu after mc
