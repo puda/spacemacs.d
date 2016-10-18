@@ -74,8 +74,8 @@
     (progn
       (setq key-chord-two-keys-delay 0.1)
       ;; use M-space instead
-      (key-chord-define minibuffer-local-map "jk" 'spacemacs/helm-navigation-transient-state/body)
-      ;; (key-chord-define ivy-minibuffer-map "jk" 'spacemacs/ivy-transient-state/body)
+      ;; (key-chord-define minibuffer-local-map "jk" 'spacemacs/helm-navigation-transient-state/body)
+      (key-chord-define ivy-minibuffer-map "jk" 'spacemacs/ivy-transient-state/body)
       )
     :config
     (key-chord-mode t)))
