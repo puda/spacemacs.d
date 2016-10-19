@@ -34,7 +34,7 @@
      (spell-checking :variables spell-checking-enable-by-default nil)
      syntax-checking
      (version-control :variables version-control-diff-tool 'diff-hl)
-     ivy
+     ;; ivy
      colors
      better-defaults
      emacs-lisp
@@ -209,7 +209,6 @@
   (spacemacs|diminish evil-mc-mode)
   (spacemacs|diminish helm-gtags-mode)
   (spacemacs|diminish ggtags-mode)
-
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
