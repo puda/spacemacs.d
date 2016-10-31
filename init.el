@@ -100,7 +100,7 @@
    dotspacemacs-enable-paste-transient-state t
    dotspacemacs-which-key-delay 1.0
    dotspacemacs-loading-progress-bar t
-   dotspacemacs-fullscreen-at-startup t
+   dotspacemacs-fullscreen-at-startup nil
    dotspacemacs-fullscreen-use-non-native nil
    dotspacemacs-maximized-at-startup nil
    dotspacemacs-active-transparency 90
