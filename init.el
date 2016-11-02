@@ -195,6 +195,7 @@
     ;; ">" 'dumb-jump-back
     "bk" 'kill-this-buffer
     "bd" 'kill-buffer
+    "qq" 'spacemacs/frame-killer
     )
   ;; multiple-cursors-mode
   (setq mc/always-run-for-all t)
