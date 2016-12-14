@@ -123,4 +123,11 @@
   (use-package geben-helm-projectile
     :ensure t))
 
+;; custom functions
+(defun puda-semicolon-newline ()
+  (interactive)
+  (mwim-end-of-line-or-code)
+  (insert ";")
+  (newline-and-indent))
+
 ;;; packages.el ends here

@@ -68,7 +68,7 @@
    dotspacemacs-elpa-https t
    dotspacemacs-elpa-timeout 10
    dotspacemacs-check-for-update t
-   dotspacemacs-editing-style 'hybrid
+   dotspacemacs-editing-style 'vim
    dotspacemacs-startup-banner nil
    dotspacemacs-startup-lists '(recents bookmarks projects)
    dotspacemacs-startup-recent-list-size 5
@@ -192,6 +192,7 @@
   (evil-leader/set-key
     ;; "." 'dumb-jump-go
     ;; ">" 'dumb-jump-back
+    "RET" 'puda-semicolon-newline
     "bk" 'kill-this-buffer
     "bd" 'kill-buffer
     "qq" 'spacemacs/frame-killer
