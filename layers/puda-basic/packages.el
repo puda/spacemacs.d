@@ -94,6 +94,13 @@
       )))
 
 (defun puda-basic/pre-init-php-mode ()
+  ;; make sure exuberant-ctags and gnu globals are installed
+  ;; inside globals folder:
+  ;; $ ./configure --with-universal-ctags=/usr/local/bin/ctags
+  ;; $ make
+  ;; $ sudo make install
+
+  ;; $ cp /usr/local/share/gtags/gtags.conf
   ;; use gtags layer and make sure the ~/.globalrc file is in place and generate tags using
   ;; gtags --gtagslabel drupal
   (use-package php-mode
