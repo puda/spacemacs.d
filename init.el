@@ -160,7 +160,7 @@
    ;; Helm
    helm-echo-input-in-header-line nil
    ;; Spaceline
-   powerline-default-separator 'arrow
+   powerline-default-separator 'wave
    spaceline-new-version-p nil
    spaceline-buffer-encoding-abbrev-p nil
    spaceline-version-control-p nil
@@ -168,8 +168,8 @@
    magit-process-ensure-unix-line-ending nil
    )
   ;; Transparency
-  ;; (spacemacs/toggle-transparency)
-  ;; (add-hook 'after-make-frame-functions 'spacemacs/toggle-transparency)
+  (spacemacs/toggle-transparency)
+  (add-hook 'after-make-frame-functions 'spacemacs/toggle-transparency)
 
   ;; Modes
   (global-evil-mc-mode t)
