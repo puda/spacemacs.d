@@ -75,7 +75,7 @@
    dotspacemacs-startup-buffer-responsive t
    dotspacemacs-scratch-mode 'text-mode
    dotspacemacs-themes
-   '(sanityinc-tomorrow-eighties monokai material spacemacs-dark darkokai base16-eighties solarized-dark)
+   '(monokai material spacemacs-dark darkokai base16-eighties solarized-dark)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Input Mono" :size 28 :weight semibold :width normal :powerline-scale 1.2)
    dotspacemacs-leader-key "SPC"
