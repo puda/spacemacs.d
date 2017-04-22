@@ -12,13 +12,20 @@
                       auto-completion-return-key-behavior 'complete
                       auto-completion-tab-key-behavior 'cycle
                       auto-completion-private-snippets-directory "~/.spacemacs.d/puda-snippets"
-                      )
+                      auto-completion-enable-help-tooltip 'manual
+                      :disabled-for org erc)
      (evil-snipe :variables
                  evil-snipe-enable-alternate-f-and-t-behaviors t)
      (git :variables
           git-magit-status-fullscreen t)
+     (c-c++ :variables c-c++-enable-clang-support t)
+     csharp
+     csv
+     extra-langs
      php
      html
+     pdf-tools
+     shell-scripts
      gtags
      (javascript :variables
                  javascript-disable-tern-port-files t)
@@ -75,9 +82,9 @@
    dotspacemacs-startup-buffer-responsive t
    dotspacemacs-scratch-mode 'text-mode
    dotspacemacs-themes
-   '(monokai material spacemacs-dark darkokai base16-eighties solarized-dark)
+   '(monokai leuven material spacemacs-dark darkokai base16-eighties solarized-dark)
    dotspacemacs-colorize-cursor-according-to-state t
-   dotspacemacs-default-font '("Input Mono" :size 28 :weight semibold :width normal :powerline-scale 1.2)
+   dotspacemacs-default-font '("Input Mono" :size 32 :weight semibold :width normal :powerline-scale 1.2)
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-leader-key "M-m"
    dotspacemacs-major-mode-leader-key ","
