@@ -27,6 +27,8 @@
      pdf-tools
      shell-scripts
      gtags
+     java
+     evil-commentary
      (javascript :variables
                  javascript-disable-tern-port-files t)
      react
