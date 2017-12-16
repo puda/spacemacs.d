@@ -19,6 +19,12 @@
 
 ;; (puda-turn-off-mouse)
 
+;; Web Mode
+;; Enable web-mode for blade files
+(add-to-list 'auto-mode-alist '("\\.blade.php\\'" . web-mode))
+;; Indentation to 4 spaces
+(setq web-mode-indent-style 4)
+
 ;; Prettify-Symbols
 (let ((puda-prettify-hooks '(js2-mode-hook php-mode-hook emacs-lisp-mode-hook)))
   (spacemacs/add-to-hooks

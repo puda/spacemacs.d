@@ -113,7 +113,7 @@
     (progn
       (defun puda-drupal-gtags-create ()
         (interactive)
-        (let ((inhibit-message t) (default-directory "/var/www/community/"))
+        (let ((inhibit-message t) (default-directory "/Library/WebServer/Documents/community"))
           (shell-command "gtags --gtagslabel drupal")))
 
       (evil-leader/set-key-for-mode 'php-mode "." 'ggtags-find-definition)

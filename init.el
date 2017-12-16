@@ -23,6 +23,7 @@
      (javascript :variables
                  javascript-disable-tern-port-files t)
      react
+     evil-commentary
      (shell :variables
             shell-default-position 'bottom
             shell-default-height 70
@@ -36,6 +37,7 @@
      (version-control :variables version-control-diff-tool 'diff-hl)
      ;; ivy
      colors
+     csv
      better-defaults
      emacs-lisp
      org
@@ -77,7 +79,7 @@
    dotspacemacs-themes
    '(monokai material spacemacs-dark darkokai base16-eighties solarized-dark)
    dotspacemacs-colorize-cursor-according-to-state t
-   dotspacemacs-default-font '("Input Mono" :size 28 :weight semibold :width normal :powerline-scale 1.2)
+   dotspacemacs-default-font '("Menlo" :size 18 :weight semibold :width normal :powerline-scale 1.2)
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-leader-key "M-m"
    dotspacemacs-major-mode-leader-key ","
@@ -129,6 +131,8 @@
    avy-all-windows 'all-frames
    ;; Shell
    shell-default-term-shell "/bin/zsh"
+   ;; CSS
+   css-indent-offset 2
    ;; Web
    web-mode-markup-indent-offset 4
    web-mode-css-indent-offset 4
@@ -195,6 +199,7 @@
     "RET" 'puda-semicolon-newline
     "bk" 'kill-this-buffer
     "bd" 'kill-buffer
+    ;; mac custom
     "qq" 'spacemacs/frame-killer
     )
   ;; multiple-cursors-mode
@@ -202,6 +207,8 @@
   (global-set-key (kbd "C->") 'mc/mark-next-like-this)
   (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
   (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+  ;; mac custom
+  (setq ns-use-srgb-colorspace nil)
 
   ;; Diminish
   (spacemacs|diminish holy-mode)
