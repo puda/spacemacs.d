@@ -210,13 +210,6 @@
   ;; mac custom
   (setq ns-use-srgb-colorspace nil)
 
-  ;; Web Mode
-  ;; Enable web-mode for blade files
-  (add-to-list 'auto-mode-alist '("\\.blade.php\\'" . web-mode))
-  ;; Indentation to 4 spaces
-  (setq web-mode-indent-style 4)
-
-
   ;; Diminish
   (spacemacs|diminish holy-mode)
   (spacemacs|diminish hybrid-mode)
